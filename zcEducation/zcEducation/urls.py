@@ -14,6 +14,7 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.conf.urls import url, include
+from users.views import index
 
 import xadmin
 
@@ -22,5 +23,6 @@ urlpatterns = [
     url(r'^users/', include(('users.urls', 'users'), namespace='users')),
     url(r'^orgs/', include(('orgs.urls', 'orgs'), namespace='orgs')),
     url(r'^operations/', include(('operations.urls', 'operations'), namespace='operations')),
-    url(r'^courses/', include(('courses.urls', 'courses'), namespace='courses'))
+    url(r'^courses/', include(('courses.urls', 'courses'), namespace='courses')),
+    url(r'^$',index, name = 'index')
 ]
