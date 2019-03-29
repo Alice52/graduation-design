@@ -2,7 +2,72 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="96dd5053-9309-4961-9cff-4ad65a12edc9" name="Default" comment="">
+      <change afterPath="$PROJECT_DIR$/frontend/.babelrc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/.editorconfig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/.eslintignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/.eslintrc.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/.postcssrc.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/config/dev.env.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/config/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/config/prod.env.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/package.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/App.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/assets/logo.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/components/HelloWorld.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/main.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/router/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/static/.gitkeep" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/../.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../django-vue-test/myproject/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../django-vue-test/myproject/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tes/myproject/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tes/myproject/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tes/myproject/.idea/workspace.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tes/myproject/appfront/.babelrc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tes/myproject/appfront/.editorconfig" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tes/myproject/appfront/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tes/myproject/appfront/.postcssrc.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tes/myproject/appfront/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tes/myproject/appfront/config/dev.env.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tes/myproject/appfront/config/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tes/myproject/appfront/config/prod.env.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tes/myproject/appfront/dist/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tes/myproject/appfront/dist/static/css/app.0cb060e03a6a1ff5df1c44d497ce043a.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tes/myproject/appfront/dist/static/css/app.0cb060e03a6a1ff5df1c44d497ce043a.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tes/myproject/appfront/dist/static/fonts/element-icons.b02bdc1.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tes/myproject/appfront/dist/static/js/app.5553667c29b35ff8b49d.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tes/myproject/appfront/dist/static/js/app.5553667c29b35ff8b49d.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tes/myproject/appfront/dist/static/js/manifest.55ff73df77c096301b6f.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tes/myproject/appfront/dist/static/js/manifest.55ff73df77c096301b6f.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tes/myproject/appfront/dist/static/js/vendor.cd22270bb7a25646e71f.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tes/myproject/appfront/dist/static/js/vendor.cd22270bb7a25646e71f.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tes/myproject/appfront/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tes/myproject/appfront/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tes/myproject/appfront/src/App.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tes/myproject/appfront/src/assets/logo.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tes/myproject/appfront/src/components/Hello.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tes/myproject/appfront/src/components/Home.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tes/myproject/appfront/src/main.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tes/myproject/appfront/src/router/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tes/myproject/appfront/static/.gitkeep" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tes/myproject/apps/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tes/myproject/apps/myapp/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tes/myproject/apps/myapp/admin.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tes/myproject/apps/myapp/apps.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tes/myproject/apps/myapp/migrations/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tes/myproject/apps/myapp/models.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tes/myproject/apps/myapp/tests.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tes/myproject/apps/myapp/urls.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tes/myproject/apps/myapp/views.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tes/myproject/manage.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tes/myproject/myproject/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tes/myproject/myproject/settings.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tes/myproject/myproject/urls.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tes/myproject/myproject/wsgi.py" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/zcEducation/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/zcEducation/settings.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -19,8 +84,8 @@
       <file leaf-file-name="settings.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/zcEducation/settings.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="524">
-              <caret line="130" selection-start-line="130" selection-end-line="130" />
+            <state relative-caret-position="2948">
+              <caret line="135" column="49" selection-start-line="135" selection-start-column="44" selection-end-line="135" selection-end-column="49" />
               <folding>
                 <element signature="e#312#321#0" expanded="true" />
               </folding>
@@ -28,20 +93,20 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="manage.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="manage.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/manage.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="308">
-              <caret line="15" lean-forward="true" selection-start-line="15" selection-end-line="15" />
+            <state relative-caret-position="286">
+              <caret line="14" column="39" selection-start-line="14" selection-start-column="39" selection-end-line="14" selection-end-column="39" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="__init__.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="__init__.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/zcEducation/__init__.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret selection-end-line="2" selection-end-column="28" />
+            <state relative-caret-position="66">
+              <caret line="3" selection-start-line="3" selection-end-line="3" />
             </state>
           </provider>
         </entry>
@@ -49,8 +114,8 @@
       <file leaf-file-name="views.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/apps/users/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="88">
-              <caret line="4" column="4" selection-start-line="4" selection-start-column="4" selection-end-line="4" selection-end-column="4" />
+            <state>
+              <caret selection-end-column="35" />
             </state>
           </provider>
         </entry>
@@ -140,13 +205,13 @@
         <option value="$PROJECT_DIR$/apps/operations/apps.py" />
         <option value="$PROJECT_DIR$/apps/courses/apps.py" />
         <option value="$PROJECT_DIR$/apps/courses/adminx.py" />
-        <option value="$PROJECT_DIR$/apps/users/views.py" />
         <option value="$PROJECT_DIR$/zcEducation/urls.py" />
         <option value="$PROJECT_DIR$/static/css/index.css" />
         <option value="$PROJECT_DIR$/static/css/reset.css" />
         <option value="$PROJECT_DIR$/templates/index.html" />
         <option value="$PROJECT_DIR$/static/css/style.css" />
         <option value="$PROJECT_DIR$/zcEducation/settings.py" />
+        <option value="$PROJECT_DIR$/apps/users/views.py" />
       </list>
     </option>
   </component>
@@ -162,12 +227,17 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
+  <component name="NodeModulesDirectoryManager">
+    <handled-path value="$PROJECT_DIR$/frontend/node_modules" />
+  </component>
   <component name="NodePackageJsonFileManager">
-    <packageJsonPaths />
+    <packageJsonPaths>
+      <path value="$PROJECT_DIR$/frontend/package.json" />
+    </packageJsonPaths>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="213" />
-    <option name="y" value="389" />
+    <option name="x" value="-8" />
+    <option name="y" value="-8" />
     <option name="width" value="1400" />
     <option name="height" value="1000" />
   </component>
@@ -179,31 +249,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="ProjectPane">
-        <subPane>
-          <expand>
-            <path>
-              <item name="zcEducation" type="b2602c69:ProjectViewProjectNode" />
-              <item name="zcEducation" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="zcEducation" type="b2602c69:ProjectViewProjectNode" />
-              <item name="zcEducation" type="462c0819:PsiDirectoryNode" />
-              <item name="apps" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="zcEducation" type="b2602c69:ProjectViewProjectNode" />
-              <item name="zcEducation" type="462c0819:PsiDirectoryNode" />
-              <item name="zcEducation" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="zcEducation" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
       <pane id="Scope">
         <subPane subId="Project Files">
           <expand>
@@ -215,11 +260,27 @@
           <select />
         </subPane>
       </pane>
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="zcEducation" type="b2602c69:ProjectViewProjectNode" />
+              <item name="zcEducation" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="zcEducation" type="b2602c69:ProjectViewProjectNode" />
+              <item name="zcEducation" type="462c0819:PsiDirectoryNode" />
+              <item name="zcEducation" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../zcEdocationNoVue" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -304,17 +365,17 @@
       <window_info anchor="bottom" id="TODO" order="11" weight="0.3298611" />
       <window_info anchor="bottom" id="Event Log" order="4" sideWeight="0.5010707" side_tool="true" weight="0.4722222" />
       <window_info anchor="bottom" id="Database Changes" order="2" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Run" order="7" weight="0.2789352" />
       <window_info anchor="bottom" id="Version Control" order="1" sideWeight="0.49947917" weight="0.2974537" />
       <window_info anchor="bottom" id="Python Console" order="3" weight="0.3298611" />
+      <window_info anchor="bottom" id="Run" order="7" weight="0.2789352" />
       <window_info anchor="bottom" id="Terminal" order="12" sideWeight="0.49892932" weight="0.4722222" />
-      <window_info active="true" content_ui="combo" id="Project" order="1" visible="true" weight="0.20021413" />
+      <window_info active="true" content_ui="combo" id="Project" order="1" visible="true" weight="0.20824412" />
       <window_info anchor="bottom" id="Docker" order="0" show_stripe_button="false" />
       <window_info anchor="right" id="Database" order="2" />
       <window_info anchor="right" id="SciView" order="0" />
       <window_info id="Structure" order="2" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="Debug" order="8" weight="0.4" />
       <window_info id="Favorites" order="0" side_tool="true" />
+      <window_info anchor="bottom" id="Debug" order="8" weight="0.4" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="10" weight="0.4" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="1" type="SLIDING" weight="0.4" />
@@ -654,10 +715,27 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/zcEducation/__init__.py">
+    <entry file="file://$PROJECT_DIR$/zcEducation/urls.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret selection-end-line="2" selection-end-column="28" />
+        <state relative-caret-position="352">
+          <caret line="16" column="28" selection-start-line="16" selection-start-column="28" selection-end-line="16" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/manage.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="286">
+          <caret line="14" column="39" selection-start-line="14" selection-start-column="39" selection-end-line="14" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/zcEducation/settings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2948">
+          <caret line="135" column="49" selection-start-line="135" selection-start-column="44" selection-end-line="135" selection-end-column="49" />
+          <folding>
+            <element signature="e#312#321#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -670,32 +748,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/apps/users/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="88">
-          <caret line="4" column="4" selection-start-line="4" selection-start-column="4" selection-end-line="4" selection-end-column="4" />
+        <state>
+          <caret selection-end-column="35" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/zcEducation/urls.py">
+    <entry file="file://$PROJECT_DIR$/zcEducation/__init__.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="352">
-          <caret line="16" column="28" selection-start-line="16" selection-start-column="28" selection-end-line="16" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/zcEducation/settings.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="524">
-          <caret line="130" selection-start-line="130" selection-end-line="130" />
-          <folding>
-            <element signature="e#312#321#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/manage.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="308">
-          <caret line="15" lean-forward="true" selection-start-line="15" selection-end-line="15" />
+        <state relative-caret-position="66">
+          <caret line="3" selection-start-line="3" selection-end-line="3" />
         </state>
       </provider>
     </entry>
