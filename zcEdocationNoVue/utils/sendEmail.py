@@ -34,7 +34,7 @@ def send_email_code(email, send_type):
     if send_type == 1:
         send_title = '欢迎注册谷粒教育网站：'
         receiverlist = [email]
-        send_body = '请点击以下链接进行激活您的账号：\n http://127.0.0.1:8000/users/user_active/' + code + """
+        send_body = '请点击以下链接进行激活您的账号：\n http://101.132.45.28:8000/users/user_active/' + code + """
                 <br>
                 <img src="https://t1.hddhhn.com/uploads/tu/201903/195/4554fds.jpg"  alt="美女" />
                 """
@@ -44,7 +44,7 @@ def send_email_code(email, send_type):
     if send_type == 2:
         receiverlist = [email]
         send_title = '谷粒教育重置密码系统：'
-        send_body = '请点击以下链接进行重置您的密码：\n http://127.0.0.1:8000/users/user_reset/' + code + """
+        send_body = '请点击以下链接进行重置您的密码：\n http://101.132.45.28:8000/users/user_reset/' + code + """
                 <br>
                 <img src="https://t1.hddhhn.com/uploads/tu/201903/195/4554fds.jpg"  alt="美女" />
                 """
