@@ -143,3 +143,13 @@ EMAIL_PORT = 465
 EMAIL_HOST_USER = '1252068782@qq.com'
 EMAIL_HOST_PASSWORD = 'eclzegtgaytufidi'
 EMAIL_FROM = '1252068782@qq.com'
+
+CACHES = {
+    "default": {
+        "BACKEND": "django_redis.cache.RedisCache",
+        "LOCATION": "redis://101.132.45.28:6379/4",
+        "OPTIONS": {
+            "CLIENT_CLASS": "django_redis.client.DefaultClient",
+        }
+    }
+}

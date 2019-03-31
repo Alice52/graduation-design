@@ -19,9 +19,9 @@
     <div class="c-box bg-box">
         <div class="login-box clearfix">
             <div class="hd-login clearfix">
-                <a class="index-logo" href="index.html"></a>
+                <a class="index-logo" href="/"></a>
                 <h1>忘记密码</h1>
-                <a class="index-font" href="index.html">回到首页</a>
+                <a class="index-font" href="/">回到首页</a>
             </div>
             <div class="fl slide">
                 <div class="imgslide">
@@ -43,11 +43,11 @@
                     </div>
                     <div class="form-group captcha1 marb38">
                         <label>验&nbsp;证&nbsp;码</label>
-                        {{ user_forget_from.captcha }}
+                        {{ user_forget_form.captcha }}
                     </div>
                     <div class="error btns" id="jsForgetTips">
                         {{ msg }}
-                        {% for key, err in user_forget_from.errors.items %}
+                        {% for key, err in user_forget_form.errors.items %}
                             {{ err }}
                         {% endfor %}
 

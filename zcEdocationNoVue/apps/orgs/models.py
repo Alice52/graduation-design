@@ -36,7 +36,7 @@ class OrgInfo(models.Model):
     click_num = models.IntegerField(default=0, verbose_name="访问量")
     category = models.CharField(choices=(('pxjg', '培训机构'), ('gx', '高校'), ('gr', '个人')), max_length=10,
                                 verbose_name="机构类别")
-    cityinfo = models.ForeignKey(CityInfo, verbose_name="所在城市")
+    cityinfo = models.ForeignKey(CityInfo, verbose_name="所在城市", on_delete=models.CASCADE)
     add_time = models.DateTimeField(default=datetime.now, verbose_name="添加时间")
 
     def __str__(self):

@@ -1998,7 +1998,7 @@ textarea:focus {
 
 .module1 .imgslide2 {
     width: 470px;
-    height: 100%;
+    height: 300px;
     overflow: hidden;
 }
 
@@ -2008,7 +2008,7 @@ textarea:focus {
 }
 
 .module1_2 img {
-    height: 100% !important;
+    height: 300px !important;
 }
 
 .module1_3, .module1_5, .module1_6, .module1_7 {
@@ -2448,7 +2448,6 @@ textarea:focus {
 
 footer .footer {
     background: #3a3a3a;
-    height: 210px;
     padding: 15px;
     color: #717171;
 }

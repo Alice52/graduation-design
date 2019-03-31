@@ -51,9 +51,15 @@ def send_email_code(email, send_type):
         send_email1 = SendEmail(subject=send_title, content=send_body, receiver_list=receiverlist)
         send_email1.send_email()
 
-
     if send_type == 3:
-        pass
+        receiverlist = [email]
+        send_title = '谷粒教育修改邮箱验证码：'
+        send_body = '您的验证码是：' + code + """
+                <br>
+                <img src="https://t1.hddhhn.com/uploads/tu/201903/195/4554fds.jpg"  alt="美女" />
+                """
+        send_email1 = SendEmail(subject=send_title, content=send_body, receiver_list=receiverlist)
+        send_email1.send_email()
 
 
 class SendEmail(object):
