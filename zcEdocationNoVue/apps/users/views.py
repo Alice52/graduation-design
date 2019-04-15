@@ -176,7 +176,7 @@
 
 from django.shortcuts import render, redirect, reverse, HttpResponse
 from .forms import UserRegisterForm, UserLoginForm, UserForgetForm, UserResetForm, \
-    UserChangeEmailForm, UserChangeInfoForm, UserResetEmailForm
+    UserChangeEmailForm, UserChangeInfoForm, UserResetEmailForm, UserChangeImageForm
 from .models import UserProfile, EmailVerifyCode, BannerInfo
 from django.db.models import Q
 from django.contrib.auth import authenticate, logout, login
@@ -402,20 +402,29 @@ def user_info(request):
     return render(request, 'users/usercenter-info.html')
 
 
+# def user_changeimage(request):
+#     iamge = 'user/' + str(request.FILES.get('image'))
+#     com = re.compile('^.*(\.gif|\.jpeg|\.png|\.jpg|\.bmp)$')
+#     if com.match(iamge):
+#         user = UserProfile.objects.filter(id=request.user.id)[0]
+#         user.image = iamge
+#         # upload image  MEDIA_URL
+#         filename = BASE_DIR + os.path.join(MEDIA_URL, iamge)
+#         fobj = open(filename, 'wb');
+#         for chrunk in request.FILES.get('image').chunks():
+#             fobj.write(chrunk);
+#         fobj.close();
+#         user.save()
+#         return JsonResponse({'status': 'ok'})
+#     else:
+#         return JsonResponse({'status': 'fail'})
 def user_changeimage(request):
-    iamge = 'user/' + str(request.FILES.get('image'))
-    com = re.compile('^.*(\.gif|\.jpeg|\.png|\.jpg|\.bmp)$')
-    if com.match(iamge):
-        user = UserProfile.objects.filter(id=request.user.id)[0]
-        user.image = iamge
-        # upload image  MEDIA_URL
-        filename = BASE_DIR + os.path.join(MEDIA_URL, iamge)
-        fobj = open(filename, 'wb');
-        for chrunk in request.FILES.get('image').chunks():
-            fobj.write(chrunk);
-        fobj.close();
-        user.save()
-        return JsonResponse({'status': 'ok'})
+    #instance  指明实例是什么，做修改的时候，我们需要知道是给哪个对象实例进行修改
+    #如果不指明，那么就会被当作创建对象去执行，而我们只有一个图片，就一定会报错。
+    user_changeimage_form = UserChangeImageForm(request.POST,request.FILES,instance=request.user)
+    if user_changeimage_form.is_valid():
+        user_changeimage_form.save(commit=True)
+        return JsonResponse({'status':'ok'})
     else:
         return JsonResponse({'status': 'fail'})
 

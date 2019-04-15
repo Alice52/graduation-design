@@ -41,11 +41,10 @@ class UserResetForm(forms.Form):
     })
 
 
-# class UserChangeImageForm(forms.ModelForm):
-#     # class Meta:
-#     #     model = UserProfile
-#     #     fields = ['image']
-#     image = models.ImageField(upload_to='user/', max_length=200, verbose_name="用户头像", null=True, blank=True)
+class UserChangeImageForm(forms.ModelForm):
+    class Meta:
+        model = UserProfile
+        fields = ['image']
 
 
 class UserChangeInfoForm(forms.ModelForm):

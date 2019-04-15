@@ -10,7 +10,7 @@ from utils.decorators import login_decorator
 # Create your views here.
 
 def course_list(request):
-    all_courses = CourseInfo.objects.all()
+    all_courses = CourseInfo.objects.all().order_by('id')
     recommend_courses = all_courses.order_by('-add_time')[:3]
 
     # 全局搜索功能的过滤

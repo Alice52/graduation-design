@@ -7,8 +7,8 @@ from django.db.models import Q
 
 # Create your views here.
 def org_list(request):
-    all_orgs = OrgInfo.objects.all()
-    all_citys = CityInfo.objects.all()
+    all_orgs = OrgInfo.objects.all().order_by('id')
+    all_citys = CityInfo.objects.all().order_by('id')
 
     # 全局搜索功能的过滤
     keyword = request.GET.get('keyword', '')
@@ -136,7 +136,7 @@ def org_detail_teacher(request, org_id):
 
 
 def teacher_list(request):
-    all_teachers = TeacherInfo.objects.all()
+    all_teachers = TeacherInfo.objects.all().order_by('id')
     sort_teachers = all_teachers.order_by('-love_num')[:2]
 
     # 全局搜索功能的过滤

@@ -1,3 +1,20 @@
+/*html {*/
+    /*height: 100%;*/
+    /*width: auto;*/
+/*}*/
+
+/*body {*/
+    /*height: 100%;*/
+    /*width: auto;*/
+
+    /*overflow: auto;*/
+/*}*/
+
+/*section[class=content] {*/
+    /*height: 70%;*/
+    /*width: auto;*/
+/*}*/
+
 body {
     overflow: auto;
 }
@@ -68,6 +85,10 @@ table.linehei50 td, table.linehei50 th {
 .errorpage .wp {
     width: 1000px;
 }
+/*footer {*/
+    /*width: 100%;*/
+    /*position: fixed;*/
+/*}*/
 .footer .code img{
 	width: 100px;
 	height: 100px;

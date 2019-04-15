@@ -10,8 +10,8 @@ class BaseXadminSetting(object):
 
 
 class CommXadminSetting(object):
-    site_title = '谷粒教育后台管理系统'
-    site_footer = '尚硅谷it教育'
+    site_title = 'zc在线教育后台管理系统'
+    site_footer = '617室 ZC在线学习平台'
     menu_style = 'accordion'
 
 
