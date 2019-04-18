@@ -74,7 +74,7 @@
 					</div>
 					<div class="pic">
                         <a href="{% url 'orgs:org_detail' course.orginfo.id %}">
-                            <img width="150" height="80" src="{{ MEDIA_URL }}{{ course.orginfo.image }}"/>
+                            <img width="130" height="130" style="margin-left: 10px" src="{{ MEDIA_URL }}{{ course.orginfo.image }}"/>
                         </a>
                     </div>
 					<a href="{% url 'orgs:org_detail' course.orginfo.id %}">
@@ -127,7 +127,7 @@
                         <dl>
                             <dt>
                                 <a target="_blank" href="{% url 'courses:course_detail' relate.id %}">
-                                    <img width="240" height="220" class="scrollLoading" src="{{ MEDIA_URL }}{{ relate.image }}"/>
+                                    <img width="170" height="130" class="scrollLoading" src="{{ MEDIA_URL }}{{ relate.image }}"/>
                                 </a>
                             </dt>
                             <dd>

@@ -124,7 +124,7 @@
                                 <li {% if forloop.counter|divisibleby:"5" %}class="five"{% endif %}>
                                     <a href="{% url 'orgs:org_detail' org.id %}">
                                         <div class="company">
-                                            <img width="184" height="100" src="{{ MEDIA_URL }}{{ org.image }}"/>
+                                            <img width="120" height="96" style="margin-top: 2px" src="{{ MEDIA_URL }}{{ org.image }}"/>
                                             <div class="score">
                                                 <div class="circle">
                                                     <h2>全国知名</h2>
