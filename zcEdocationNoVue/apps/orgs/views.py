@@ -29,7 +29,7 @@ def org_list(request):
     if sort:
         all_orgs = all_orgs.order_by('-' + sort)
 
-    sort_orgs = all_orgs.order_by('-love_num')[:3]
+    sort_orgs = all_orgs.order_by('-love_num')[:5]
     # pagination
     page_num = request.GET.get('pagenum', '')
     paginator = Paginator(all_orgs, 3)
@@ -137,7 +137,7 @@ def org_detail_teacher(request, org_id):
 
 def teacher_list(request):
     all_teachers = TeacherInfo.objects.all().order_by('id')
-    sort_teachers = all_teachers.order_by('-love_num')[:2]
+    sort_teachers = all_teachers.order_by('-love_num')[:4]
 
     # 全局搜索功能的过滤
     keyword = request.GET.get('keyword', '')
@@ -149,7 +149,7 @@ def teacher_list(request):
         all_teachers = all_teachers.order_by('-' + sort)
 
     pagenum = request.GET.get('pagenum', '')
-    pa = Paginator(all_teachers, 2)
+    pa = Paginator(all_teachers, 4)
     try:
         pages = pa.page(pagenum)
     except PageNotAnInteger:

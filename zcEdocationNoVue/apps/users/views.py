@@ -247,6 +247,7 @@ def user_register(request):
                 a.username = email
                 a.set_password(password)
                 a.email = email
+                a.image = 'user/default.jpg'
                 a.save()
                 send_email_code(email, 1)
                 return render(request, 'users/register.html', {

@@ -5,6 +5,7 @@
 <head>
 	<meta charset="UTF-8">
     <meta name="renderer" content="webkit">
+    <link rel="shortcut icon"  href="{% static 'images/favaor.png' %}" >
     <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1" >
 	<title>617室zc在线学习平台登录</title>
 	<link rel="stylesheet" type="text/css" href="{% static 'css/reset.css' %}">
@@ -54,7 +55,7 @@
                      </div>
                      <input class="btn btn-green" id="jsLoginBtn" type="submit" value="立即登录 > " />
                 </form>
-                <p class="form-p">没有谷粒教育在线网帐号？<a href="register.html">[立即注册]</a></p>
+                <p class="form-p">没有617室 ZC在线学习平台？<a href="{% url 'users:user_register' %}">[立即注册]</a></p>
             </div>
         </div>
     </div>

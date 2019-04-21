@@ -186,7 +186,7 @@ SECRET_KEY = 'g2fz3vovi1x^i_(33d!_^hz!)=pe#%z9qzb=v2%i4hfloc5^z^'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['127.0.0.1', '101.132.45.28', 'www.zc-education.top', 'zc-education.top']
 
 # Application definition
 

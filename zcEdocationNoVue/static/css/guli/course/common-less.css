@@ -1026,3 +1026,10 @@ a.from:hover {
     margin: 15px 0 3px;
     width: auto;
 }
+
+.vedioright {
+    padding-top: 14px;
+    margin-right: -320px;
+    width: 240px;
+    float: right;
+}

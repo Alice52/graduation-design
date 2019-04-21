@@ -106,7 +106,7 @@ def course_video(request, course_id):
         usercourse_list = UserCourse.objects.filter(study_man__in=user_list).exclude(study_course=course)
 
         # 第四步：从获取到的用户课程列表当中，拿到我们需要的其它课程
-        course_list = list(set([usercourse.study_course for usercourse in usercourse_list]))
+        course_list = list(set([usercourse.study_course for usercourse in usercourse_list]))[:6]
 
         return render(request, 'courses/course-video.html', {
             'course': course,
