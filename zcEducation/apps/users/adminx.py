@@ -10,24 +10,19 @@ class BaseXadminSetting(object):
 
 
 class CommXadminSetting(object):
-    site_title = 'zc在线学习后台管理系统'
-    site_footer = 'zc教育617'
+    site_title = 'zc在线教育后台管理系统'
+    site_footer = '617室 ZC在线学习平台'
     menu_style = 'accordion'
 
 
 class BannerInfoXadmin(object):
-    # 显示内容
     list_display = ['image', 'url', 'add_time']
-    # 搜索字段
     search_fields = ['image', 'url']
-    # 筛选字段
-    list_filter = ['image', 'url', 'add_time']
+    list_filter = ['image', 'url']
 
 
 class EmailVerifyCodeXadmin(object):
     list_display = ['code', 'email', 'send_type', 'add_time']
-    search_fields = ['code', 'email', 'send_type']
-    list_filter = ['code', 'email', 'send_type', 'add_time']
 
 
 xadmin.site.register(BannerInfo, BannerInfoXadmin)

@@ -1,6 +1,6 @@
 # frontend
 
-> the frontend of zcEducation
+> A Vue.js project
 
 ## Build Setup
 

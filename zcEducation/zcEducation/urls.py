@@ -20,9 +20,12 @@ import xadmin
 
 urlpatterns = [
     url(r'^xadmin/', xadmin.site.urls),
+    # include 分发
+    url(r'^captcha/', include('captcha.urls')),
+    url(r'^uedit/', include('DjangoUeditor.urls')),
     url(r'^users/', include(('users.urls', 'users'), namespace='users')),
     url(r'^orgs/', include(('orgs.urls', 'orgs'), namespace='orgs')),
     url(r'^operations/', include(('operations.urls', 'operations'), namespace='operations')),
     url(r'^courses/', include(('courses.urls', 'courses'), namespace='courses')),
-    url(r'^$',index, name = 'index')
+    url(r'^$', index, name='index'),
 ]
