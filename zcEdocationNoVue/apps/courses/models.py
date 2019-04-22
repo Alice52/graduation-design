@@ -49,7 +49,7 @@ class VideoInfo(models.Model):
     name = models.CharField(max_length=50, verbose_name="视频名称")
     study_time = models.IntegerField(default=0, verbose_name="视频时长")
     # url = models.URLField(default='http://baidu.com', verbose_name="视频链接", max_length=200)
-    url = models.FileField(upload_to='vedio/', verbose_name="视频链接")
+    url = models.FileField(upload_to='vedio/', verbose_name="视频资源")
     lessoninfo = models.ForeignKey(LessonInfo, verbose_name="所属章节", on_delete=models.CASCADE)
     add_time = models.DateTimeField(default=datetime.now, verbose_name="添加时间")
 
