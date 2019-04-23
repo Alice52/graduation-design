@@ -93,7 +93,8 @@ def user_login(request):
     if request.method == 'GET':
         return render(request, 'users/login.html')
     else:
-        userInfo = json.loads(request.body)
+        # userInfo1 = json.loads(request.POST)
+        userInfo = json.loads(request.body.decode('utf-8'))
         username = userInfo.get('username')
         password = userInfo.get('password')
         patern = re.compile(r'^\w+@(\w+\.)+(com|cn|net)$')

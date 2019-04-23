@@ -106,7 +106,7 @@ export default {
           let res = respanse.data;
           if (res.errMsg == "ok") {
             let url = res.url;
-            window.location.href = "http://www.zc-education.top:8000/";
+            window.location.href = "http://www.zc-education.top:8000"+ url;
           } else {
             this.errMsg = res.errMsg;
           }
