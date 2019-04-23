@@ -6,11 +6,15 @@ from django.db.models import Q
 from django.contrib.auth import authenticate, logout, login
 from utils.sendEmail import send_email_code
 from django.http import JsonResponse
+import json
+import re
+from django.http import QueryDict
 from datetime import datetime
 from operations.models import UserLove, UserMessage
 from orgs.models import OrgInfo, TeacherInfo
 from courses.models import CourseInfo
 from django.views.generic import View
+from django.views.decorators.csrf import csrf_exempt
 from zcEducation.settings import MEDIA_URL, BASE_DIR
 import os
 import re
@@ -18,6 +22,20 @@ import re
 from django.views.decorators.cache import cache_page
 
 from redis import StrictRedis
+
+
+# class IndexView(View):
+#     def get(self,request):
+#         all_banners = BannerInfo.objects.all().order_by('-add_time')[:5]
+#         banner_courses = CourseInfo.objects.filter(is_banner=True)[:3]
+#         all_courses = CourseInfo.objects.filter(is_banner=False)[:6]
+#         all_orgs = OrgInfo.objects.all()[:15]
+#         return render(request, 'index.html', {
+#             'all_banners': all_banners,
+#             'banner_courses': banner_courses,
+#             'all_courses': all_courses,
+#             'all_orgs': all_orgs
+#         })
 
 
 # @cache_page(15 * 60)
@@ -70,42 +88,78 @@ def user_register(request):
             })
 
 
-class UserLoginView(View):
-    def get(self, request):
+@csrf_exempt
+def user_login(request):
+    if request.method == 'GET':
         return render(request, 'users/login.html')
+    else:
+        userInfo = json.loads(request.body)
+        username = userInfo.get('username')
+        password = userInfo.get('password')
+        patern = re.compile(r'^\w+@(\w+\.)+(com|cn|net)$')
 
-    def post(self, request):
-        user_login_form = UserLoginForm(request.POST)
-        if user_login_form.is_valid():
-            username = user_login_form.cleaned_data['username']
-            password = user_login_form.cleaned_data['password']
-
+        if (patern.search(username)) and (len(password) > 3) and (len(password) < 15):
             user = authenticate(username=username, password=password)
             if user:
                 if user.is_start:
                     login(request, user)
-                    # 当登陆成功的时候,给加入一条消息
-                    a = UserMessage()
-                    a.message_man = user.id
-                    a.message_content = '欢迎登陆'
-                    a.save()
                     url = request.COOKIES.get('url', '/')
-                    ret = redirect(url)
-                    ret.delete_cookie('url')
-                    return ret
+                    # ret = redirect(url)
+                    # ret.delete_cookie('url')
+                    return JsonResponse({
+                        'errMsg': 'ok',
+                        'url': url
+                    })
                 else:
-                    return render(request, 'users/login.html', {
-                        'msg': '请去邮箱激活账号'
+                    return JsonResponse({
+                        'errMsg': '请去邮箱激活账号'
                     })
             else:
-                return render(request, 'users/login.html', {
-                    'msg': '邮箱或者密码有误'
+                return JsonResponse({
+                    'errMsg': '邮箱或密码不对'
                 })
         else:
-            return render(request, 'users/login.html', {
-                'user_login_form': user_login_form,
-                'msg': '邮箱或者密码有误'
+            return JsonResponse({
+                'errMsg': '请出入正确格式的邮箱'
             })
+
+
+# class UserLoginView(View):
+#     def get(self, request):
+#         return render(request, 'users/login.html')
+#
+#     def post(self, request):
+#         user_login_form = UserLoginForm(request.POST)
+#         if user_login_form.is_valid():
+#             username = user_login_form.cleaned_data['username']
+#             password = user_login_form.cleaned_data['password']
+#
+#             user = authenticate(username=username, password=password)
+#             if user:
+#                 if user.is_start:
+#                     login(request, user)
+#                     # 当登陆成功的时候,给加入一条消息
+#                     a = UserMessage()
+#                     a.message_man = user.id
+#                     a.message_content = '欢迎登陆'
+#                     a.save()
+#                     url = request.COOKIES.get('url', '/')
+#                     ret = redirect(url)
+#                     ret.delete_cookie('url')
+#                     return ret
+#                 else:
+#                     return render(request, 'users/login.html', {
+#                         'msg': '请去邮箱激活账号'
+#                     })
+#             else:
+#                 return render(request, 'users/login.html', {
+#                     'msg': '邮箱或者密码有误'
+#                 })
+#         else:
+#             return render(request, 'users/login.html', {
+#                 'user_login_form': user_login_form,
+#                 'msg': '邮箱或者密码有误'
+#             })
 
 
 def user_logout(request):
@@ -230,12 +284,12 @@ def user_info(request):
 #     else:
 #         return JsonResponse({'status': 'fail'})
 def user_changeimage(request):
-    #instance  指明实例是什么，做修改的时候，我们需要知道是给哪个对象实例进行修改
-    #如果不指明，那么就会被当作创建对象去执行，而我们只有一个图片，就一定会报错。
-    user_changeimage_form = UserChangeImageForm(request.POST,request.FILES,instance=request.user)
+    # instance  指明实例是什么，做修改的时候，我们需要知道是给哪个对象实例进行修改
+    # 如果不指明，那么就会被当作创建对象去执行，而我们只有一个图片，就一定会报错。
+    user_changeimage_form = UserChangeImageForm(request.POST, request.FILES, instance=request.user)
     if user_changeimage_form.is_valid():
         user_changeimage_form.save(commit=True)
-        return JsonResponse({'status':'ok'})
+        return JsonResponse({'status': 'ok'})
     else:
         return JsonResponse({'status': 'fail'})
 

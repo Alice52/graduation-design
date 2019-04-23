@@ -1,179 +1,3 @@
-# from django.shortcuts import render, redirect, reverse, HttpResponse
-#
-# from .froms import UserRegisterForm, UserLoginForm, UserForgetForm, UserResetForm
-# from .models import UserProfile, EmailVerifyCode
-# from django.db.models import Q
-# from utils.sendEmail import send_email_code
-# from django.contrib.auth import authenticate, logout, login
-#
-#
-# # Create your views here.
-# def index(request):
-#     return render(request, 'index.html')
-#
-#
-# def user_register(request):
-#     if request.method == 'GET':
-#         user_register_form = UserRegisterForm()
-#         return render(request, 'users/register.html', {
-#             'user_register_form': user_register_form
-#         })
-#     else:
-#         user_register_form = UserRegisterForm(request.POST)
-#         if user_register_form.is_valid():
-#             email = user_register_form.cleaned_data['email']
-#             password = user_register_form.cleaned_data['password']
-#
-#             user_list = UserProfile.objects.filter(Q(username=email) | Q(email=email))
-#             if user_list:
-#                 return render(request, 'users/register.html', {
-#                     'msg': '用户已经注册'
-#                 })
-#             else:
-#                 user = UserProfile()
-#                 user.username = email
-#                 user.set_password(password)
-#                 user.email = email
-#                 user.save()
-#                 # send email
-#                 send_email_code(email, 1)
-#                 return render(request, 'users/register.html', {
-#                     'msg': '请去邮箱激活账号'
-#                 })
-#         else:
-#             return render(request, 'users/register.html', {
-#                 'user_register_form': user_register_form
-#             })
-#
-#
-# def user_login(request):
-#     if request.method == 'GET':
-#         return render(request, 'users/login.html')
-#     else:
-#         user_login_from = UserLoginForm(request.POST)
-#         if user_login_from.is_valid():
-#             email = user_login_from.cleaned_data['email']
-#             password = user_login_from.cleaned_data['password']
-#
-#             user = authenticate(username=email, password=password)
-#             if user:
-#                 if user.is_start:
-#                     login(request, user)
-#                     return redirect(reverse('index'))
-#                 else:
-#                     return render(request, 'users/login.html', {
-#                         'msg': '请去邮箱激活账号'
-#                     })
-#             else:
-#                 return render(request, 'users/login.html', {
-#                     'msg': '邮箱或密码不对'
-#                 })
-#         else:
-#             return render(request, 'users/login.html', {
-#                 'user_login_from': user_login_from
-#             })
-#
-#
-# def user_logout(request):
-#     logout(request)
-#     return redirect(reverse('index'))
-#
-#
-# def user_active(request, code):
-#     if code:
-#         email_ver_list = EmailVerifyCode.objects.filter(code=code)
-#         if email_ver_list:
-#             email_ver = email_ver_list[0]
-#             email = email_ver.email
-#             user_list = UserProfile.objects.filter(email=email)
-#             if user_list:
-#                 user = user_list[0]
-#                 user.is_start = True
-#                 user.save()
-#                 return redirect(reverse('users:user_login'))
-#             else:
-#                 pass
-#         else:
-#             pass
-#     else:
-#         pass
-#
-#
-# def user_forget(request):
-#     if request.method == 'GET':
-#         user_forget_from = UserForgetForm()
-#         return render(request, 'users/forgetpwd.html', {
-#             'user_forget_from': user_forget_from
-#         })
-#     else:
-#         user_forget_from = UserForgetForm(request.POST)
-#         if user_forget_from.is_valid():
-#             email = user_forget_from.cleaned_data['email']
-#             user_list = UserProfile.objects.filter(email=email)
-#             if user_list:
-#                 user = user_list[0]
-#                 send_email_code(email, 2)
-#                 return render(request, 'users/forgetpwd.html', {
-#                     'msg': '请尽快区邮箱重置密码'
-#                 })
-#             else:
-#                 return render(request, 'users/forgetpwd.html', {
-#                     'msg': '用户不存在'
-#                 })
-#         else:
-#             return render(request, 'users/forgetpwd.html', {
-#                 'user_forget_from': user_forget_from
-#             })
-#
-#
-# def user_reset(request, code):
-#     if code:
-#         if request.method == 'GET':
-#             return render(request, 'users/password_reset.html', {
-#                 'code': code
-#             })
-#         else:
-#             user_reset_from = UserResetForm(request.POST)
-#             if user_reset_from.is_valid():
-#                 password = user_reset_from.cleaned_data['password']
-#                 password1 = user_reset_from.cleaned_data['password1']
-#                 if password == password1:
-#                     email_ver_list = EmailVerifyCode.objects.filter(code=code)
-#                     if email_ver_list:
-#                         email = email_ver_list[0].email
-#                         if email:
-#                             user_list = UserProfile.objects.filter(email=email)
-#                             if user_list:
-#                                 user = user_list[0]
-#                                 user.set_password(password)
-#                                 user.save()
-#                                 return redirect(reverse('users:user_login'))
-#                             else:
-#                                 return render(request, 'users/password_reset.html', {
-#                                     'msg': '用户不存在',
-#                                     'code': code
-#                                 })
-#                         else:
-#                             return render(request, 'users/password_reset.html', {
-#                                 'msg': '用户不存在',
-#                                 'code': code
-#                             })
-#                     else:
-#                         return render(request, 'users/password_reset.html', {
-#                             'msg': '用户不存在',
-#                             'code': code
-#                         })
-#                 else:
-#                     return render(request, 'users/password_reset.html', {
-#                         'msg': '两次输入的密码不同',
-#                         'code': code
-#                     })
-#             else:
-#                 return render(request, 'users/password_reset.html', {
-#                     'user_reset_from': user_reset_from,
-#                     'code': code
-#                 })
-
 from django.shortcuts import render, redirect, reverse, HttpResponse
 from .forms import UserRegisterForm, UserLoginForm, UserForgetForm, UserResetForm, \
     UserChangeEmailForm, UserChangeInfoForm, UserResetEmailForm, UserChangeImageForm
@@ -187,11 +11,6 @@ from operations.models import UserLove, UserMessage
 from orgs.models import OrgInfo, TeacherInfo
 from courses.models import CourseInfo
 from django.views.generic import View
-from zcEdocationNoVue.settings import MEDIA_URL, BASE_DIR
-import os
-import re
-# Create your views here.
-from django.views.decorators.cache import cache_page
 
 from redis import StrictRedis
 
@@ -420,12 +239,12 @@ def user_info(request):
 #     else:
 #         return JsonResponse({'status': 'fail'})
 def user_changeimage(request):
-    #instance  指明实例是什么，做修改的时候，我们需要知道是给哪个对象实例进行修改
-    #如果不指明，那么就会被当作创建对象去执行，而我们只有一个图片，就一定会报错。
-    user_changeimage_form = UserChangeImageForm(request.POST,request.FILES,instance=request.user)
+    # instance  指明实例是什么，做修改的时候，我们需要知道是给哪个对象实例进行修改
+    # 如果不指明，那么就会被当作创建对象去执行，而我们只有一个图片，就一定会报错。
+    user_changeimage_form = UserChangeImageForm(request.POST, request.FILES, instance=request.user)
     if user_changeimage_form.is_valid():
         user_changeimage_form.save(commit=True)
-        return JsonResponse({'status':'ok'})
+        return JsonResponse({'status': 'ok'})
     else:
         return JsonResponse({'status': 'fail'})
 

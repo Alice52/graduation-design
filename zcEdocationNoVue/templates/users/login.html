@@ -33,7 +33,8 @@
             </div>
             <div class="fl form-box">
                 <h2>帐号登录</h2>
-                <form action="{% url 'users:user_login' %}" method="post" autocomplete="off">{% csrf_token %}
+                <form action="{% url 'users:user_login' %}" method="post" autocomplete="off">
+                    {% csrf_token %}
                     <div class="form-group marb20 ">
                         <label>邮    箱</label>
                         <input name="username" id="account_l" type="text" placeholder="手机号/邮箱" />
