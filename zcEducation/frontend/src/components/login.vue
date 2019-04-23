@@ -56,13 +56,13 @@
               {% endfor %}-->
             </div>
             <div class="auto-box marb38">
-              <a class="fr" href="http://www.zc-education.top:8000/users/user_forget">忘记密码？</a>
+              <a class="fr" href="http://127.0.0.1:8000/users/user_forget">忘记密码？</a>
             </div>
             <input class="btn btn-green btlogin" id="jsLoginBtn" @click="login" value="立即登录 > ">
           </div>
           <p class="form-p">
             没有617室 ZC在线学习平台？
-            <a href="http://www.zc-education.top:8000/users/user_register">[立即注册]</a>
+            <a href="http://127.0.0.1:8000/users/user_register">[立即注册]</a>
           </p>
         </div>
       </div>
@@ -95,7 +95,7 @@ export default {
       };
 
       axios({
-        url: "http://www.zc-education.top:8000/users/user_login/",
+        url: "http://127.0.0.1:8000/users/user_login/",
         method: "POST",
         data: userInfo,
         headers: {
@@ -106,7 +106,7 @@ export default {
           let res = respanse.data;
           if (res.errMsg == "ok") {
             let url = res.url;
-            window.location.href = "http://www.zc-education.top:8000"+ url;
+            window.location.href = "http://127.0.0.1:8000" + url;
           } else {
             this.errMsg = res.errMsg;
           }
