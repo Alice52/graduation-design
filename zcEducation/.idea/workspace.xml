@@ -2,449 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="96dd5053-9309-4961-9cff-4ad65a12edc9" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/../vim.exe.stackdump" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../zcEdocationNoVue/apps/users/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/../zcEdocationNoVue/apps/users/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../zcEdocationNoVue/templates/users/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/../zcEdocationNoVue/templates/users/login.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/@static/css/animate.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/@static/css/aui.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/@static/css/aui_iconfont.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/@static/css/login.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/@static/css/lq.datetimepick.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/@static/css/mooc.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/@static/css/reset.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/@static/css/style.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/@static/css/zc-education/base.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/@static/css/zc-education/common-less.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/@static/css/zc-education/course/common-less.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/@static/css/zc-education/course/course-comment.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/@static/css/zc-education/course/learn-less.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/@static/images/about_nav_bg.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/@static/images/arrow.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/@static/images/arrow_g.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/@static/images/authentication.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/@static/images/banner1.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/@static/images/banner2.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/@static/images/banner3.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/@static/images/banner4.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/@static/images/banner5.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/@static/images/banner_icon1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/@static/images/banner_icon2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/@static/images/banner_icon3.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/@static/images/banner_icon4.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/@static/images/bgblack.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/@static/images/billbg.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/@static/images/billbox.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/@static/images/billboxactive.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/@static/images/billcheck.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/@static/images/billcheckg.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/@static/images/btn1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/@static/images/btn2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/@static/images/btn3.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/@static/images/btn4.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/@static/images/check.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/@static/images/check2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/@static/images/check3.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/@static/images/check4.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/@static/images/check_alt.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/@static/images/checkbox.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/@static/images/checked.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/@static/images/css.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/@static/images/delete.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/@static/images/diary-edit.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/@static/images/dig_close.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/@static/images/down.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/@static/images/drop_plus.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/@static/images/drop_plus_g.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/@static/images/error-img.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/@static/images/favaor.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/@static/images/feature5.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/@static/images/fold.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/@static/images/g_star.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/@static/images/goback.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/@static/images/gold.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/@static/images/h_star.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/@static/images/header_middle.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/@static/images/help_index_pic.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/@static/images/homepage.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/@static/images/ht-top.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/@static/images/html.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/@static/images/icon-diary-jl.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/@static/images/icon-diary-my.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/@static/images/icon-diary-user.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/@static/images/icon-release-active.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/@static/images/icon-release-on.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/@static/images/icon-release-over.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/@static/images/jQuery.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/@static/images/js基础.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/@static/images/js高级.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/@static/images/laba.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/@static/images/linux.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/@static/images/list_time.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/@static/images/logo1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/@static/images/logo1.png.bak" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/@static/images/mask.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/@static/images/module5_1.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/@static/images/module6_1.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/@static/images/module6bg.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/@static/images/mongoDB.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/@static/images/mysql.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/@static/images/nav_arrow.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/@static/images/nav_hot.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/@static/images/oracle.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/@static/images/org.png.bak" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/@static/images/path2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/@static/images/path3.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/@static/images/path4.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/@static/images/path5.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/@static/images/path6.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/@static/images/pathbg.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/@static/images/pathbg2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/@static/images/pay1.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/@static/images/pay2.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/@static/images/pay3.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/@static/images/pay4.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/@static/images/paypic1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/@static/images/paypic2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/@static/images/pen.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/@static/images/pic1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/@static/images/pic10.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/@static/images/pic11.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/@static/images/pic12.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/@static/images/pic13.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/@static/images/pic1_1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/@static/images/pic2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/@static/images/pic3.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/@static/images/pic4.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/@static/images/pic5.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/@static/images/pic6.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/@static/images/pic7.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/@static/images/pic8.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/@static/images/pic9.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/@static/images/pixel.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/@static/images/plus.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/@static/images/pop-tips-info-arr.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/@static/images/r_star.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/@static/images/rankgold.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/@static/images/rankgreen.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/@static/images/release1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/@static/images/release2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/@static/images/release3.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/@static/images/release4.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/@static/images/release5.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/@static/images/release6.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/@static/images/release7.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/@static/images/release8.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/@static/images/right.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/@static/images/rightform1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/@static/images/rightform2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/@static/images/rightform3.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/@static/images/rolling.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/@static/images/scores.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/@static/images/search_btn.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/@static/images/select-arr-default.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/@static/images/select_arrow.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/@static/images/select_arrow2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/@static/images/send.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/@static/images/share_c1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/@static/images/share_c1_g.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/@static/images/share_c2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/@static/images/share_c3.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/@static/images/share_c4.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/@static/images/share_c5.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/@static/images/share_c6.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/@static/images/share_c7.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/@static/images/share_c8.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/@static/images/share_c9.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/@static/images/side1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/@static/images/side1_1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/@static/images/side2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/@static/images/side2_1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/@static/images/side3.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/@static/images/side3_1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/@static/images/side4.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/@static/images/side4_1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/@static/images/slide_l.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/@static/images/slide_l_1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/@static/images/slide_r.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/@static/images/slide_r_1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/@static/images/star-btn-hover.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/@static/images/star-btn.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/@static/images/star-hover.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/@static/images/star.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/@static/images/tab-jt.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/@static/images/tab.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/@static/images/tel.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/@static/images/tell.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/@static/images/time.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/@static/images/top_down.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/@static/images/touxiang.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/@static/images/unfold.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/@static/images/up.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/@static/images/upload.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/@static/images/weixi_icon2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/@static/images/weixi_image.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/@static/images/weixi_sm.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/@static/images/x_alt.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/@static/img/background.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/@static/img/cancel-off-big.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/@static/img/cancel-on-big.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/@static/img/coffee.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/@static/img/face-a-off.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/@static/img/face-a.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/@static/img/face-b-off.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/@static/img/face-b.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/@static/img/face-c-off.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/@static/img/face-c.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/@static/img/face-d-off.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/@static/img/face-d.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/@static/img/face-off.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/@static/img/medal-off.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/@static/img/medal-on.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/@static/img/star-half-big.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/@static/img/star-off-big.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/@static/img/star-on-big.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/@static/js/AdrInputPopDiv.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/@static/js/area.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/@static/js/autocomplete-init.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/@static/js/bootstrap.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/@static/js/comment.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/@static/js/deco-comment.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/@static/js/deco-common.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/@static/js/deco-user.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/@static/js/fastclick.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/@static/js/fliplightbox.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/@static/js/fold.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/@static/js/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/@static/js/jQuery.artTxtCount.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/@static/js/jcarousel.connected-carousels.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/@static/js/jquery-migrate-1.2.1.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/@static/js/jquery-powerFloat-min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/@static/js/jquery-xmenu.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/@static/js/jquery.autocomplete.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/@static/js/jquery.cookie.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/@static/js/jquery.formset.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/@static/js/jquery.imagezoom.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/@static/js/jquery.jcarousel.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/@static/js/jquery.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/@static/js/jquery.uploadify.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/@static/js/login.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/@static/js/lq.datetimepick.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/@static/js/plugins/datePicker/mobiscroll.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/@static/js/plugins/datePicker/mobiscroll.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/@static/js/plugins/jquery.flexslider-min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/@static/js/plugins/jquery.raty.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/@static/js/plugins/jquery.scrollLoading.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/@static/js/plugins/jquery.timer.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/@static/js/plugins/jquery.upload.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/@static/js/plugins/laydate/laydate.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/@static/js/plugins/laydate/need/laydate.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/@static/js/plugins/laydate/skins/default/icon.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/@static/js/plugins/laydate/skins/default/laydate.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/@static/js/plugins/layer/extend/layer.ext.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/@static/js/plugins/layer/layer.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/@static/js/plugins/layer/skin/default/icon-ext.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/@static/js/plugins/layer/skin/default/icon.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/@static/js/plugins/layer/skin/default/loading-0.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/@static/js/plugins/layer/skin/default/loading-1.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/@static/js/plugins/layer/skin/default/loading-2.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/@static/js/plugins/layer/skin/layer.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/@static/js/plugins/layer/skin/layer.ext.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/@static/js/plugins/queryCity/css/cityLayout.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/@static/js/plugins/queryCity/images/Thumbs.db" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/@static/js/plugins/queryCity/images/bg_mc_0113_1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/@static/js/plugins/queryCity/images/bg_mc_0113_2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/@static/js/plugins/queryCity/images/bg_mc_0113_3.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/@static/js/plugins/queryCity/images/bg_mc_0113_4.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/@static/js/plugins/queryCity/images/bg_mc_0130_1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/@static/js/plugins/queryCity/images/bg_mc_0130_2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/@static/js/plugins/queryCity/images/ts-indexcity.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/@static/js/plugins/queryCity/js/public.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/@static/js/plugins/queryCity/js/public2.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/@static/js/plugins/queryCity/js/queryAllAreas.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/@static/js/plugins/queryCity/js/queryAllProvinces.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/@static/js/plugins/queryCity/js/queryCities.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/@static/js/plugins/upload.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/@static/js/select.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/@static/js/selectUi.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/@static/js/unslider.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/@static/js/validate.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/@static/js/validateDialog.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/@static/js/wechat.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/@static/media-bak/140724c11606263861.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/@static/media-bak/GitGitHub.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/@static/media-bak/GitGitHub_iHNsWWe.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/@static/media-bak/ajax.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/@static/media-bak/cloud.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/@static/media-bak/flutter.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/@static/media-bak/git.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/@static/media-bak/idea.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/@static/media-bak/java.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/@static/media-bak/java8.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/@static/media-bak/java9.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/@static/media-bak/javaweb.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/@static/media-bak/jquery.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/@static/media-bak/js.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/@static/media-bak/juc.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/@static/media-bak/linux.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/@static/media-bak/mybatisplus.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/@static/media-bak/mysql-high.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/@static/media-bak/mysql-pl.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/@static/media-bak/mysql.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/@static/media-bak/nio.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/@static/media-bak/org/上海交通大学.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/@static/media-bak/org/东南大学.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/@static/media-bak/org/千峰教育.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/@static/media-bak/org/南京农业大学.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/@static/media-bak/org/南京大学.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/@static/media-bak/org/南华大学.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/@static/media-bak/org/南通大学.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/@static/media-bak/org/厦门大学.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/@static/media-bak/org/尚学堂.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/@static/media-bak/org/慕课网.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/@static/media-bak/org/极客学院.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/@static/media-bak/org/腾讯jpg.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/@static/media-bak/org/阿里巴巴.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/@static/media-bak/org/麦子学院.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/@static/media-bak/org/黑马程序员.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/@static/media-bak/python.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/@static/media-bak/react.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/@static/media-bak/redis.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/@static/media-bak/springboot.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/@static/media-bak/springcloud.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/@static/media-bak/springmvc.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/@static/media-bak/srping.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/@static/media-bak/teacher/java.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/@static/media-bak/teacher/mysql.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/@static/media-bak/teacher/佐仓绫音.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/@static/media-bak/teacher/内田真礼.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/@static/media-bak/teacher/刘苍松.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/@static/media-bak/teacher/张立猛.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/@static/media-bak/teacher/方立勋.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/@static/media-bak/teacher/毕向东.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/@static/media-bak/teacher/水濑祈.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/@static/media-bak/teacher/池泽彩野花.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/@static/media-bak/teacher/神谷浩史.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/@static/media-bak/teacher/种田梨沙.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/@static/media-bak/teacher/许式伟.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/@static/media-bak/teacher/赵洁琼.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/@static/media-bak/teacher/金恩荣.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/@static/media-bak/teacher/韩顺平.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/@static/media/banner/banner1.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/@static/media/banner/banner2.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/@static/media/banner/banner4.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/@static/media/banner/banner5.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/@static/media/banner/感言.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/@static/media/course/140724c11606263861.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/@static/media/course/15130518dbce180821.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/@static/media/course/GitGitHub.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/@static/media/course/GitHub.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/@static/media/course/HTMLCSS基础.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/@static/media/course/JavaWeb.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/@static/media/course/MySQL核心.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/@static/media/course/MySQL高级.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/@static/media/course/ajax.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/@static/media/course/git.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/@static/media/course/idea.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/@static/media/course/jQuery.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/@static/media/course/jQuery_K49AB1J.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/@static/media/course/java.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/@static/media/course/java8.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/@static/media/course/javaweb_Cwjnhnb.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/@static/media/course/js.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/@static/media/course/juc.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/@static/media/course/linux.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/@static/media/course/mybatisplus.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/@static/media/course/nio.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/@static/media/course/python.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/@static/media/course/react.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/@static/media/course/redis.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/@static/media/course/redis_iQcbOMX.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/@static/media/course/springboot.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/@static/media/course/springcloud.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/@static/media/course/springmvc.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/@static/media/course/srping.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/@static/media/org/上海交通大学.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/@static/media/org/东南大学_EWWjLI8.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/@static/media/org/千峰教育.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/@static/media/org/南京农业大学.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/@static/media/org/南京大学.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/@static/media/org/南华大学.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/@static/media/org/南华大学_ZgSrEOq.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/@static/media/org/南通大学.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/@static/media/org/厦门大学.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/@static/media/org/尚学堂.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/@static/media/org/慕课网.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/@static/media/org/极客学院.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/@static/media/org/腾讯jpg.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/@static/media/org/阿里巴巴.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/@static/media/org/麦子学院.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/@static/media/org/黑马程序员.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/@static/media/source/谷粒教育.docx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/@static/media/teacher/17.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/@static/media/teacher/17_QaSaqTi.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/@static/media/teacher/9.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/@static/media/teacher/java.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/@static/media/teacher/佐仓绫音.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/@static/media/teacher/内田真礼.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/@static/media/teacher/刘苍松.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/@static/media/teacher/张立猛.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/@static/media/teacher/方立勋.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/@static/media/teacher/毕向东.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/@static/media/teacher/水濑祈.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/@static/media/teacher/池泽彩野花.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/@static/media/teacher/神谷浩史.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/@static/media/teacher/种田梨沙.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/@static/media/teacher/许式伟.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/@static/media/teacher/赵洁琼.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/@static/media/teacher/金恩荣.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/@static/media/teacher/韩顺平.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/@static/media/ueditor/images/3_20180930142508_881.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/@static/media/user/15.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/@static/media/user/17_QaSaqTi.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/@static/media/user/9.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/@static/media/user/QQ图片20190331123245.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/@static/media/user/default.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/@static/media/user/git.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/@static/media/vedio/大鱼海棠.mp4" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/@templates/base.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/@templates/courses/course-comment.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/@templates/courses/course-detail.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/@templates/courses/course-list.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/@templates/courses/course-video.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/@templates/handler_404.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/@templates/handler_500.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/@templates/index-back.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/@templates/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/@templates/orgs/org-detail-base.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/@templates/orgs/org-detail-course.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/@templates/orgs/org-detail-desc.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/@templates/orgs/org-detail-homepage.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/@templates/orgs/org-detail-teachers.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/@templates/orgs/org-list.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/@templates/orgs/teacher-detail.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/@templates/orgs/teachers-list.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/@templates/users/forgetpwd.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/@templates/users/login.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/@templates/users/password_reset.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/@templates/users/register.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/@templates/users/usercenter-base.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/@templates/users/usercenter-fav-course.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/@templates/users/usercenter-fav-org.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/@templates/users/usercenter-fav-teacher.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/@templates/users/usercenter-info.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/@templates/users/usercenter-message.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/@templates/users/usercenter-mycourse.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/users/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/users/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/users/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/users/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/config/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/config/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/App.vue" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/App.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/components/HelloWorld.vue" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/main.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/router/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/router/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/zcEducation/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/zcEducation/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/login.vue" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/login.vue" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -458,35 +16,41 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="views.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/apps/users/views.py">
+      <file leaf-file-name="login.vue" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/frontend/src/components/login.vue">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="30">
-              <caret line="92" selection-start-line="92" selection-end-line="92" />
+            <state relative-caret-position="168">
+              <caret line="78" column="14" selection-start-line="78" selection-start-column="14" selection-end-line="78" selection-end-column="14" />
               <folding>
-                <element signature="e#0#68#0" expanded="true" />
-                <element signature="e#2039#3339#0" />
-                <element signature="e#3481#4553#0" />
-                <element signature="e#4556#4584#0" />
+                <element signature="e#2358#2395#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="csrf.py" pinned="false" current-in-tab="false">
-        <entry file="file://E:/dev/Python/Python36/Lib/site-packages/django/views/decorators/csrf.py">
+      <file leaf-file-name="App.vue" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/frontend/src/App.vue">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file leaf-file-name="main.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/frontend/src/main.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1188">
-              <caret line="57" selection-start-line="57" selection-end-line="57" />
+            <state>
+              <folding>
+                <element signature="n#!!doc" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="urls.py" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/apps/users/urls.py">
+      <file leaf-file-name="index.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/frontend/src/router/index.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="330">
-              <caret line="15" column="16" selection-start-line="15" selection-start-column="16" selection-end-line="15" selection-end-column="16" />
+            <state>
+              <folding>
+                <element signature="e#0#21#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -571,6 +135,7 @@
         <option value="$PROJECT_DIR$/zcEducation/settings.py" />
         <option value="$PROJECT_DIR$/apps/users/views.py" />
         <option value="$PROJECT_DIR$/apps/users/urls.py" />
+        <option value="$PROJECT_DIR$/frontend/src/components/login.vue" />
       </list>
     </option>
   </component>
@@ -629,18 +194,27 @@
             <path>
               <item name="zcEducation" type="b2602c69:ProjectViewProjectNode" />
               <item name="zcEducation" type="462c0819:PsiDirectoryNode" />
-              <item name="apps" type="462c0819:PsiDirectoryNode" />
+              <item name="frontend" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="zcEducation" type="b2602c69:ProjectViewProjectNode" />
               <item name="zcEducation" type="462c0819:PsiDirectoryNode" />
-              <item name="apps" type="462c0819:PsiDirectoryNode" />
-              <item name="users" type="462c0819:PsiDirectoryNode" />
+              <item name="frontend" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="zcEducation" type="b2602c69:ProjectViewProjectNode" />
               <item name="zcEducation" type="462c0819:PsiDirectoryNode" />
+              <item name="frontend" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="components" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="zcEducation" type="b2602c69:ProjectViewProjectNode" />
               <item name="zcEducation" type="462c0819:PsiDirectoryNode" />
+              <item name="frontend" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="router" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -745,7 +319,7 @@
       <window_info anchor="bottom" id="Find" order="6" weight="0.3298611" />
       <window_info anchor="right" id="SciView" order="0" />
       <window_info id="Structure" order="2" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="Debug" order="8" visible="true" weight="0.39930555" />
+      <window_info anchor="bottom" id="Debug" order="8" visible="true" weight="0.18402778" />
       <window_info id="Favorites" order="0" side_tool="true" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="10" weight="0.4" />
@@ -803,10 +377,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/apps/operations/migrations/0001_initial.py" />
-    <entry file="file://$PROJECT_DIR$/apps/users/migrations/0001_initial.py" />
-    <entry file="file://$PROJECT_DIR$/apps/orgs/migrations/0001_initial.py" />
-    <entry file="file://$PROJECT_DIR$/apps/operations/migrations/0002_auto_20190324_1241.py" />
     <entry file="file://$PROJECT_DIR$/apps/courses/migrations/0001_initial.py" />
     <entry file="file://$PROJECT_DIR$/extra_apps/xadmin/plugins/themes.py" />
     <entry file="file://$PROJECT_DIR$/extra_apps/xadmin/templates/xadmin/auth/user/add_form.html" />
@@ -940,6 +510,16 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/apps/users/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="264">
+          <caret line="12" column="24" lean-forward="true" selection-start-line="12" selection-start-column="24" selection-end-line="12" selection-end-column="24" />
+          <folding>
+            <element signature="e#635#667#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://E:/dev/Python/Python36/Lib/site-packages/django/views/decorators/csrf.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1188">
@@ -960,10 +540,34 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/apps/users/urls.py">
+    <entry file="file://$PROJECT_DIR$/frontend/src/App.vue">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frontend/src/main.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="15" column="16" selection-start-line="15" selection-start-column="16" selection-end-line="15" selection-end-column="16" />
+        <state>
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frontend/src/router/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <element signature="e#0#21#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frontend/src/components/login.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="168">
+          <caret line="78" column="14" selection-start-line="78" selection-start-column="14" selection-end-line="78" selection-end-column="14" />
+          <folding>
+            <element signature="e#2358#2395#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
