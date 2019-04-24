@@ -18,12 +18,13 @@
                     <dd>
                         <h1>
                             <a href="{% url 'orgs:teacher_detail' teacher.id %}">
-                            {{ teacher.name }}<span class="key">已认证</span>
+{#                                {{ teacher.name }}<span class="key">已认证</span>#}
+                                {{ teacher.name }}
                             </a>
                         </h1>
                         <ul class="cont clearfix">
                             <li class="time">工作年限：<span>{{ teacher.work_year }}年</span></li>
-                            <li class="c7">课程数：<span>{{ teacher.courseinfo_set.count }}</span></li>
+                            <li class="c7" style="padding-left: 21px">课程数：<span>{{ teacher.courseinfo_set.count }}</span></li>
                         </ul>
                     </dd>
                 </dl>

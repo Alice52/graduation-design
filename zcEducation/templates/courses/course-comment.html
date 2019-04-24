@@ -27,42 +27,42 @@
 	</div>
 </section>
     <div id="main">
-    <div class="course-infos">
-        <div class="w pr">
-            <div style="height: 15px" class="path">
-            </div>
-            <div class="hd">
-                <h2 class="l">{{ course.name }}</h2>
-            </div>
-            <div class="statics clearfix">
-                <div class="static-item ">
-                    <span class="meta-value">
-                        <strong>
-                            {% if course.level == 'cj' %}
-                                        初级
-                                 {% elif course.level == 'zj' %}
-                                        中级
-                                 {% else %}
-                                        高级
-                                 {% endif %}
-                        </strong>
-                    </span>
-                    <span class="meta">难度</span>
-                    <em></em>
-                </div>
-                <div class="static-item static-time">
-                    <span class="meta-value">{{ course.study_time }}分钟</span>
-                    <span class="meta">时长</span>
-                    <em></em>
-                </div>
-                <div class="static-item">
-                    <span class="meta-value"><strong>{{ course.study_num }}</strong></span>
-                    <span class="meta">学习人数</span>
-                    <em></em>
-                </div>
-            </div>
-        </div>
-    </div>
+{#    <div class="course-infos">#}
+{#        <div class="w pr">#}
+{#            <div style="height: 15px" class="path">#}
+{#            </div>#}
+{#            <div class="hd">#}
+{#                <h2 class="l">{{ course.name }}</h2>#}
+{#            </div>#}
+{#            <div class="statics clearfix">#}
+{#                <div class="static-item ">#}
+{#                    <span class="meta-value">#}
+{#                        <strong>#}
+{#                            {% if course.level == 'cj' %}#}
+{#                                        初级#}
+{#                                 {% elif course.level == 'zj' %}#}
+{#                                        中级#}
+{#                                 {% else %}#}
+{#                                        高级#}
+{#                                 {% endif %}#}
+{#                        </strong>#}
+{#                    </span>#}
+{#                    <span class="meta">难度</span>#}
+{#                    <em></em>#}
+{#                </div>#}
+{#                <div class="static-item static-time">#}
+{#                    <span class="meta-value">{{ course.study_time }}分钟</span>#}
+{#                    <span class="meta">时长</span>#}
+{#                    <em></em>#}
+{#                </div>#}
+{#                <div class="static-item">#}
+{#                    <span class="meta-value"><strong>{{ course.study_num }}</strong></span>#}
+{#                    <span class="meta">学习人数</span>#}
+{#                    <em></em>#}
+{#                </div>#}
+{#            </div>#}
+{#        </div>#}
+{#    </div>#}
     <div class="course-info-main clearfix w has-progress">
 
         <div class="info-bar clearfix">
@@ -107,64 +107,71 @@
                 </div>
                 <div class="aside r">
                     <div class="bd">
-
                         <div class="box mb40">
-                        <h4>资料下载</h4>
-                        <ul class="downlist">
-                        {% for source in course.sourceinfo_set.all %}
-                            <li>
-                                <span ><i class="aui-iconfont aui-icon-file"></i>&nbsp;&nbsp;{{ source.name }}</span>
-                                <a href="{{ MEDIA_URL }}{{ source.down_load }}" class="downcode" target="_blank" download="" data-id="274" title="">下载</a>
-                            </li>
-                        {% endfor %}
-                        </ul>
-                    </div>
+                            <h4>课程信息</h4>
+                            {#                                <div class="teacher-info">#}
+                            {#                                    <a href="{% url 'orgs:teacher_detail' course.teacherinfo.id %}" target="_blank">#}
+                            {#                                        <img src='{{ MEDIA_URL }}{{ course.teacherinfo.image }}' width='80'#}
+                            {#                                             height='80'/>#}
+                            {#                                    </a>#}
+                            {#                                    <span class="tit">#}
+                            {#          <a href="{% url 'orgs:teacher_detail' course.teacherinfo.id %}"#}
+                            {#             target="_blank">{{ course.teacherinfo.name }}</a>#}
+                            {#        </span>#}
+                            {#                                    <span class="job">{{ course.teacherinfo.work_position }}</span>#}
+                            {#                                </div>#}
+                            <div class="course-info-tip">
+                                <dl class="first">
+                                    <dt>课程名称：{{ course.name }}</dt>
+                                </dl>
+                                <dl  class="first">
+                                    <dt>课程时长：{{ course.study_time }}分钟</dt>
+                                </dl>
+                                <dl class="first">
+                                    <dt>学习人数： {{ course.study_num }}</dt>
+                                </dl>
+                                <dl class="first">
+                                    <dt>如何学习: </dt>
+                                    <dd class="autowrap">&nbsp;&nbsp;&nbsp;{{ course.teacher_tell }}</dd>
+                                </dl>
+                            </div>
+                        </div>
                         <div class="box mb40">
-                        <h4>讲师提示</h4>
-                        <div class="teacher-info">
-                            <a href="{% url 'orgs:teacher_detail' course.teacherinfo.id  %}" target="_blank">
-                                <img src='{{ MEDIA_URL }}{{ course.teacherinfo.image }}' width='80' height='80' />
-                            </a>
-        <span class="tit">
-          <a href="{% url 'orgs:teacher_detail' course.teacherinfo.id  %}" target="_blank">{{ course.teacherinfo.name }}</a>
-        </span>
-                            <span class="job">{{ course.teacherinfo.work_position }}</span>
+                            <h4>资料下载</h4>
+                            <ul class="downlist">
+                                {% for source in course.sourceinfo_set.all %}
+                                    <li>
+                                            <span><i
+                                                    class="aui-iconfont aui-icon-file"></i>&nbsp;&nbsp;{{ source.name }}</span>
+                                        <a href="{{ MEDIA_URL }}{{ source.down_load }}" class="downcode"
+                                           target="_blank" download="" data-id="274" title="">下载</a>
+                                    </li>
+                                {% endfor %}
+                            </ul>
                         </div>
-                        <div class="course-info-tip">
-                            <dl class="first">
-                                <dt>课程须知</dt>
-                                <dd class="autowrap">{{ course.course_need }}</dd>
-                            </dl>
-                            <dl>
-                                <dt>老师告诉你能学到什么？</dt>
-                                <dd class="autowrap">{{ course.teacher_tell }}</dd>
-                            </dl>
-                        </div>
-                    </div>
-
-
                         <div class="cp-other-learned  js-comp-tabs">
                             <div class="cp-header clearfix">
-                                <h2 class="cp-tit l">该课的同学还学过</h2>
+                                <h2 class="cp-tit l">学过该课的同学还学过</h2>
                             </div>
                             <div class="cp-body">
-                                <div class="cp-tab-pannel js-comp-tab-pannel" data-pannel="course" style="display: block">
+                                <div class="cp-tab-pannel js-comp-tab-pannel" data-pannel="course"
+                                     style="display: block">
                                     <!-- img 200 x 112 -->
                                     <ul class="other-list">
                                         {% for course1 in course_list %}
-                                        <li class="curr">
-                                            <a href="{% url 'courses:course_detail' course1.id %}" target="_blank">
-                                                <img src="{{ MEDIA_URL }}{{ course1.image }}" alt="html">
-                                                <span class="name autowrap">{{ course1.name }}</span>
-                                            </a>
-                                        </li>
+                                            <li class="curr">
+                                                <a href="{% url 'courses:course_detail' course1.id %}"
+                                                   target="_blank">
+                                                    <img width="240"  src="{{ MEDIA_URL }}{{ course1.image }}">
+                                                    <span class="name autowrap">{{ course1.name }}</span>
+                                                </a>
+                                            </li>
                                         {% endfor %}
                                     </ul>
                                 </div>
 
                             </div>
                         </div>
-
                     </div>    </div>
             </div>
             <div class="clear"></div>

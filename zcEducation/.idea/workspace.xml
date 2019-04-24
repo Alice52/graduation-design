@@ -2,10 +2,24 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="96dd5053-9309-4961-9cff-4ad65a12edc9" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/frontend/src/components/login.vue" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/login.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/users/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/users/login.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/users/login.html.back" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/users/login.html.local" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/orgs/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/orgs/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/css/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/css/zc-education/course/common-less.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/css/zc-education/course/common-less.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/images/header_middle.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/courses/course-comment.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/courses/course-comment.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/courses/course-detail.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/courses/course-detail.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/courses/course-video.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/courses/course-video.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/orgs/org-detail-base.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/orgs/org-detail-base.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/orgs/org-detail-teachers.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/orgs/org-detail-teachers.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/orgs/org-list.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/orgs/org-list.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/orgs/teacher-detail.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/orgs/teacher-detail.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/orgs/teachers-list.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/orgs/teachers-list.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/users/usercenter-fav-course.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/users/usercenter-fav-course.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/users/usercenter-fav-org.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/users/usercenter-fav-org.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/users/usercenter-fav-teacher.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/users/usercenter-fav-teacher.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/users/usercenter-info.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/users/usercenter-info.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -18,24 +32,14 @@
     <option name="myCustomStartScript" value="import sys; print('Python %s on %s' % (sys.version, sys.platform))&#10;import django; print('Django %s' % django.get_version())&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;if 'setup' in dir(django): django.setup()&#10;import django_manage_shell; django_manage_shell.run(PROJECT_ROOT)" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file leaf-file-name="login.vue" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/frontend/src/components/login.vue">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="348">
-              <caret line="111" column="11" lean-forward="true" selection-start-line="111" selection-start-column="11" selection-end-line="111" selection-end-column="11" />
-            </state>
-          </provider>
-        </entry>
-      </file>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
       <file leaf-file-name="views.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/apps/orgs/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="273">
-              <caret line="120" selection-start-line="120" selection-end-line="120" />
+            <state relative-caret-position="112">
+              <caret line="88" column="37" selection-start-line="88" selection-start-column="37" selection-end-line="88" selection-end-column="37" />
               <folding>
                 <element signature="e#0#35#0" expanded="true" />
-                <element signature="e#2243#3088#0" />
                 <element signature="e#3133#3614#0" />
                 <element signature="e#3662#4150#0" />
               </folding>
@@ -43,59 +47,64 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="style.css" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/static/css/style.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="228">
+              <caret line="423" column="25" selection-start-line="423" selection-start-column="25" selection-end-line="423" selection-end-column="25" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="usercenter-info.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/templates/users/usercenter-info.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="52">
+              <caret line="3" column="17" lean-forward="true" selection-start-line="3" selection-start-column="17" selection-end-line="3" selection-end-column="17" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="usercenter-fav-course.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/templates/users/usercenter-fav-course.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="224">
+              <caret line="12" column="49" selection-start-line="12" selection-start-column="49" selection-end-line="12" selection-end-column="49" />
+              <folding>
+                <element signature="n#style#0;n#div#0;n#div#1;n#div#0;n#!!top" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="org-list.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/templates/orgs/org-list.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="756">
+              <caret line="69" lean-forward="true" selection-start-line="69" selection-end-line="69" />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="views.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/apps/users/views.py">
+        <entry file="file://$PROJECT_DIR$/apps/courses/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1328">
-              <caret line="97" column="13" selection-start-line="97" selection-start-column="13" selection-end-line="97" selection-end-column="13" />
+            <state relative-caret-position="176">
+              <caret line="8" column="33" selection-start-line="8" selection-start-column="33" selection-end-line="8" selection-end-column="33" />
               <folding>
-                <element signature="e#0#68#0" expanded="true" />
+                <element signature="e#0#35#0" expanded="true" />
+                <element signature="e#386#1301#0" />
+                <element signature="e#1347#2379#0" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="__init__.py" pinned="false" current-in-tab="false">
-        <entry file="file://E:/dev/Python/Python36/Lib/json/__init__.py">
+      <file leaf-file-name="common-less.css" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/static/css/zc-education/course/common-less.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="147">
-              <caret line="301" column="4" selection-start-line="301" selection-start-column="4" selection-end-line="301" selection-end-column="4" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="App.vue" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/frontend/src/App.vue">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file leaf-file-name="main.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/frontend/src/main.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <folding>
-                <element signature="n#!!doc" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/frontend/src/router/index.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <folding>
-                <element signature="e#0#21#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="csrf.py" pinned="false" current-in-tab="false">
-        <entry file="file://E:/dev/Python/Python36/Lib/site-packages/django/views/decorators/csrf.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="351">
-              <caret line="57" selection-start-line="57" selection-end-line="57" />
+            <state relative-caret-position="197">
+              <caret line="294" column="34" selection-start-line="294" selection-start-column="34" selection-end-line="294" selection-end-column="34" />
             </state>
           </provider>
         </entry>
@@ -112,31 +121,36 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>MySQLdb</find>
-      <find>NoReverseMatch</find>
-      <find>UserCreationForm</find>
-      <find />
-      <find>{% static '</find>
-      <find>.css</find>
-      <find>personal</find>
-      <find>dd</find>
-      <find>personal {</find>
-      <find>margin-top: 5px</find>
-      <find>footer .footer</find>
-      <find>footer .footer .</find>
-      <find>.fl</find>
-      <find>.fl {</find>
-      <find>important</find>
-      <find>fr</find>
-      <find>footer .footer .cont</find>
-      <find>footer</find>
-      <find>.loginbtn</find>
-      <find>zcEdocationNoVue</find>
-      <find>appf</find>
       <find>app</find>
-      <find>更多</find>
       <find>uwsgi_connect_timeout</find>
       <find>127.0.0.1</find>
+      <find>.selectMe</find>
+      <find>selectOp</find>
+      <find>.header .n</find>
+      <find>hr</find>
+      <find>.group_list .des span</find>
+      <find>.group_list .des .key</find>
+      <find>.groupPurchase_detail .toppro .right .btn</find>
+      <find>/gold.png</find>
+      <find>.groupPurchase_detail .toppro .right .pic</find>
+      <find>gold.</find>
+      <find>authentication.png</find>
+      <find>buy buyservice</find>
+      <find>金牌讲师</find>
+      <find>认证</find>
+      <find>.course-info-main .aside h4</find>
+      <find>课程信息</find>
+      <find>更多</find>
+      <find>.butler_list .cont .c7, .companyranklist .cont .c8</find>
+      <find>class=&quot;c7&quot;</find>
+      <find>.listoptions h2</find>
+      <find>header_middle</find>
+      <find>.personal_list .right</find>
+      <find>style=&quot;width:242px;&quot;</find>
+      <find>.personal_list .inforcon .right</find>
+      <find>border:1px solid #eaeaea;</find>
+      <find>.personal_des .head</find>
+      <find>tab_header messagehead</find>
     </findStrings>
     <replaceStrings>
       <replace />
@@ -175,14 +189,27 @@
         <option value="$PROJECT_DIR$/zcEducation/urls.py" />
         <option value="$PROJECT_DIR$/static/css/index.css" />
         <option value="$PROJECT_DIR$/static/css/reset.css" />
-        <option value="$PROJECT_DIR$/templates/index.html" />
-        <option value="$PROJECT_DIR$/static/css/style.css" />
         <option value="$PROJECT_DIR$/utils/sendEmail.py" />
         <option value="$PROJECT_DIR$/api/zcEducation/settings.py" />
         <option value="$PROJECT_DIR$/zcEducation/settings.py" />
         <option value="$PROJECT_DIR$/apps/users/urls.py" />
         <option value="$PROJECT_DIR$/apps/users/views.py" />
         <option value="$PROJECT_DIR$/frontend/src/components/login.vue" />
+        <option value="$PROJECT_DIR$/templates/index.html" />
+        <option value="$PROJECT_DIR$/templates/courses/course-detail.html" />
+        <option value="$PROJECT_DIR$/templates/orgs/org-list.html" />
+        <option value="$PROJECT_DIR$/templates/users/usercenter-fav-org.html" />
+        <option value="$PROJECT_DIR$/templates/orgs/org-detail-base.html" />
+        <option value="$PROJECT_DIR$/templates/orgs/teachers-list.html" />
+        <option value="$PROJECT_DIR$/templates/orgs/teacher-detail.html" />
+        <option value="$PROJECT_DIR$/static/css/zc-education/course/common-less.css" />
+        <option value="$PROJECT_DIR$/templates/courses/course-video.html" />
+        <option value="$PROJECT_DIR$/templates/courses/course-comment.html" />
+        <option value="$PROJECT_DIR$/apps/orgs/views.py" />
+        <option value="$PROJECT_DIR$/templates/orgs/org-detail-teachers.html" />
+        <option value="$PROJECT_DIR$/templates/users/usercenter-info.html" />
+        <option value="$PROJECT_DIR$/templates/users/usercenter-fav-course.html" />
+        <option value="$PROJECT_DIR$/static/css/style.css" />
       </list>
     </option>
   </component>
@@ -220,17 +247,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope">
-        <subPane subId="Project Files">
-          <expand>
-            <path>
-              <item name="Root" type="cbb8eebc:String" user="Root" />
-              <item name="zcEducation" type="cbb8eebc:String" user="zcEducation" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -247,7 +263,52 @@
               <item name="zcEducation" type="b2602c69:ProjectViewProjectNode" />
               <item name="zcEducation" type="462c0819:PsiDirectoryNode" />
               <item name="apps" type="462c0819:PsiDirectoryNode" />
+              <item name="courses" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="zcEducation" type="b2602c69:ProjectViewProjectNode" />
+              <item name="zcEducation" type="462c0819:PsiDirectoryNode" />
+              <item name="apps" type="462c0819:PsiDirectoryNode" />
+              <item name="orgs" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="zcEducation" type="b2602c69:ProjectViewProjectNode" />
+              <item name="zcEducation" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="zcEducation" type="b2602c69:ProjectViewProjectNode" />
+              <item name="zcEducation" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
+              <item name="css" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="zcEducation" type="b2602c69:ProjectViewProjectNode" />
+              <item name="zcEducation" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="zcEducation" type="b2602c69:ProjectViewProjectNode" />
+              <item name="zcEducation" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
+              <item name="orgs" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="zcEducation" type="b2602c69:ProjectViewProjectNode" />
+              <item name="zcEducation" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
               <item name="users" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="Scope">
+        <subPane subId="Project Files">
+          <expand>
+            <path>
+              <item name="Root" type="cbb8eebc:String" user="Root" />
+              <item name="zcEducation" type="cbb8eebc:String" user="zcEducation" />
             </path>
           </expand>
           <select />
@@ -337,22 +398,23 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info anchor="bottom" id="TODO" order="11" weight="0.3298611" />
       <window_info anchor="bottom" id="Event Log" order="4" sideWeight="0.5010707" side_tool="true" weight="0.4722222" />
       <window_info anchor="bottom" id="Database Changes" order="2" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Run" order="7" weight="0.24074075" />
       <window_info anchor="bottom" id="Version Control" order="1" sideWeight="0.49947917" weight="0.2974537" />
       <window_info anchor="bottom" id="Python Console" order="3" weight="0.3298611" />
-      <window_info anchor="bottom" id="Terminal" order="12" sideWeight="0.49892932" weight="0.45717594" />
-      <window_info content_ui="combo" id="Project" order="1" visible="true" weight="0.22162741" />
+      <window_info anchor="bottom" id="Run" order="7" weight="0.24074075" />
+      <window_info anchor="bottom" id="Terminal" order="12" sideWeight="0.49892932" weight="0.22685185" />
+      <window_info content_ui="combo" id="Project" order="1" visible="true" weight="0.22430407" />
       <window_info anchor="bottom" id="Docker" order="0" show_stripe_button="false" />
       <window_info anchor="right" id="Database" order="2" />
       <window_info anchor="bottom" id="Find" order="6" weight="0.3298611" />
       <window_info anchor="right" id="SciView" order="0" />
       <window_info id="Structure" order="2" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="Debug" order="8" weight="0.48032406" />
       <window_info id="Favorites" order="0" side_tool="true" />
+      <window_info active="true" anchor="bottom" id="Debug" order="8" visible="true" weight="0.48032406" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="10" weight="0.4" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="1" type="SLIDING" weight="0.4" />
@@ -405,29 +467,10 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="4" />
+      <option name="time" value="5" />
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/extra_apps/xadmin/templates/xadmin/auth/user/add_form.html" />
-    <entry file="file://$PROJECT_DIR$/extra_apps/xadmin/templates/xadmin/auth/user/change_password.html" />
-    <entry file="file://$PROJECT_DIR$/extra_apps/xadmin/plugins/auth.py" />
-    <entry file="file://$PROJECT_DIR$/extra_apps/xadmin/views/__init__.py" />
-    <entry file="file://$PROJECT_DIR$/apps/operations/adminx.py" />
-    <entry file="file://$PROJECT_DIR$/apps/operations/models.py" />
-    <entry file="file://E:/dev/Python/Python36/Lib/site-packages/pytz/__init__.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="261">
-          <caret line="1360" column="1" selection-start-line="1360" selection-start-column="1" selection-end-line="1360" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/apps/orgs/models.py" />
-    <entry file="file://$PROJECT_DIR$/apps/users/apps.py" />
-    <entry file="file://$PROJECT_DIR$/apps/orgs/apps.py" />
-    <entry file="file://$PROJECT_DIR$/apps/operations/apps.py" />
-    <entry file="file://$PROJECT_DIR$/apps/courses/apps.py" />
-    <entry file="file://$PROJECT_DIR$/apps/orgs/adminx.py" />
     <entry file="file://$PROJECT_DIR$/apps/users/adminx.py" />
     <entry file="file://$PROJECT_DIR$/apps/courses/adminx.py" />
     <entry file="file://$PROJECT_DIR$/apps/courses/models.py" />
@@ -437,7 +480,6 @@
     <entry file="file://$PROJECT_DIR$/static/css/index.css" />
     <entry file="file://$PROJECT_DIR$/static/css/reset.css" />
     <entry file="file://$PROJECT_DIR$/static/css/guli/course/common-less.css" />
-    <entry file="file://$PROJECT_DIR$/static/css/style.css" />
     <entry file="file://$PROJECT_DIR$/zcEducation/__init__.py" />
     <entry file="file://$PROJECT_DIR$/zcEducation/urls.py" />
     <entry file="file://$PROJECT_DIR$/utils/sendEmail.py" />
@@ -458,13 +500,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/frontend/dist/static/js/deco-common.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-880">
-          <caret line="23" column="48" lean-forward="true" selection-start-line="3" selection-start-column="8" selection-end-line="23" selection-end-column="48" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/frontend/dist/static/js/deco-common.js" />
     <entry file="file://$PROJECT_DIR$/templates/index-back.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="308">
@@ -472,27 +508,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/base.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="316">
-          <caret line="138" lean-forward="true" selection-end-line="149" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/templates/index-backup.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="66">
           <caret line="3" column="22" lean-forward="true" selection-start-line="3" selection-start-column="4" selection-end-line="3" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="15" selection-start-column="15" selection-end-column="15" />
-          <folding>
-            <element signature="n#style#0;n#img#0;n#div#0;n#a#0;n#li#0;n#ul#0;n#div#1;n#div#0;n#div#0;n#div#0;n#section#2;n#!!top" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -521,15 +540,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state>
           <caret column="798" selection-start-column="798" selection-end-column="798" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/apps/courses/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <folding>
-            <element signature="e#0#35#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -568,36 +578,23 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/apps/orgs/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="273">
-          <caret line="120" selection-start-line="120" selection-end-line="120" />
-          <folding>
-            <element signature="e#0#35#0" expanded="true" />
-            <element signature="e#2243#3088#0" />
-            <element signature="e#3133#3614#0" />
-            <element signature="e#3662#4150#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://E:/dev/Python/Python36/Lib/json/__init__.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="147">
+        <state relative-caret-position="6578">
           <caret line="301" column="4" selection-start-line="301" selection-start-column="4" selection-end-line="301" selection-end-column="4" />
         </state>
       </provider>
     </entry>
     <entry file="file://E:/dev/Python/Python36/Lib/site-packages/django/views/decorators/csrf.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="351">
+        <state relative-caret-position="1188">
           <caret line="57" selection-start-line="57" selection-end-line="57" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/apps/users/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1328">
+        <state relative-caret-position="1628">
           <caret line="97" column="13" selection-start-line="97" selection-start-column="13" selection-end-line="97" selection-end-column="13" />
           <folding>
             <element signature="e#0#68#0" expanded="true" />
@@ -610,8 +607,162 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/frontend/src/components/login.vue">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="348">
-          <caret line="111" column="11" lean-forward="true" selection-start-line="111" selection-start-column="11" selection-end-line="111" selection-end-column="11" />
+        <state relative-caret-position="284">
+          <caret line="117" column="3" lean-forward="true" selection-start-line="117" selection-start-column="3" selection-end-line="117" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/base.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="316">
+          <caret line="138" selection-end-line="149" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/css/app.fb379a032cdefe19f8d31bf4fde51471.css">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="201">
+          <caret line="129" column="54" lean-forward="true" selection-start-line="129" selection-start-column="54" selection-end-line="129" selection-end-column="54" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/courses/course-detail.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="140">
+          <caret line="97" column="33" lean-forward="true" selection-start-line="94" selection-start-column="28" selection-end-line="97" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/users/usercenter-fav-org.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="37" lean-forward="true" selection-start-line="37" selection-end-line="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/orgs/org-detail-base.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="206">
+          <caret line="18" column="88" lean-forward="true" selection-start-line="18" selection-start-column="88" selection-end-line="18" selection-end-column="88" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/orgs/teachers-list.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="184">
+          <caret line="53" lean-forward="true" selection-start-line="53" selection-end-line="53" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/orgs/teacher-detail.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="241">
+          <caret line="39" column="90" lean-forward="true" selection-start-line="39" selection-start-column="90" selection-end-line="39" selection-end-column="90" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/css/zc-education/course/common-less.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="197">
+          <caret line="294" column="34" selection-start-line="294" selection-start-column="34" selection-end-line="294" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/courses/course-video.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="66">
+          <caret line="171" column="34" lean-forward="true" selection-start-line="149" selection-start-column="28" selection-end-line="171" selection-end-column="34" />
+          <folding>
+            <element signature="n#div#1;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" />
+            <element signature="e#7635#7641#0#HTML" expanded="true" />
+            <element signature="e#7641#7647#0#HTML" expanded="true" />
+            <element signature="e#7647#7653#0#HTML" expanded="true" />
+            <element signature="n#div#1;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" />
+            <element signature="n#div#2;n#div#0;n#div#1;n#div#0;n#div#0;n#div#1;n#div#0;n#!!top" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/courses/course-comment.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="107" column="37" lean-forward="true" selection-start-line="107" selection-start-column="37" selection-end-line="107" selection-end-column="37" />
+          <folding>
+            <element signature="n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" />
+            <element signature="e#6763#6769#0#HTML" expanded="true" />
+            <element signature="e#6769#6775#0#HTML" expanded="true" />
+            <element signature="e#6775#6781#0#HTML" expanded="true" />
+            <element signature="n#div#1;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" />
+            <element signature="n#div#2;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/apps/courses/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="176">
+          <caret line="8" column="33" selection-start-line="8" selection-start-column="33" selection-end-line="8" selection-end-column="33" />
+          <folding>
+            <element signature="e#0#35#0" expanded="true" />
+            <element signature="e#386#1301#0" />
+            <element signature="e#1347#2379#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/apps/orgs/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="112">
+          <caret line="88" column="37" selection-start-line="88" selection-start-column="37" selection-end-line="88" selection-end-column="37" />
+          <folding>
+            <element signature="e#0#35#0" expanded="true" />
+            <element signature="e#3133#3614#0" />
+            <element signature="e#3662#4150#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/orgs/org-detail-teachers.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="197">
+          <caret line="30" column="28" lean-forward="true" selection-start-line="30" selection-start-column="28" selection-end-line="30" selection-end-column="28" />
+          <folding>
+            <element signature="n#style#0;n#li#1;n#ul#0;n#dd#0;n#dl#0;n#div#0;n#div#1;n#div#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/orgs/org-list.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="756">
+          <caret line="69" lean-forward="true" selection-start-line="69" selection-end-line="69" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/users/usercenter-info.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="52">
+          <caret line="3" column="17" lean-forward="true" selection-start-line="3" selection-start-column="17" selection-end-line="3" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/users/usercenter-fav-course.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="224">
+          <caret line="12" column="49" selection-start-line="12" selection-start-column="49" selection-end-line="12" selection-end-column="49" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#div#1;n#div#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/css/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="228">
+          <caret line="423" column="25" selection-start-line="423" selection-start-column="25" selection-end-line="423" selection-end-column="25" />
         </state>
       </provider>
     </entry>

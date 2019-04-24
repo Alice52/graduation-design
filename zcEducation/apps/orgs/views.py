@@ -86,7 +86,7 @@ def org_detail_course(request, org_id):
 
         # 分页功能
         pagenum = request.GET.get('pagenum', '')
-        pa = Paginator(all_courses, 2)
+        pa = Paginator(all_courses, 4)
         try:
             pages = pa.page(pagenum)
         except PageNotAnInteger:

@@ -24,31 +24,29 @@
             </div>
 
         </div>
-
-
     </div>
-    <section>
-        <div class="wp">
-            <ul class="feature">
-                <li class="feature1">
-                    <img class="pic" src="{% static 'images/feature5.png' %}"/>
-                    <p class="center">专业权威</p>
-                </li>
-                <li class="feature2">
-                    <img class="pic" src="{% static 'images/feature5.png' %}"/>
-                    <p class="center">课程最新</p>
-                </li>
-                <li class="feature3">
-                    <img class="pic" src="{% static 'images/feature5.png' %}"/>
-                    <p class="center">名师授课</p>
-                </li>
-                <li class="feature4">
-                    <img class="pic" src="{% static 'images/feature5.png' %}"/>
-                    <p class="center">数据真实</p>
-                </li>
-            </ul>
-        </div>
-    </section>
+{#    <section>#}
+{#        <div class="wp">#}
+{#            <ul class="feature">#}
+{#                <li class="feature1">#}
+{#                    <img class="pic" src="{% static 'images/feature5.png' %}"/>#}
+{#                    <p class="center">专业权威</p>#}
+{#                </li>#}
+{#                <li class="feature2">#}
+{#                    <img class="pic" src="{% static 'images/feature5.png' %}"/>#}
+{#                    <p class="center">课程最新</p>#}
+{#                </li>#}
+{#                <li class="feature3">#}
+{#                    <img class="pic" src="{% static 'images/feature5.png' %}"/>#}
+{#                    <p class="center">名师授课</p>#}
+{#                </li>#}
+{#                <li class="feature4">#}
+{#                    <img class="pic" src="{% static 'images/feature5.png' %}"/>#}
+{#                    <p class="center">数据真实</p>#}
+{#                </li>#}
+{#            </ul>#}
+{#        </div>#}
+{#    </section>#}
     <section>
         <div class="module">
             <div class="wp">
@@ -125,11 +123,11 @@
                                     <a href="{% url 'orgs:org_detail' org.id %}">
                                         <div class="company">
                                             <img width="120" height="96" style="margin-top: 2px" src="{{ MEDIA_URL }}{{ org.image }}"/>
-                                            <div class="score">
-                                                <div class="circle">
-                                                    <h2>全国知名</h2>
-                                                </div>
-                                            </div>
+{#                                            <div class="score">#}
+{#                                                <div class="circle">#}
+{#                                                    <h2>全国知名</h2>#}
+{#                                                </div>#}
+{#                                            </div>#}
                                         </div>
                                         <p><span class="key" title="{{ org.name }}">{{ org.name }}</span></p>
                                     </a>
