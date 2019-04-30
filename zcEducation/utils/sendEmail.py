@@ -44,7 +44,7 @@ def send_email_code(email, send_type):
     if send_type == 2:
         receiverlist = [email]
         send_title = '617室 ZC在线学习平台重置密码系统：'
-        send_body = '请点击以下链接进行重置您的密码：\n http://www.zc-education.top:8000/users/user_reset/' + code + """
+        send_body = '请点击以下链接进行重置您的密码：\n http://127.0.0.1:8000/users/user_reset/' + code + """
                 <br>
                 <img src="https://t1.hddhhn.com/uploads/tu/201903/195/4554fds.jpg"  alt="美女" />
                 """

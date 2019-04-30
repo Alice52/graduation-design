@@ -1,0 +1,641 @@
+.sidebar {
+  display: block;
+  width: 80px;
+  height: 360px;
+  position: fixed;
+  right: 0;
+  top: 50%;
+  z-index: 99;
+}
+.sidebar .totop {
+  background: lightgray url(../images/side4.png) no-repeat center center;
+}
+
+.sidebar li {
+  float: left;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: #e1e1e1;
+  margin: 5px;
+  cursor: pointer;
+  position: relative;
+}
+
+body {
+  overflow: auto;
+}
+
+.headerwrap {
+  height: 192px;
+  width: 100%;
+}
+
+.header {
+  width: 100%;
+  height: 192px;
+  background: #fff;
+}
+
+.header .top {
+  height: 38px;
+  line-height: 38px;
+  color: #fff;
+  width: 100%;
+}
+
+.header .top {
+  height: 38px;
+  line-height: 38px;
+  color: #fff;
+  width: 100%;
+}
+
+.header .top .personal {
+  height: auto;
+  float: right;
+  position: relative;
+  right: -320px;
+  top: 40px;
+  font-size: 20px;
+}
+.header .top .user {
+  height: 30px;
+  line-height: 30px;
+  margin-top: 4px;
+  cursor: pointer;
+}
+
+.header .top .userdetail {
+  display: none;
+  position: absolute;
+  right: 0;
+  top: 38px;
+  background: #fff;
+  padding: 10px;
+  z-index: 99;
+  border: 1px solid #ccc;
+  border-top: 0;
+}
+
+.header .top .user dd {
+  float: right;
+  color: #000;
+  margin-top: 5px;
+}
+
+.header .top .userdetail dl {
+  width: 300px;
+  height: auto;
+  overflow: hidden;
+}
+
+.header .top .userdetail dt {
+  width: 80px;
+  height: 80px;
+  overflow: hidden;
+  border-radius: 50%;
+  float: left;
+}
+
+.header .top .userdetail dd {
+  text-align: right;
+  line-height: 20px;
+  width: 190px;
+  float: right;
+  position: absolute;
+  right: 10px;
+  top: 30px;
+  color: #333;
+  height: auto;
+  overflow: hidden;
+}
+
+.header .top .userdetail .btn {
+  width: 100%;
+  height: 30px;
+  line-height: 30px;
+  margin-top: 20px;
+  clear: both;
+}
+
+.header .top .userdetail .btn a.fl {
+  width: 65%;
+}
+.header .top .userdetail .btn a.fr {
+  width: 32%;
+}
+
+.header .top .userdetail .btn a {
+  display: block;
+  height: 30px;
+  line-height: 30px;
+  text-align: center;
+  background: #717171;
+  color: #fff;
+}
+
+.header .middle {
+  height: 116px;
+  width: 100%;
+  clear: both;
+}
+
+.header .middle .wp {
+  height: 100%;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: normal;
+  color: black;
+}
+
+.crumbs {
+  width: 100%;
+  height: 50px;
+  line-height: 50px;
+  color: #454545;
+  letter-spacing: 2px;
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+}
+
+.crumbs li {
+  float: left;
+}
+
+.crumbs a {
+  color: gray;
+}
+
+.personal_list {
+  margin-top: 0;
+}
+.list {
+  height: auto;
+  margin-top: 40px;
+  margin-bottom: 40px;
+  min-height: 200px;
+  overflow: hidden;
+  clear: both;
+  position: relative;
+}
+
+.personal_list .left {
+  width: 210px;
+  float: left;
+  background: #f8f8f8;
+  border: 1px solid #eaeaea;
+  overflow: hidden;
+}
+
+.personal_list .left li:hover,
+.personal_list .left .active2 {
+  background: #fff url(../images/arrow_g.png) no-repeat 95% center;
+  border-left: 2px solid #717171;
+}
+
+.personal_list .left li {
+  width: 100%;
+  height: 60px;
+  line-height: 60px;
+  font-size: 16px;
+  color: #3a3a3a;
+  border-bottom: 1px solid #eaeaea;
+  background: url(../images/arrow.png) no-repeat 95% center;
+  background-color: lightgrey;
+}
+.active2 {
+  color: #3d9328 !important;
+}
+
+.personal_list .left a {
+  width: 90%;
+  margin: 0 5%;
+  height: 100%;
+  display: block;
+  color: #3a3a3a;
+}
+
+/*common*/
+
+.personal_list .right {
+  width: 940px;
+  float: right;
+  overflow: hidden;
+  border: 1px solid;
+}
+
+.list .right {
+  width: 280px;
+  float: right;
+  margin-bottom: 20px;
+  overflow: hidden;
+}
+
+.personal_des .head {
+  border-bottom: 1px solid black;
+  /* background: #f8f8f8; */
+}
+
+.list .layout .head,
+.personal_des .head {
+  border-bottom: 1px solid black;
+  background: lightgray;
+  color: #333;
+  height: 50px;
+  line-height: 50px;
+  text-indent: 20px;
+  font-size: 14px;
+}
+
+.personal_list .head h1 {
+  display: inline;
+  color: #717171;
+}
+.personal_des .inforcon {
+  border: 1px solid #eaeaea;
+  height: auto;
+  overflow: hidden;
+  width: 943px;
+  border-top: 0;
+}
+
+.personal_des .inforcon .left {
+  float: left;
+  width: 230px;
+  height: 100%;
+  text-align: center;
+  border: 0;
+  background: none;
+}
+
+.personal_list .left {
+  width: 210px;
+  float: left;
+  background: #f8f8f8;
+  border: 1px solid #eaeaea;
+  overflow: hidden;
+}
+.list .left {
+  width: 900px;
+  float: left;
+}
+
+.personal_des .inforcon .left .pic {
+  display: block;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 3px solid #eee;
+  margin: 50px auto 20px;
+}
+
+.list span {
+  color: #9f9f9f;
+}
+
+.personal_des .inforcon .left .pic img {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.changearea .upload-inp-box {
+  margin: 0 65px;
+}
+
+.list span {
+  color: #9f9f9f;
+}
+.upload-inp-box {
+  position: relative;
+  overflow: hidden;
+}
+
+.changearea .button {
+  margin: 0;
+}
+
+.upload-inp-box .button {
+  margin: 8px 25px;
+}
+.list span {
+  color: #9f9f9f;
+}
+.btn-w100 {
+  width: 100px;
+}
+.btn-green {
+  background: #717171;
+}
+.button {
+  display: block;
+  height: 35px;
+  line-height: 35px;
+  margin: 0 auto;
+  border: 0;
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  border-radius: 2px;
+  color: #fff !important;
+  cursor: pointer;
+  text-align: center;
+  text-indent: 0 !important;
+}
+
+.upload-inp-box input[type='file'] {
+  position: absolute;
+  right: 0;
+  top: 0;
+  height: 35px;
+  opacity: 0;
+  filter: Alpha(opacity=0);
+  cursor: pointer;
+}
+
+.clearfix:after {
+  content: '.';
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+}
+
+.btn-w100 {
+  width: 100px;
+}
+.btn-green {
+  background: #717171;
+}
+
+.personal_list .inforcon .right {
+  width: 700px !important;
+  height: 100%;
+  border: 1px solid #eaeaea;
+  font-size: 14px;
+  margin: 0;
+}
+
+.personal_list .inforcon .right > li {
+  float: left;
+  width: 100%;
+}
+
+.personal_list .inforcon .right > li,
+.inputs li {
+  height: 50px;
+  line-height: 50px;
+  border-bottom: 1px solid #eaeaea;
+  text-indent: 20px;
+  color: #a9a9a9;
+  position: relative;
+}
+
+.personal_list .inforcon .right li input[type='text'] {
+  color: #3d3d3d;
+  height: 30px;
+  line-height: 30px;
+  margin-left: 20px;
+  text-indent: 10px;
+  width: 300px;
+  background: #fafafa;
+}
+
+.error-tips {
+  display: none;
+  color: #f00;
+}
+
+.personal_list .inforcon .right .button {
+  text-align: center;
+}
+
+.heibtn {
+  height: 150px !important;
+  border-bottom: 0 !important;
+}
+
+.personal_list .inforcon .right .button input {
+  cursor: pointer;
+  background: #717171;
+  color: #fff;
+  text-align: center;
+  border-radius: 2px;
+  border: 0;
+  height: 35px;
+  width: 100px;
+  margin: 0 auto;
+}
+.heibtn input {
+  margin-top: 50px !important;
+}
+
+.dialog {
+  position: fixed;
+  color: #7c7c7c;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  overflow: auto;
+  display: none;
+  z-index: 9999;
+}
+
+.dialogbox {
+  position: relative;
+  width: 400px;
+  min-height: 300px;
+  padding: 15px;
+  margin: 30px auto;
+  background: #fff;
+  overflow: hidden;
+  display: none;
+}
+
+.dialogbox h1 {
+  color: #333;
+  height: 30px;
+  line-height: 30px;
+  border-bottom: 1px solid #ddd;
+  margin-bottom: 20px;
+  padding-bottom: 10px;
+}
+
+.dialogbox .close {
+  position: absolute;
+  right: 10px;
+  top: 15px;
+  cursor: pointer;
+}
+
+.dialogbox .cont {
+  width: 340px;
+  margin: 0 auto;
+  padding: 20px 0;
+}
+
+.dialogbox .box {
+  width: 100%;
+  height: 45px;
+  line-height: 45px;
+  border: 1px solid #ccc;
+  margin: 15px 0;
+  border-radius: 3px;
+  position: relative;
+}
+
+.dialogbox .box span {
+  color: #7c7c7c;
+  border-right: 1px solid #ccc;
+  width: 80px;
+  height: 20px;
+  line-height: 20px;
+  margin-top: 12px;
+  text-align: center;
+  display: block;
+}
+
+.dialogbox .box input {
+  width: 235px;
+  padding: 10px;
+  line-height: 24px;
+  border: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+.dialogbox .btns {
+  height: 50px;
+  line-height: 50px;
+  font-size: 14px;
+  color: #7c7c7c;
+  width: 100%;
+}
+
+.dialogbox .error {
+  background: #fb8344;
+  color: #fff !important;
+  text-align: center;
+  height: 40px !important;
+  line-height: 40px !important;
+  margin: 20px 0;
+  display: none;
+}
+
+.dialogbox .button {
+  width: 100%;
+  height: 45px;
+  line-height: 45px;
+  background: #5dbf45;
+  color: #fff;
+  margin: 0;
+  border: 0;
+  cursor: pointer;
+  position: relative;
+}
+
+.button {
+  display: block;
+  height: 35px;
+  line-height: 35px;
+  margin: 0 auto;
+  border: 0;
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  border-radius: 2px;
+  color: #fff !important;
+  cursor: pointer;
+  text-align: center;
+  text-indent: 0 !important;
+}
+
+.changephone p {
+  font-size: 16px;
+  text-align: center;
+  line-height: 150%;
+  color: #333;
+}
+
+.changephone .box .fl {
+  left: 0;
+}
+
+.changephone .getcode {
+  width: auto !important;
+  background: #ff7800;
+  color: #fff !important;
+  display: block;
+  height: 35px !important;
+  line-height: normal !important;
+  margin: 5px !important;
+  padding: 0 10px;
+  border-radius: 2px;
+  border: 0 !important;
+  text-align: center;
+  cursor: pointer;
+}
+
+.changephone p {
+  font-size: 16px;
+  text-align: center;
+  line-height: 150%;
+  color: #333;
+}
+
+.changephone .box .fl {
+  left: 0;
+}
+
+.changephone .getcode {
+  width: auto !important;
+  background: #ff7800;
+  color: #fff !important;
+  display: block;
+  height: 35px !important;
+  line-height: normal !important;
+  margin: 5px !important;
+  padding: 0 10px;
+  border-radius: 2px;
+  border: 0 !important;
+  text-align: center;
+  cursor: pointer;
+}
+
+.changephone .button {
+  float: left;
+  border-radius: 2px;
+}
+
+.dialogbox .button input {
+  background: none;
+  border: 0;
+  width: 100%;
+  color: #fff;
+  cursor: pointer;
+  line-height: 45px;
+}
+
+.bg,
+.dialog .bg,
+.dialog1 .bg,
+.dialog2 .bg {
+  z-index: 999;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #000;
+  opacity: 0.5;
+  filter: Alpha(opacity=50);
+  display: none;
+}

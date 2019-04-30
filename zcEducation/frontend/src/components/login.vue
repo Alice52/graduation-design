@@ -73,10 +73,8 @@
 <script>
 import "../../static/js/unslider.js";
 import "../../static/js/login.js";
-// import "../../static/js/ajax_post_csrf.js";
 import axios from "axios";
 export default {
-  name: "login",
   data() {
     return {
       errMsg: "",
@@ -95,7 +93,7 @@ export default {
       };
 
       axios({
-        url: "http://127.0.0.1:8000/users/user_login/",
+        url: "/api/users/user_login/",
         method: "POST",
         data: userInfo,
         headers: {
@@ -106,7 +104,8 @@ export default {
           let res = respanse.data;
           if (res.errMsg == "ok") {
             let url = res.url;
-            window.location.href = "http://127.0.0.1:8000" + url;
+            $router.push(`/`);
+            // window.location.href = "http://127.0.0.1:8000" + url;
           } else {
             this.errMsg = res.errMsg;
           }
@@ -120,6 +119,8 @@ export default {
 </script>
 
 <style scoped>
+@import "../../static/css/login.css";
+@import "../../static/css/reset.css";
 .btlogin {
   text-indent: 108px;
 }

@@ -1,0 +1,32 @@
+<template>
+  <div class="companycenter">
+    <div class="group_list brief">
+      {% for course in course_list %}
+      <div class="module1_5 box">
+        <a href="{% url 'courses:course_detail' course.id %}">
+          <img width="214" height="190" src="{{ MEDIA_URL }}{{ course.image }}">
+        </a>
+        <div class="des">
+          <a href="{% url 'courses:course_detail' course.id %}">
+            <h2>{{ course.name }}</h2>
+          </a>
+          <span class="fl">
+            时长：
+            <i class="key">{{ course.study_time }}</i>
+          </span>
+          <span class="fr">学习人数：{{ course.study_num }}</span>
+        </div>
+        <div class="bottom">
+          <span class="fl">{{ course.orginfo.name }}</span>
+          <span class="delete-group fr jsDeleteFav_course" data-favid="{{ course.id }}"></span>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</template>
+<script>
+export default {};
+</script>
+<style scoped>
+</style>

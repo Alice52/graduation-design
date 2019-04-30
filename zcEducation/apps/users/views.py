@@ -7,6 +7,7 @@ from django.contrib.auth import authenticate, logout, login
 from utils.sendEmail import send_email_code
 from django.http import JsonResponse
 import json
+from django.core import serializers
 import re
 from django.http import QueryDict
 from datetime import datetime
@@ -18,6 +19,11 @@ from django.views.decorators.csrf import csrf_exempt
 from zcEducation.settings import MEDIA_URL, BASE_DIR
 import os
 import re
+try:
+    import cPickle as pickle
+except ImportError:
+    import pickle
+
 # Create your views here.
 from django.views.decorators.cache import cache_page
 
@@ -40,11 +46,17 @@ from redis import StrictRedis
 
 # @cache_page(15 * 60)
 def index(request):
-    all_banners = BannerInfo.objects.all().order_by('-add_time')[:5]
-    banner_courses = CourseInfo.objects.filter(is_banner=True)[:3]
-    all_courses = CourseInfo.objects.filter(is_banner=False)[:6]
-    all_orgs = OrgInfo.objects.all()[:15]
-    return render(request, 'index.html', {
+    all_banners = serializers.serialize("json", BannerInfo.objects.all().order_by('-add_time')[:5])
+    banner_courses = serializers.serialize("json", CourseInfo.objects.filter(is_banner=True)[:3])
+    all_courses = serializers.serialize("json", CourseInfo.objects.filter(is_banner=False)[:6])
+    all_orgs = serializers.serialize("json", OrgInfo.objects.all()[:15])
+    user = None
+    u = UserProfile.objects.filter(username=request.user.username)
+    if u.count() > 0:
+        user = serializers.serialize("json", u),
+
+    return JsonResponse({
+        'user': user,
         'all_banners': all_banners,
         'banner_courses': banner_courses,
         'all_courses': all_courses,
@@ -93,7 +105,9 @@ def user_login(request):
     if request.method == 'GET':
         return render(request, 'users/login.html')
     else:
-        # userInfo1 = json.loads(request.POST)
+        # userInfo = request.body.decode('utf-8').split('&')[1:]
+        # username = userInfo[0].split('=')[1].replace('%40', '@')
+        # password = userInfo[1].split('=')[1]
         userInfo = json.loads(request.body.decode('utf-8'))
         username = userInfo.get('username')
         password = userInfo.get('password')
@@ -165,7 +179,11 @@ def user_login(request):
 
 def user_logout(request):
     logout(request)
-    return redirect(reverse('index'))
+    # return redirect(reverse('index'))
+    return JsonResponse({
+        'errMsg': 'ok',
+        'url': '/'
+    })
 
 
 def user_active(request, code):

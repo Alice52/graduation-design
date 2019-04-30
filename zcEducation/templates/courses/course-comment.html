@@ -27,42 +27,6 @@
 	</div>
 </section>
     <div id="main">
-{#    <div class="course-infos">#}
-{#        <div class="w pr">#}
-{#            <div style="height: 15px" class="path">#}
-{#            </div>#}
-{#            <div class="hd">#}
-{#                <h2 class="l">{{ course.name }}</h2>#}
-{#            </div>#}
-{#            <div class="statics clearfix">#}
-{#                <div class="static-item ">#}
-{#                    <span class="meta-value">#}
-{#                        <strong>#}
-{#                            {% if course.level == 'cj' %}#}
-{#                                        初级#}
-{#                                 {% elif course.level == 'zj' %}#}
-{#                                        中级#}
-{#                                 {% else %}#}
-{#                                        高级#}
-{#                                 {% endif %}#}
-{#                        </strong>#}
-{#                    </span>#}
-{#                    <span class="meta">难度</span>#}
-{#                    <em></em>#}
-{#                </div>#}
-{#                <div class="static-item static-time">#}
-{#                    <span class="meta-value">{{ course.study_time }}分钟</span>#}
-{#                    <span class="meta">时长</span>#}
-{#                    <em></em>#}
-{#                </div>#}
-{#                <div class="static-item">#}
-{#                    <span class="meta-value"><strong>{{ course.study_num }}</strong></span>#}
-{#                    <span class="meta">学习人数</span>#}
-{#                    <em></em>#}
-{#                </div>#}
-{#            </div>#}
-{#        </div>#}
-{#    </div>#}
     <div class="course-info-main clearfix w has-progress">
 
         <div class="info-bar clearfix">
@@ -109,17 +73,6 @@
                     <div class="bd">
                         <div class="box mb40">
                             <h4>课程信息</h4>
-                            {#                                <div class="teacher-info">#}
-                            {#                                    <a href="{% url 'orgs:teacher_detail' course.teacherinfo.id %}" target="_blank">#}
-                            {#                                        <img src='{{ MEDIA_URL }}{{ course.teacherinfo.image }}' width='80'#}
-                            {#                                             height='80'/>#}
-                            {#                                    </a>#}
-                            {#                                    <span class="tit">#}
-                            {#          <a href="{% url 'orgs:teacher_detail' course.teacherinfo.id %}"#}
-                            {#             target="_blank">{{ course.teacherinfo.name }}</a>#}
-                            {#        </span>#}
-                            {#                                    <span class="job">{{ course.teacherinfo.work_position }}</span>#}
-                            {#                                </div>#}
                             <div class="course-info-tip">
                                 <dl class="first">
                                     <dt>课程名称：{{ course.name }}</dt>
