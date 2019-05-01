@@ -1,24 +1,24 @@
 <template>
-  <section class="headerwrap">
+  <section v-cloak class="headerwrap">
     <header>
       <div class="header">
         <div class="top">
           <div class="wp">
             <!-- TODO 判断用户是否登录状态 -->
             <div v-if="user!=null" class="personal">
-              <dl class="user fr">
-                <dd>
+              <dl @mouseenter="enter()" @mouseleave="leave()" class="user fr">
+                <dd >
                   {{ user.username }}
-                  <img
-                    class="down fr"
-                    src="../../static/images/top_down.png"
-                  >
+                  <!--<img-->
+                    <!--class="down fr"-->
+                    <!--src="../../static/images/top_down.png"-->
+                  <!--&gt;-->
                 </dd>
                 <dt>
                   <img width="30" height="30" :src="getImgUrl(user.image)">
                 </dt>
               </dl>
-              <div class="userdetail">
+              <div @mouseenter="enter()" @mouseleave="leave2()" v-show="showUserScale" class="userdetail">
                 <dl>
                   <dt>
                     <img width="80" height="80" :src="getImgUrl(user.image)">
@@ -28,8 +28,8 @@
                   </dd>
                 </dl>
                 <div class="btn">
-                  <a class="personcenter fl" @click="$router.push(`/user/user_info`)" >进入个人中心</a>
-                  <a class="fr"  @click="$router.push(`/user/user_logout`)">退出</a>
+                  <a class="personcenter fl" @click="$router.push(`/users/user_info`)" >进入个人中心</a>
+                  <a class="fr"  @click="userLogout">退出</a>
                 </div>
               </div>
             </div>
@@ -37,13 +37,13 @@
               v-if="user==null"
               style="color:white"
               class="fr registerbtn"
-              @click="$router.push(`/user/user_register`)"
+              @click="$router.push(`/users/user_register`)"
             >注册</a>
             <a
               v-if="user==null"
               style="color:white"
               class="fr loginbtn"
-              @click="$router.push(`/user/user_login`)"
+              @click="$router.push(`/users/user_login`)"
             >登录</a>
           </div>
         </div>
@@ -55,13 +55,13 @@
             <div class="searchbox fr">
               <div class="selectContainer fl">
                 <span class="selectOption" id="jsSelectOption" data-value="course">公开课</span>
-                <ul class="selectMenu" id="jsSelectMenu">
+                <ul  class="selectMenu" id="jsSelectMenu">
                   <li data-value="course">公开课</li>
                   <li data-value="org">课程机构</li>
                   <li data-value="teacher">授课老师</li>
                 </ul>
               </div>
-              <input id="search_keywords" class="fl" type="text" value placeholder="请输入搜索内容">
+              <input id="search_keywords" class="fl" type="text" value placeholder="请输入搜索内容" v-model="searchKeywords">
               <img
                 class="search_btn fr"
                 id="jsSearchBtn"
@@ -98,15 +98,53 @@
 </template>
 
 <script>
+  import axios from 'axios'
 export default {
   data() {
     return {
+      showUserScale: false,
+      timer: '',
+      searchKeywords: '',
     }
   },
   methods: {
+
     getImgUrl: (bannerUrl) =>{
       return "../../static/media/" + bannerUrl
-    }
+    },
+    enter(){
+      this.showUserScale = true
+      if (this.timer != null){
+        clearTimeout(this.timer);
+      }
+    },
+    leave(){
+      this.timer = setTimeout(()=>{
+        this.showUserScale = false
+      }, 100)
+    },
+    leave2(){
+      this.showUserScale = false
+    },
+    userLogout() {
+      axios({
+        url: "/api/users/user_logout/",
+        method: "GET",
+      })
+        .then(respanse => {
+          let res = respanse.data;
+          console.log(res)
+          if (res.errMsg == "ok") {
+            // this.$router.push(`/`);
+            location.reload()
+          } else {
+            alert(res.errMsg);
+          }
+        })
+        .catch(function(error) {
+          console.log(error);
+        });
+    },
   },
   props:[
     'user'
@@ -114,4 +152,11 @@ export default {
 };
 </script>
 <style scoped>
+
+  a{
+    cursor:pointer;
+  }
+  [v-cloak] {
+    display:none !important;
+  }
 </style>

@@ -1,5 +1,5 @@
 <template>
-  <section>
+  <section class="loginbg">
     <div class="c-box bg-box">
       <div class="login-box clearfix">
         <div class="hd-login clearfix">
@@ -51,18 +51,15 @@
             </div>
             <div class="error btns login-form-tips" id="jsLoginTips">
               {{ errMsg }}
-              <!-- {% for key, err in user_login_from.errors.items %}
-                {{ err }}
-              {% endfor %}-->
             </div>
             <div class="auto-box marb38">
-              <a class="fr" href="http://127.0.0.1:8000/users/user_forget">忘记密码？</a>
+              <a class="fr"  @click="$router.push(`/users/user_forget`)">忘记密码？</a>
             </div>
             <input class="btn btn-green btlogin" id="jsLoginBtn" @click="login" value="立即登录 > ">
           </div>
           <p class="form-p">
             没有617室 ZC在线学习平台？
-            <a href="http://127.0.0.1:8000/users/user_register">[立即注册]</a>
+            <a  @click="$router.push(`/users/user_register`)">[立即注册]</a>
           </p>
         </div>
       </div>
@@ -74,6 +71,7 @@
 import "../../../static/js/unslider.js";
 import "../../../static/js/login.js";
 import axios from "axios";
+import Qs from 'qs'
 
 export default {
   data() {
@@ -84,19 +82,12 @@ export default {
     };
   },
   methods: {
-    login() {
-      // 发送请求，提交登录数据
-      // OK, 跳转 index
-      // failed 显示本界面
-      var userInfo = {
-        username: this.username,
-        password: this.password
-      };
-
+    login () {
+      var data = Qs.stringify({"username":this.username, "password":this.password});
       axios({
         url: "/api/users/user_login/",
         method: "POST",
-        data: userInfo,
+        data: data,
         headers: {
           "Content-Type": "application/x-www-form-urlencoded"
         }
@@ -121,6 +112,11 @@ export default {
 <style scoped>
 @import "../../../static/css/login.css";
 @import "../../../static/css/reset.css";
+.loginbg{
+  background-color: green;
+  width: 100%;
+  height: 100%;
+}
 .btlogin {
   text-indent: 108px;
 }

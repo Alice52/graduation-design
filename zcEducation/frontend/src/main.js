@@ -3,9 +3,11 @@
 import Vue from 'vue'
 import App from './App'
 import router from './router'
-import '../static/js/jquery.min.js'
+// import '../static/js/jquery.min.js'
 
 Vue.config.productionTip = false
+import SIdentify from './components/identity'
+Vue.use(SIdentify)
 
 router.beforeEach((to, from, next) => {
   /* 路由发生变化修改页面title */

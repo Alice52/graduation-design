@@ -5,6 +5,11 @@ import Home from '../components/Home'
 import UserInfo from '../components/user/UserInfo'
 import UserForget from '../components/user/ForgetPwd'
 import UserLogout from '../components/user/UserLogout'
+import UserRegister from '../components/user/Register'
+import UserActive from '../components/user/UserActive'
+import UserReset from '../components/user/PasswordReset'
+
+
 
 Vue.use(Router)
 
@@ -22,20 +27,36 @@ export default new Router({
     },
     // 用户
     {
-      path: '/user/user_info',
+      path: '/users/user_info',
       component: UserInfo
     },
     {
-      path: '/user/user_logout',
+      path: '/users/user_courses',
+      // component: UserActive
+    },
+    {
+      path: 'users/user_logout',
       component: UserLogout
     },
     {
-      path: '/user/user_register',
+      path: '/users/user_register',
+      component: UserRegister
+    },
+    {
+      path: '/users/user_login',
+      component: Login
+    },
+    {
+      path: '/users/user_forget',
       component: UserForget
     },
     {
-      path: '/user/user_login',
-      component: Login
+      path: '/users/user_active/(\\w+)',
+      component: UserActive
+    },
+    {
+      path: '/users/user_reset/(\\w+)',
+      component: UserReset
     },
     {
       path: '/courses/course_list'

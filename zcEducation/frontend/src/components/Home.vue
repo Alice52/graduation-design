@@ -4,8 +4,8 @@
     <div class="banner">
       <div class="wp">
         <div class="fl">
-          <div class="imgslide">
-            <ul class="imgs">
+          <div class="imgSSlide">
+            <ul class="imgsImgs">
               <li v-for="(banner, index) in all_banners" :key="index" :index="index">
                 <a :href="banner.fields.url">
                   <img width="1200" height="478" :src="getImgUrl(banner.fields.image)"/>
@@ -13,8 +13,8 @@
               </li>
             </ul>
           </div>
-          <div class="unslider-arrow prev"></div>
-          <div class="unslider-arrow next"></div>
+          <!--<div class="unslider-arrow prev"></div>-->
+          <!--<div class="unslider-arrow next"></div>-->
         </div>
       </div>
     </div>
@@ -36,17 +36,17 @@
                 <div class="imgslide2">
                   <ul class="imgs">
                     <li v-for="(banner , index) in banner_courses" :key="index" :index="index">
-                      <a @click="$router.push(`/courses/course_detail/{{banner.fields.id}}`)">
+                      <a @click="$router.push(`/courses/course_detail/${banner.pk}`)">
                         <img width="470" height="300" :src="getImgUrl(banner.fields.image)">
                       </a>
                     </li>
                   </ul>
                 </div>
-                <div class="unslider-arrow2 prev"></div>
-                <div class="unslider-arrow2 next"></div>
+                <!--<div class="unslider-arrow2 prev"></div>-->
+                <!--<div class="unslider-arrow2 next"></div>-->
               </div>
-              <div v-for="(course, index) in all_courses" :key="index" :index="index">
-                <a @click="$router.push(`/courses/course_detail/{{course.fields.id}}`)">
+              <div class="future" v-for="(course, index) in all_courses" :key="index" :index="index">
+                <a @click="$router.push(`/courses/course_detail/${course.pk}`)">
                   <img width="233" height="190" :src="getImgUrl(course.fields.image)">
                 </a>
                 <div class="des">
@@ -57,13 +57,13 @@
                     难度：
                     <i v-if="course.fields.level == 'gj'" class="key">高级</i>
                     <i v-if="course.fields.level == 'zj'" class="key">中级</i>
-                    <i v-else class="key">初级</i>
+                    <i v-if="course.fields.level == 'cj'" class="key">初级</i>
                   </span>
                   <span class="fr">学习人数：{{course.fields.study_num}}</span>
                 </div>
                 <div class="bottom">
-                  <!--<span class="fl" title={{ course.orginfo.name }}>{{ course.orginfo.name }}</span>-->
-                  <!--<span class="star fr">{{ course.love_num }}</span>-->
+                  <span class="browse fl" title="浏览次数">{{course.fields.click_num}}</span>
+                  <span class="star fr" title="收藏人数">{{course.fields.love_num}}</span>
                 </div>
               </div>
             </div>
@@ -86,8 +86,8 @@
             </div>
             <div class="right">
               <ul>
-                <li v-for="(org, index) in all_orgs " :key="index" :index="index" class="five">
-                  <a @click="$router.push(`/orgs/org_detail/{{org.id}}`)">
+                <li v-for="(org, index) in all_orgs " :key="index" :index="index">
+                  <a @click="$router.push(`/orgs/org_detail/${org.pk}`)">
                     <div class="company">
                       <img
                         width="120"
@@ -116,7 +116,7 @@ import HeaderWithSearch from "./HeaderWithSearch";
 import ToTop from "./ToTop";
 import Footer from "./Footer";
 import axios from "axios";
-
+// import '../../static/js/index'
 
 export default {
   data() {
@@ -147,6 +147,15 @@ export default {
         console.log(this.all_courses[0].fields)
         console.log(this.all_courses[0].fields.orginfo)
         console.log(this.all_courses[0].fields.orginfo.name)
+
+        // 渲染完成, 操作 dom 元素
+        this.$nextTick(function(){
+          var doms = document.querySelectorAll('.future');
+          var arr = [...doms]
+          arr.forEach((val) => {
+            val.className+=' module1_'+ (parseInt(val.getAttribute('index'))+3) + ' box'
+          })
+        });
       })
       .catch(function(error) {
         console.log(error);
@@ -157,7 +166,6 @@ export default {
         return "../../static/media/" + bannerUrl
     }
   },
-  computed: {},
   // 将头组件映射为标签
   components: {
     HeaderWithSearch,
@@ -166,3 +174,106 @@ export default {
   }
 };
 </script>
+<style scoped>
+  a {
+    cursor: pointer;
+  }
+  .group_list .bottom .browse {
+    cursor: pointer;
+    background: lightgrey url(../../static/images/browse.png) no-repeat 20px center;
+    background-size: 25px 20px;
+  }
+
+  .group_list .bottom .fl {
+    width: 50.5%;
+  }
+
+  .group_list .bottom .fr {
+    width: 49%;
+    text-indent: 10px;
+    cursor: pointer;
+  }
+
+  .group_list .bottom .star {
+    cursor: pointer;
+    background: lightgrey url(../../static/images/star.png) no-repeat 38px center;
+  }
+
+  .module3 li {
+    width: 184px;
+    height: 140px;
+    float: left;
+    margin-right: 8px;
+    margin-top: 4px;
+  }
+
+  .imgSSlide{
+    width: 1200px;
+    height: 479px;
+    overflow: hidden;
+  }
+  .imgsImgs{
+    position: relative;
+    /*left: -400%;*/
+    -webkit-animation: 20s move infinite linear;
+    width: 500%;
+    height: 479px;
+  }
+  .imgsImgs li{
+    float: left;
+    width: 1200px;
+  }
+
+  @-webkit-keyframes move{
+    0% {
+      left: 0;
+    }
+    100% {
+      left: -4800px;
+    }
+  }
+  @keyframes move {
+    0% {
+      left: 0;
+    }
+    100% {
+      left: -4800px;
+    }
+  }
+  .imgSSlide:hover .imgsImgs {
+    -webkit-animation-play-state: paused; /*动画暂停播放*/
+  }
+
+
+  .imgslide2{
+    width: 470px;
+    height: 301px;
+    overflow: hidden;
+  }
+  .imgslide2 > .imgs{
+    position: relative;
+    -webkit-animation: 10s move2 infinite linear;
+    width: 300%;
+    height: 301px;
+  }
+
+  @-webkit-keyframes move2{
+    0% {
+      left: 0;
+    }
+    100% {
+      left: -940px;
+    }
+  }
+  @keyframes move2 {
+    0% {
+      left: 0;
+    }
+    100% {
+      left: -940px;
+    }
+  }
+  .imgslide2:hover .imgs {
+    -webkit-animation-play-state: paused; /*动画暂停播放*/
+  }
+</style>

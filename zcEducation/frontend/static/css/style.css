@@ -17,6 +17,7 @@
 
 body {
     overflow: auto;
+    height: 100%;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -457,7 +458,6 @@ caption {
 }
 
 .header .top .userdetail {
-    display: none;
     position: absolute;
     right: 0;
     top: 38px;
@@ -1861,8 +1861,8 @@ textarea:focus {
 }
 
 .module .box img {
-    width: 100%;
-    transition: all 1s ease 0s;
+    /*width: 100%;*/
+    /*transition: all 1s ease 0s;*/
 }
 
 .module .more {

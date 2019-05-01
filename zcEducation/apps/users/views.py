@@ -6,42 +6,12 @@ from django.db.models import Q
 from django.contrib.auth import authenticate, logout, login
 from utils.sendEmail import send_email_code
 from django.http import JsonResponse
-import json
 from django.core import serializers
-import re
-from django.http import QueryDict
 from datetime import datetime
 from operations.models import UserLove, UserMessage
 from orgs.models import OrgInfo, TeacherInfo
 from courses.models import CourseInfo
-from django.views.generic import View
 from django.views.decorators.csrf import csrf_exempt
-from zcEducation.settings import MEDIA_URL, BASE_DIR
-import os
-import re
-try:
-    import cPickle as pickle
-except ImportError:
-    import pickle
-
-# Create your views here.
-from django.views.decorators.cache import cache_page
-
-from redis import StrictRedis
-
-
-# class IndexView(View):
-#     def get(self,request):
-#         all_banners = BannerInfo.objects.all().order_by('-add_time')[:5]
-#         banner_courses = CourseInfo.objects.filter(is_banner=True)[:3]
-#         all_courses = CourseInfo.objects.filter(is_banner=False)[:6]
-#         all_orgs = OrgInfo.objects.all()[:15]
-#         return render(request, 'index.html', {
-#             'all_banners': all_banners,
-#             'banner_courses': banner_courses,
-#             'all_courses': all_courses,
-#             'all_orgs': all_orgs
-#         })
 
 
 # @cache_page(15 * 60)
@@ -65,39 +35,31 @@ def index(request):
 
 
 def user_register(request):
-    if request.method == 'GET':
-        # 这里实例化forms类，目的不是为了验证，而是为了使用验证码
-        user_register_form = UserRegisterForm()
-        return render(request, 'users/register.html', {
-            'user_register_form': user_register_form
-        })
-    else:
-        user_register_form = UserRegisterForm(request.POST)
-        if user_register_form.is_valid():
-            email = user_register_form.cleaned_data['email']
-            password = user_register_form.cleaned_data['password']
+    user_register_form = UserRegisterForm(request.POST)
+    if user_register_form.is_valid():
+        email = user_register_form.cleaned_data['email']
+        password = user_register_form.cleaned_data['password']
 
-            user_list = UserProfile.objects.filter(Q(username=email) | Q(email=email))
-            if user_list:
-                return render(request, 'users/register.html', {
-                    'msg': '用户已经存在'
-                })
-            else:
-                a = UserProfile()
-                a.username = email
-                a.set_password(password)
-                a.email = email
-                a.image = 'user/default.jpg'
-                a.save()
-                send_email_code(email, 1)
-                return render(request, 'users/register.html', {
-                    'msg': '请去邮箱激活账号'
-                })
-                # return redirect(reverse('index'))
-        else:
-            return render(request, 'users/register.html', {
-                'user_register_form': user_register_form
+        user_list = UserProfile.objects.filter(Q(username=email) | Q(email=email))
+        if user_list:
+            return JsonResponse({
+                'errMsg': '用户已经存在'
             })
+        else:
+            a = UserProfile()
+            a.username = email
+            a.set_password(password)
+            a.email = email
+            a.image = 'user/default.jpg'
+            a.save()
+            send_email_code(email, 1)
+            return JsonResponse({
+                'errMsg': '请去邮箱激活账号'
+            })
+    else:
+        return JsonResponse({
+            'errMsg': '输入信息格式错误'
+        })
 
 
 @csrf_exempt
@@ -105,22 +67,16 @@ def user_login(request):
     if request.method == 'GET':
         return render(request, 'users/login.html')
     else:
-        # userInfo = request.body.decode('utf-8').split('&')[1:]
-        # username = userInfo[0].split('=')[1].replace('%40', '@')
-        # password = userInfo[1].split('=')[1]
-        userInfo = json.loads(request.body.decode('utf-8'))
-        username = userInfo.get('username')
-        password = userInfo.get('password')
-        patern = re.compile(r'^\w+@(\w+\.)+(com|cn|net)$')
+        user_login_form = UserLoginForm(request.POST)
+        if user_login_form.is_valid():
+            username = user_login_form.cleaned_data['username']
+            password = user_login_form.cleaned_data['password']
 
-        if (patern.search(username)) and (len(password) > 3) and (len(password) < 15):
             user = authenticate(username=username, password=password)
             if user:
                 if user.is_start:
                     login(request, user)
                     url = request.COOKIES.get('url', '/')
-                    # ret = redirect(url)
-                    # ret.delete_cookie('url')
                     return JsonResponse({
                         'errMsg': 'ok',
                         'url': url
@@ -139,47 +95,8 @@ def user_login(request):
             })
 
 
-# class UserLoginView(View):
-#     def get(self, request):
-#         return render(request, 'users/login.html')
-#
-#     def post(self, request):
-#         user_login_form = UserLoginForm(request.POST)
-#         if user_login_form.is_valid():
-#             username = user_login_form.cleaned_data['username']
-#             password = user_login_form.cleaned_data['password']
-#
-#             user = authenticate(username=username, password=password)
-#             if user:
-#                 if user.is_start:
-#                     login(request, user)
-#                     # 当登陆成功的时候,给加入一条消息
-#                     a = UserMessage()
-#                     a.message_man = user.id
-#                     a.message_content = '欢迎登陆'
-#                     a.save()
-#                     url = request.COOKIES.get('url', '/')
-#                     ret = redirect(url)
-#                     ret.delete_cookie('url')
-#                     return ret
-#                 else:
-#                     return render(request, 'users/login.html', {
-#                         'msg': '请去邮箱激活账号'
-#                     })
-#             else:
-#                 return render(request, 'users/login.html', {
-#                     'msg': '邮箱或者密码有误'
-#                 })
-#         else:
-#             return render(request, 'users/login.html', {
-#                 'user_login_form': user_login_form,
-#                 'msg': '邮箱或者密码有误'
-#             })
-
-
 def user_logout(request):
     logout(request)
-    # return redirect(reverse('index'))
     return JsonResponse({
         'errMsg': 'ok',
         'url': '/'
@@ -197,7 +114,9 @@ def user_active(request, code):
                 user = user_list[0]
                 user.is_start = True
                 user.save()
-                return redirect(reverse('users:user_login'))
+                return JsonResponse({
+                    'errMsg': 'ok'
+                })
             else:
                 pass
         else:
@@ -207,83 +126,75 @@ def user_active(request, code):
 
 
 def user_forget(request):
-    if request.method == 'GET':
-        user_forget_form = UserForgetForm()
-        return render(request, 'users/forgetpwd.html', {
-            'user_forget_form': user_forget_form
-        })
-    else:
-        user_forget_form = UserForgetForm(request.POST)
-        if user_forget_form.is_valid():
-            email = user_forget_form.cleaned_data['email']
-            user_list = UserProfile.objects.filter(email=email)
-            if user_list:
-                user = user_list[0]
-                send_email_code(email, 2)
-                return render(request, 'users/forgetpwd.html', {
-                    'msg': '请尽快区邮箱重置密码'
-                })
-            else:
-                return render(request, 'users/forgetpwd.html', {
-                    'msg': '用户不存在'
-                })
-        else:
-            return render(request, 'users/forgetpwd.html', {
-                'user_forget_form': user_forget_form
+    user_forget_form = UserForgetForm(request.POST)
+    if user_forget_form.is_valid():
+        email = user_forget_form.cleaned_data['email']
+        user_list = UserProfile.objects.filter(email=email)
+        if user_list:
+            user = user_list[0]
+            send_email_code(email, 2)
+            return JsonResponse({
+                'errMsg': '请尽快区邮箱重置密码'
             })
+        else:
+            return JsonResponse({
+                'errMsg': '用户不存在'
+            })
+    else:
+        return JsonResponse({
+            'errMsg': '邮箱格式不正确'
+        })
 
 
 def user_reset(request, code):
     if code:
-        if request.method == 'GET':
-            return render(request, 'users/password_reset.html', {
-                'code': code
-            })
-        else:
-            user_reset_from = UserResetForm(request.POST)
-            if user_reset_from.is_valid():
-                password = user_reset_from.cleaned_data['password']
-                password1 = user_reset_from.cleaned_data['password1']
-                if password == password1:
-                    email_ver_list = EmailVerifyCode.objects.filter(code=code)
-                    if email_ver_list:
-                        email = email_ver_list[0].email
-                        if email:
-                            user_list = UserProfile.objects.filter(email=email)
-                            if user_list:
-                                user = user_list[0]
-                                user.set_password(password)
-                                user.save()
-                                return redirect(reverse('users:user_login'))
-                            else:
-                                return render(request, 'users/password_reset.html', {
-                                    'msg': '用户不存在',
-                                    'code': code
-                                })
+        user_reset_from = UserResetForm(request.POST)
+        if user_reset_from.is_valid():
+            password = user_reset_from.cleaned_data['password']
+            password1 = user_reset_from.cleaned_data['password1']
+            if password == password1:
+                email_ver_list = EmailVerifyCode.objects.filter(code=code)
+                if email_ver_list:
+                    email = email_ver_list[0].email
+                    if email:
+                        user_list = UserProfile.objects.filter(email=email)
+                        if user_list:
+                            user = user_list[0]
+                            user.set_password(password)
+                            user.save()
+                            return JsonResponse({
+                                'errMsg': 'ok'
+                            })
                         else:
-                            return render(request, 'users/password_reset.html', {
+                            return JsonResponse({
                                 'msg': '用户不存在',
-                                'code': code
                             })
                     else:
-                        return render(request, 'users/password_reset.html', {
+                        return JsonResponse({
                             'msg': '用户不存在',
-                            'code': code
                         })
                 else:
-                    return render(request, 'users/password_reset.html', {
-                        'msg': '两次输入的密码不同',
-                        'code': code
+                    return JsonResponse({
+                        'msg': '用户不存在',
                     })
             else:
-                return render(request, 'users/password_reset.html', {
-                    'user_reset_from': user_reset_from,
-                    'code': code
+                return JsonResponse({
+                    'msg': '两次输入的密码不同',
                 })
+        else:
+            return JsonResponse({
+                'errMsg': '请输入3到16位的密码',
+            })
 
 
 def user_info(request):
-    return render(request, 'users/usercenter-info.html')
+    user = None
+    u = UserProfile.objects.filter(username=request.user.username)
+    if u.count() > 0:
+        user = serializers.serialize("json", u),
+    return JsonResponse({
+        'user': user
+    })
 
 
 # def user_changeimage(request):
