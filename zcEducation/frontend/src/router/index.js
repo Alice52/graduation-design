@@ -14,6 +14,10 @@ import UserFav from '../components/user/UserFav'
 import FavOrgs from '../components/user/FavOrgs'
 import FavCourse from '../components/user/FavCourse'
 import FavTeacher from '../components/user/FavTeacher'
+import HeaderWithSearch from '../components/HeaderWithSearch'
+import CourseList from '../components/CourseList'
+import TeacherList from '../components/TeacherList'
+import OrgList from '../components/OrgList'
 
 
 Vue.use(Router)
@@ -26,9 +30,30 @@ export default new Router({
     //   name: 'error',
     //   component: Home
     // },
+
+    // 首页 nav
     {
       path: '/',
-      component: Home
+      component: HeaderWithSearch,
+      redirect: '/home',
+      children:[
+        {
+          path: '/home',
+          component: Home
+        },
+        {
+          path: '/courses/course_list',
+          component: CourseList
+        },
+        {
+          path: '/teachers/teacher_list',
+          component: TeacherList
+        },
+        {
+          path: '/orgs/org_list',
+          component: OrgList
+        }
+      ]
     },
     // 用户
     {

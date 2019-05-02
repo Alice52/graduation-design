@@ -4,10 +4,9 @@ from django.core.paginator import PageNotAnInteger, EmptyPage, Paginator
 from operations.models import UserLove, UserCourse
 from django.db.models import Q
 from utils.decorators import login_decorator
+from django.http import JsonResponse
+from django.core import serializers
 
-
-# from django.contrib.auth.decorators import login_required
-# Create your views here.
 
 def course_list(request):
     all_courses = CourseInfo.objects.all().order_by('id')
@@ -33,12 +32,15 @@ def course_list(request):
     except EmptyPage:
         pages = pa.page(pa.num_pages)
 
-    return render(request, 'courses/course-list.html', {
-        'all_courses': all_courses,
-        'pages': pages,
-        'recommend_courses': recommend_courses,
+    return JsonResponse({
+        'pages': serializers.serialize("json", pages),
+        'recommend_courses': serializers.serialize("json", recommend_courses),
         'sort': sort,
-        'keyword': keyword
+        'keyword': keyword,
+        'has_previous': pages.has_previous(),
+        'has_next': pages.has_next(),
+        'current_page_number': pages.number,
+        'page_range': pages.paginator.num_pages,
     })
 
 

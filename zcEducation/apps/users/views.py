@@ -20,6 +20,21 @@ def index(request):
     banner_courses = serializers.serialize("json", CourseInfo.objects.filter(is_banner=True)[:3])
     all_courses = serializers.serialize("json", CourseInfo.objects.filter(is_banner=False)[:6])
     all_orgs = serializers.serialize("json", OrgInfo.objects.all()[:15])
+    # user = None
+    # u = UserProfile.objects.filter(username=request.user.username)
+    # if u.count() > 0:
+    #     user = serializers.serialize("json", u),
+
+    return JsonResponse({
+        # 'user': user,
+        'all_banners': all_banners,
+        'banner_courses': banner_courses,
+        'all_courses': all_courses,
+        'all_orgs': all_orgs
+    })
+
+
+def get_user(request):
     user = None
     u = UserProfile.objects.filter(username=request.user.username)
     if u.count() > 0:
@@ -27,10 +42,6 @@ def index(request):
 
     return JsonResponse({
         'user': user,
-        'all_banners': all_banners,
-        'banner_courses': banner_courses,
-        'all_courses': all_courses,
-        'all_orgs': all_orgs
     })
 
 

@@ -1,5 +1,6 @@
 <template>
-  <section v-cloak class="headerwrap">
+  <div>
+    <section v-cloak class="headerwrap">
     <header>
       <div class="header">
         <div class="top">
@@ -74,20 +75,17 @@
           <div class="nav">
             <div class="wp">
               <ul>
-                <li class="active">
+                <li  >
                   <router-link to="/" class="list-group-item">首页</router-link>
-                  <a href="/">首页</a>
                 </li>
-                <li class="active">
-                  <a @click="$router.push(`/courses/course_list`)">
-                    公开课
-                  </a>
+                <li  >
+                  <router-link to="/courses/course_list" class="list-group-item">公开课</router-link>
                 </li>
-                <li class="active">
-                  <a @click="$router.push(`/orgs/teacher_list`)" >授课教师</a>
+                <li  >
+                  <router-link to="/orgs/teacher_list" class="list-group-item">授课教师</router-link>
                 </li>
-                <li class="active">
-                  <a @click="$router.push(`/orgs/org_list`)" >授课机构</a>
+                <li  >
+                  <router-link to="/orgs/org_list" class="list-group-item">授课机构</router-link>
                 </li>
               </ul>
             </div>
@@ -96,6 +94,8 @@
       </div>
     </header>
   </section>
+    <router-view ></router-view>
+  </div>
 </template>
 
 <script>
@@ -106,7 +106,24 @@ export default {
       showUserScale: false,
       timer: '',
       searchKeywords: '',
+      user : null,
     }
+  },
+  mounted: function () {
+    // 发送请求获取 data
+    axios({
+      url: "/api/users/get_user/",
+      method: "GET",
+    })
+      .then(respanse => {
+        let res = respanse.data;
+        if (res.user!=null){
+          this.user = JSON.parse(res.user)[0].fields
+        }
+      })
+      .catch(function(error) {
+        console.log(error);
+      });
   },
   methods: {
 
@@ -137,7 +154,8 @@ export default {
           console.log(res)
           if (res.errMsg == "ok") {
             // this.$router.push(`/`);
-            location.reload()
+            // location.reload()
+            this.user=null
           } else {
             alert(res.errMsg);
           }
@@ -147,9 +165,6 @@ export default {
         });
     },
   },
-  props:[
-    'user'
-  ],
 };
 </script>
 <style scoped>

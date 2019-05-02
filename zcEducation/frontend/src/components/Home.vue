@@ -1,6 +1,6 @@
 <template>
   <div>
-    <HeaderWithSearch :user="user"/>
+    <!--<HeaderWithSearch :user="user"/>-->
     <div class="banner">
       <div class="wp">
         <div class="fl">
@@ -116,12 +116,10 @@ import HeaderWithSearch from "./HeaderWithSearch";
 import ToTop from "./ToTop";
 import Footer from "./Footer";
 import axios from "axios";
-// import '../../static/js/index'
 
 export default {
   data() {
     return {
-      user : null,
       all_banners: [],
       banner_courses: [],
       all_courses:[],
@@ -168,10 +166,16 @@ export default {
   },
   // 将头组件映射为标签
   components: {
-    HeaderWithSearch,
+    // HeaderWithSearch,
     ToTop,
     Footer
-  }
+  },
+  // props: [
+  //   'all_banners',
+  //   'banner_courses',
+  //   'all_courses',
+  //   'all_orgs',
+  // ],
 };
 </script>
 <style scoped>
