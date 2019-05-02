@@ -216,6 +216,7 @@ def user_info(request):
 def user_changeimage(request):
     # instance  指明实例是什么，做修改的时候，我们需要知道是给哪个对象实例进行修改
     # 如果不指明，那么就会被当作创建对象去执行，而我们只有一个图片，就一定会报错。
+    conct = request.POST
     user_changeimage_form = UserChangeImageForm(request.POST, request.FILES, instance=request.user)
     if user_changeimage_form.is_valid():
         user_changeimage_form.save(commit=True)
@@ -289,30 +290,29 @@ def user_resetemail(request):
 
 def user_course(request):
     usercourse_list = request.user.usercourse_set.all()
-    course_list = [usercourse.study_course for usercourse in usercourse_list]
-    return render(request, 'users/usercenter-mycourse.html', {
+    course_list = serializers.serialize("json", [usercourse.study_course for usercourse in usercourse_list])
+    return JsonResponse({
         'course_list': course_list
     })
 
 
 def user_loveorg(request):
-    # userloveorg_list = request.user.userlove_set.all().filter(love_type=1)
     userloveorg_list = UserLove.objects.filter(love_man=request.user, love_type=1, love_status=True)
     org_ids = [userloveorg.love_id for userloveorg in userloveorg_list]
-    org_list = OrgInfo.objects.filter(id__in=org_ids)
+    org_list = serializers.serialize("json", OrgInfo.objects.filter(id__in=org_ids))
 
-    return render(request, 'users/usercenter-fav-org.html', {
+    return JsonResponse({
         'org_list': org_list
     })
 
 
+# rewrite
 def user_loveteacher(request):
-    # userloveorg_list = request.user.userlove_set.all().filter(love_type=1)
     userloveteacher_list = UserLove.objects.filter(love_man=request.user, love_type=3, love_status=True)
     teacher_ids = [userloveteacher.love_id for userloveteacher in userloveteacher_list]
-    teacher_list = TeacherInfo.objects.filter(id__in=teacher_ids)
+    teacher_list = serializers.serialize("json", TeacherInfo.objects.filter(id__in=teacher_ids))
 
-    return render(request, 'users/usercenter-fav-teacher.html', {
+    return JsonResponse({
         'teacher_list': teacher_list
     })
 
@@ -320,9 +320,9 @@ def user_loveteacher(request):
 def user_lovecourse(request):
     userlovecourse_list = UserLove.objects.filter(love_man=request.user, love_type=2, love_status=True)
     course_ids = [userlovecourse.love_id for userlovecourse in userlovecourse_list]
-    course_list = CourseInfo.objects.filter(id__in=course_ids)
+    course_list = serializers.serialize("json", CourseInfo.objects.filter(id__in=course_ids))
 
-    return render(request, 'users/usercenter-fav-course.html', {
+    return JsonResponse({
         'course_list': course_list
     })
 

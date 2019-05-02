@@ -2,13 +2,18 @@ import Vue from 'vue'
 import Router from 'vue-router'
 import Login from '../components/user/Login'
 import Home from '../components/Home'
+import UserCenter from '../components/user/UserCenter'
 import UserInfo from '../components/user/UserInfo'
 import UserForget from '../components/user/ForgetPwd'
 import UserLogout from '../components/user/UserLogout'
 import UserRegister from '../components/user/Register'
 import UserActive from '../components/user/UserActive'
 import UserReset from '../components/user/PasswordReset'
-
+import  UserCourses from '../components/user/UserCourse'
+import UserFav from '../components/user/UserFav'
+import FavOrgs from '../components/user/FavOrgs'
+import FavCourse from '../components/user/FavCourse'
+import FavTeacher from '../components/user/FavTeacher'
 
 
 Vue.use(Router)
@@ -27,13 +32,41 @@ export default new Router({
     },
     // 用户
     {
-      path: '/users/user_info',
-      component: UserInfo
+      path: '/users/user_center',
+      component: UserCenter,
+      redirect:'/users/user_info',
+      children:[
+        {
+          path: '/users/user_info',
+          component: UserInfo
+        },
+        {
+          path: '/users/user_courses',
+          component: UserCourses
+        },
+        {
+          path: '/users/user_favors',
+          component: UserFav,
+          redirect: '/users/user_loveorg',
+          children:[
+            {
+              path: '/users/user_loveorg',
+              component: FavOrgs
+            },
+            {
+              path: '/users/user_loveteacher',
+              component: FavTeacher
+            },
+            {
+              path: '/users/user_lovecourse',
+              component: FavCourse,
+            }
+          ]
+        }
+      ]
     },
-    {
-      path: '/users/user_courses',
-      // component: UserActive
-    },
+
+
     {
       path: 'users/user_logout',
       component: UserLogout

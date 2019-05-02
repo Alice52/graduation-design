@@ -28,7 +28,7 @@
                   </dd>
                 </dl>
                 <div class="btn">
-                  <a class="personcenter fl" @click="$router.push(`/users/user_info`)" >进入个人中心</a>
+                  <a class="personcenter fl" @click="$router.push(`/users/user_center`)" >进入个人中心</a>
                   <a class="fr"  @click="userLogout">退出</a>
                 </div>
               </div>
@@ -75,6 +75,7 @@
             <div class="wp">
               <ul>
                 <li class="active">
+                  <router-link to="/" class="list-group-item">首页</router-link>
                   <a href="/">首页</a>
                 </li>
                 <li class="active">

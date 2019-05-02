@@ -1,28 +1,65 @@
 <template>
   <div class="messagelist">
-    {% for org in org_list %}
-    <div class="messages butler_list company company-fav-box">
+    <div v-for="(org, index) in org_list" :index="index" :key="index" class="messages butler_list company company-fav-box">
       <dl class="des fr">
         <dt>
-          <a href="{% url 'orgs:org_detail' org.id %}">
-            <img width="160" height="90" src="{{ MEDIA_URL }}{{ org.image }}">
+          <a @click="$router.push(`/orgs/org_detail/${org.pk}`)" >
+            <img width="160" height="90" :src="getImgUrl(org.fields.image)">
           </a>
         </dt>
         <dd>
           <h1>
-            <a href="{% url 'orgs:org_detail' org.id %}">{{ org.name }}</a>
+            <a @click="$router.push(`/orgs/org_detail/${org.pk}`)">{{ org.fields.name }}</a>
           </h1>
           <div class="pic fl" style="width:auto;"></div>
-          <span class="c8 clear">{{ org.address }}</span>
-          <div class="delete jsDeleteFav_org" data-favid="{{ org.id }}"></div>
+          <span class="c8 clear">{{ org.fields.address }}</span>
+          <div class="delete jsDeleteFav_org" @click="deleteLove(org.pk, index)"></div>
         </dd>
       </dl>
     </div>
-    {% endfor %}
   </div>
 </template>
 <script>
-export default {};
+  import axios from 'axios'
+export default {
+  mounted() {
+    axios({
+      url: '/api/users/user_loveorg/',
+      method: 'GET'
+    }).then((response)=>{
+      var res = response.data
+      console.log(res)
+      this.org_list = JSON.parse(res.org_list)
+    }).catch((err)=> {
+      console.log(err)
+    })
+  },
+  data() {
+    return {
+      org_list:[],
+    }
+  },
+  methods:{
+    getImgUrl: (bannerUrl) =>{
+      console.log(bannerUrl)
+      return "../../static/media/" + bannerUrl
+    },
+    deleteLove(favId, index) {
+      axios({
+        url: `/api/operations/user_deletelove/?loveid=${favId}&lovetype=1`,
+        method: 'GET'
+      }).then((response)=>{
+        var res = response.data
+        console.log(res)
+        if (res.status == 'ok') {
+          this.org_list.splice(index, 1)
+        } else {
+          alert(res.msg)
+        }
+      })
+    }
+  },
+};
 </script>
 <style scoped>
 </style>

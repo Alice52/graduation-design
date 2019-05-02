@@ -9,13 +9,13 @@
       <div class="head" style="boder:0">
         <ul class="tab_header messagehead">
           <li>
-            <a href="{% url 'users:user_loveorg' %}">课程机构</a>
+            <router-link to="/users/user_loveorg">课程机构</router-link>
           </li>
           <li>
-            <a href="{% url 'users:user_loveteacher' %}">授课教师</a>
+            <router-link to="/users/user_loveteacher">授课教师</router-link>
           </li>
-          <li class="active">
-            <a href="{% url 'users:user_lovecourse' %}">公开课程</a>
+          <li >
+            <router-link to="/users/user_lovecourse">公开课程</router-link>
           </li>
         </ul>
       </div>
@@ -24,7 +24,9 @@
   </div>
 </template>
 <script>
-export default {};
+  export default {
+
+  }
 </script>
 <style scoped>
 </style>

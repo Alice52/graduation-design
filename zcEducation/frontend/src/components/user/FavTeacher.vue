@@ -1,52 +1,83 @@
 <template>
   <div class="messagelist">
-    {% for teacher in teacher_list %}
-    <div class="butler_list butler-fav-box">
+    <div v-for="(teacher, index) in teacher_list" :index="index" :key="index" class="butler_list butler-fav-box">
       <dl class="des users">
         <dt>
-          <a href="{% url 'orgs:teacher_detail' teacher.id %}">
-            <img width="100" height="100" src="{{ MEDIA_URL }}{{ teacher.image }}">
+          <a @click="$router.push(`/orgs/teacher_detail/${teacher.pk}`)"  >
+            <img width="100" height="100" :src="getImgUrl(teacher.fields.image)">
           </a>
         </dt>
         <dd>
           <h1>
-            <a href="{% url 'orgs:teacher_detail' teacher.id %}">
-              {# {{ teacher.name }}
-              <span class="key">认证教师</span>
-              #}
-              {{ teacher.name }}
+            <a @click="$router.push(`/orgs/teacher_detail/${teacher.pk}`)" >
+              {{teacher.fields.name}}
             </a>
           </h1>
           <ul class="cont clearfix">
             <li class="time">
               工作年限：
-              <span>{{ teacher.work_year }}年</span>
+              <span>{{teacher.fields.work_year}}年</span>
             </li>
             <li class="c7">
               课程数：
-              <span>{{ teacher.courseinfo_set.count }}</span>
+              <span>{{ teacher.fields.click_num }}</span>
             </li>
           </ul>
           <ul class="cont clearfix">
             <li class="time">
               工作公司：
-              <span>{{ teacher.work_company.name }}</span>
+              <span>{{ teacher.fields.gender}}</span>
             </li>
             <li class="c7">
               公司职位：
-              <span>{{ teacher.work_position }}</span>
+              <span>{{ teacher.fields.love_num }}</span>
             </li>
           </ul>
         </dd>
-        <div class="delete jsDeleteFav_teacher" data-favid="{{ teacher.id }}"></div>
+        <div class="delete jsDeleteFav_teacher" @click="deleteLove(teacher.pk, index)"></div>
       </dl>
     </div>
-
-    {% endfor %}
   </div>
 </template>
 <script>
-export default {};
+  import axios from 'axios'
+  export default {
+    mounted() {
+      axios({
+        url:'/api/users/user_loveteacher/',
+        method: 'GET'
+      }).then((response)=>{
+        var res = response.data
+        console.log(res)
+        this.teacher_list = JSON.parse(res.teacher_list)
+      })
+    },
+    data() {
+      return {
+        teacher_list:[],
+      }
+    },
+    methods:{
+      getImgUrl: (bannerUrl) =>{
+        console.log(bannerUrl)
+        return "../../static/media/" + bannerUrl
+      },
+      deleteLove(favId, index) {
+        axios({
+          url: `/api/operations/user_deletelove/?loveid=${favId}&lovetype=3`,
+          method: 'GET'
+        }).then((response)=>{
+          var res = response.data
+          console.log(res)
+          if (res.status == 'ok') {
+            this.teacher_list.splice(index, 1)
+          } else {
+            alert(res.msg)
+          }
+        })
+      }
+    },
+  };
 </script>
 <style scoped>
 </style>
