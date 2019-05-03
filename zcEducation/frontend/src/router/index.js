@@ -15,9 +15,19 @@ import FavOrgs from '../components/user/FavOrgs'
 import FavCourse from '../components/user/FavCourse'
 import FavTeacher from '../components/user/FavTeacher'
 import HeaderWithSearch from '../components/HeaderWithSearch'
-import CourseList from '../components/CourseList'
-import TeacherList from '../components/TeacherList'
-import OrgList from '../components/OrgList'
+import CourseList from '../components/courses/CourseList'
+import TeacherList from '../components/teachers/TeacherList'
+import OrgList from '../components/orgs/OrgList'
+import Detail from '../components/courses/Detail'
+import Vedio from '../components/courses/Vedio'
+import TeacherDetail from '../components/teachers/TeacherDetail'
+import VideoChapter from '../components/courses/Chapter'
+import VideoComment from '../components/courses/Comment'
+import OrgHeader from '../components/orgs/OrgHeader'
+import OrgDetaiilCourse from '../components/orgs/OrgDetaiilCourse'
+import OrgDetail from '../components/orgs/OrgDetail'
+import OrgDetailDesc from '../components/orgs/OrgDetailDesc'
+import OrgDetailTeacher from '../components/orgs/OrgDetailTeacher'
 
 
 Vue.use(Router)
@@ -43,16 +53,41 @@ export default new Router({
         },
         {
           path: '/courses/course_list',
-          component: CourseList
+          component: CourseList,
         },
         {
-          path: '/teachers/teacher_list',
+          path: '/orgs/teacher_list',
           component: TeacherList
         },
         {
           path: '/orgs/org_list',
           component: OrgList
-        }
+        },
+        {
+          path: '/courses/course_detail/(\\d+)',
+          component: Detail,
+
+        },
+        {
+          path: '/courses/course_video/(\\d+)',
+          component: Vedio,
+          redirect: '/courses/course_chapter/(\\d+)',
+          children: [
+            {
+              path: '/courses/course_chapter/(\\d+)',
+              component: VideoChapter
+            },
+            {
+              path: '/courses/course_comment/(\\d+)',
+              component: VideoComment
+            },
+          ],
+
+        },
+        {
+          path: '/orgs/teacher_detail/(\\d+)',
+          component: TeacherDetail
+        },
       ]
     },
     // 用户
@@ -90,8 +125,6 @@ export default new Router({
         }
       ]
     },
-
-
     {
       path: 'users/user_logout',
       component: UserLogout
@@ -116,8 +149,31 @@ export default new Router({
       path: '/users/user_reset/(\\w+)',
       component: UserReset
     },
+
+    // org-detail
     {
-      path: '/courses/course_list'
-    }
+      path: '/orgs/org_detail/(\\d+)',
+      component: OrgHeader,
+      redirect: '/orgs/org_detail_home/(\\d+)',
+      children: [
+        {
+          path: '/orgs/org_detail_home/(\\d+)',
+          component: OrgDetail
+        },
+        {
+          path: '/orgs/org_detail_course/(\\d+)',
+          component: OrgDetaiilCourse
+        },
+        {
+          path: '/orgs/org_detail_desc/(\\d+)',
+          component: OrgDetailDesc
+        },
+        {
+          path: '/orgs/org_detail_teacher/(\\d+)',
+          component: OrgDetailTeacher
+        },
+      ]
+    },
+
   ]
 })

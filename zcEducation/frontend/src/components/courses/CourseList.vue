@@ -191,6 +191,7 @@
             this.current_page_number = res.current_page_number
             this.page_range = res.page_range
             this.sort = res.sort
+            this.keyword = res.keyword
           }).catch(err => {
             console.log(err)
           })
@@ -209,6 +210,7 @@
         this.has_next = res.has_next
         this.current_page_number = res.current_page_number
         this.page_range = res.page_range
+        this.keyword = res.keyword
       }).catch(err => {
         console.log(err)
       })
@@ -223,7 +225,7 @@
 
   .group_list .bottom .browse {
     cursor: pointer;
-    background: lightgrey url(../../static/images/browse.png) no-repeat 20px center;
+    background: lightgrey url(../../../static/images/browse.png) no-repeat 20px center;
     background-size: 25px 20px;
   }
 
@@ -239,12 +241,9 @@
 
   .group_list .bottom .star {
     cursor: pointer;
-    background: lightgrey url(../../static/images/star.png) no-repeat 38px center;
+    background: lightgrey url(../../../static/images/star.png) no-repeat 38px center;
   }
 
-  .router-link-exact-active {
-    background: #3D9328 !important;
-  }
 
   .activePage{
     background-color: #eaeaea;

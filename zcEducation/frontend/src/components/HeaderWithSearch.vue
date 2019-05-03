@@ -76,7 +76,7 @@
             <div class="wp">
               <ul>
                 <li  >
-                  <router-link to="/" class="list-group-item">首页</router-link>
+                  <router-link to="/home" class="list-group-item">首页</router-link>
                 </li>
                 <li  >
                   <router-link to="/courses/course_list" class="list-group-item">公开课</router-link>
@@ -174,5 +174,8 @@ export default {
   }
   [v-cloak] {
     display:none !important;
+  }
+  .router-link-exact-active {
+    background: #3D9328 !important;
   }
 </style>

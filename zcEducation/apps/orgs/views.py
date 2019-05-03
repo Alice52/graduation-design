@@ -1,8 +1,12 @@
 from django.shortcuts import render
 from .models import OrgInfo, TeacherInfo, CityInfo
+from courses.models import CourseInfo
 from django.core.paginator import Paginator, PageNotAnInteger, EmptyPage
 from operations.models import UserLove
 from django.db.models import Q
+from django.http import JsonResponse
+from django.core import serializers
+from users.models import UserProfile
 
 
 # Create your views here.
@@ -40,17 +44,41 @@ def org_list(request):
     except EmptyPage:
         pages = paginator.page(paginator.num_pages)
 
-    return render(request, 'orgs/org-list.html', {
-        'all_orgs': all_orgs,
-        'all_citys': all_citys,
-        'sort_orgs': sort_orgs,
-        'pages': pages,
+    return JsonResponse({
+        'all_orgs_count': all_orgs.count(),
+        'all_citys': serializers.serialize("json", all_citys),
+        'sort_orgs': serializers.serialize("json", sort_orgs),
+        'pages': serializers.serialize("json", pages),
         'cate': cate,
         'cityid': cityid,
         'sort': sort,
         'keyword': keyword,
+        'has_previous': pages.has_previous(),
+        'has_next': pages.has_next(),
+        'current_page_number': pages.number,
+        'page_range': pages.paginator.num_pages,
     })
 
+
+def org_header(request, org_id):
+    orgQuerySet = OrgInfo.objects.filter(id=int(org_id))
+
+    user = None
+    u = UserProfile.objects.filter(username=request.user.username)
+    if u.count() > 0:
+        user = serializers.serialize("json", u),
+
+    lovestatus = False
+    if request.user.is_authenticated():
+        love = UserLove.objects.filter(love_man=request.user, love_id=int(org_id), love_type=1, love_status=True)
+        if love:
+            lovestatus = True
+
+    return JsonResponse({
+            'user': user,
+            'lovestatus': lovestatus,
+            'org': serializers.serialize('json', orgQuerySet),
+        })
 
 def org_detail(request, org_id):
     if org_id:
@@ -65,6 +93,8 @@ def org_detail(request, org_id):
             love = UserLove.objects.filter(love_man=request.user, love_id=int(org_id), love_type=1, love_status=True)
             if love:
                 lovestatus = True
+
+
 
         return render(request, 'orgs/org-detail-homepage.html', {
             'org': org,
@@ -157,20 +187,25 @@ def teacher_list(request):
     except EmptyPage:
         pages = pa.page(pa.num_pages)
 
-    return render(request, 'orgs/teachers-list.html', {
-        'all_teachers': all_teachers,
-        'sort_teachers': sort_teachers,
-        'pages': pages,
+    return JsonResponse({
+        'all_teachers_count': all_teachers.count(),
+        'sort_teachers':  serializers.serialize("json", sort_teachers),
+        'pages': serializers.serialize("json", pages),
         'sort': sort,
-        'keyword': keyword
+        'keyword': keyword,
+        'has_previous': pages.has_previous(),
+        'has_next': pages.has_next(),
+        'current_page_number': pages.number,
+        'page_range': pages.paginator.num_pages,
     })
 
 
 def teacher_detail(request, teacher_id):
     if teacher_id:
         all_teachers = TeacherInfo.objects.all()
-        teacher = TeacherInfo.objects.filter(id=int(teacher_id))[0]
-        sort_teachers = all_teachers.order_by('-love_num')[:2]
+        teacherQuerySet = TeacherInfo.objects.filter(id=int(teacher_id))
+        teacher = teacherQuerySet[0]
+        sort_teachers = all_teachers.order_by('-love_num')[:3]
 
         teacher.click_num += 1
         teacher.save()
@@ -178,18 +213,30 @@ def teacher_detail(request, teacher_id):
         loveteacher = False
         loveorg = False
         if request.user.is_authenticated():
-            love = UserLove.objects.filter(love_id=int(teacher_id), love_type=3, love_status=True,
-                                           love_man=request.user)
+            love = UserLove.objects.filter(love_id=int(teacher_id), love_type=3, love_status=True, love_man=request.user)
             if love:
                 loveteacher = True
-            love1 = UserLove.objects.filter(love_id=teacher.work_company.id, love_type=1, love_status=True,
-                                            love_man=request.user)
+            love1 = UserLove.objects.filter(love_id=teacher.work_company.id, love_type=1, love_status=True, love_man=request.user)
             if love1:
                 loveorg = True
 
-        return render(request, 'orgs/teacher-detail.html', {
-            'teacher': teacher,
-            'sort_teachers': sort_teachers,
+        org = OrgInfo.objects.filter(teacherinfo=teacher)[0]
+        org_name = org.name
+        org_desc = org.desc
+        org_id = org.id
+        org_img = str(org.image)
+        org_address = org.address
+        all_courses = CourseInfo.objects.filter(teacherinfo=teacher)
+
+        return JsonResponse({
+            'teacher': serializers.serialize('json', teacherQuerySet),
+            'sort_teachers': serializers.serialize('json', sort_teachers),
             'loveteacher': loveteacher,
-            'loveorg': loveorg
+            'loveorg': loveorg,
+            'all_courses': serializers.serialize('json', all_courses),
+            'org_name': org_name,
+            'org_desc': org_desc,
+            'org_id': org_id,
+            'org_img': org_img,
+            'org_address': org_address,
         })

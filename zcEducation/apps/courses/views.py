@@ -1,11 +1,15 @@
 from django.shortcuts import render
-from .models import CourseInfo
+from .models import CourseInfo, SourceInfo
 from django.core.paginator import PageNotAnInteger, EmptyPage, Paginator
 from operations.models import UserLove, UserCourse
 from django.db.models import Q
 from utils.decorators import login_decorator
 from django.http import JsonResponse
 from django.core import serializers
+from orgs.models import OrgInfo
+from courses.models import LessonInfo, VideoInfo
+from users.models import UserProfile
+import json
 
 
 def course_list(request):
@@ -46,9 +50,11 @@ def course_list(request):
 
 def course_detail(request, course_id):
     if course_id:
-        course = CourseInfo.objects.filter(id=int(course_id))[0]
+        courseQuerySet = CourseInfo.objects.filter(id=int(course_id))
+        course = courseQuerySet[0]
+        org = OrgInfo.objects.filter(id=int(course.orginfo.id))
         relate_courses = CourseInfo.objects.filter(category=course.category).exclude(id=int(course_id))[:2]
-
+        course_lessoninfo_count = course.lessoninfo_set.count()
         course.click_num += 1
         course.save()
 
@@ -64,18 +70,23 @@ def course_detail(request, course_id):
             if love1:
                 loveorg = True
 
-        return render(request, 'courses/course-detail.html', {
-            'course': course,
-            'relate_courses': relate_courses,
+        return JsonResponse({
+            'course': serializers.serialize("json", courseQuerySet),
+            'org': serializers.serialize("json", org),
+            'city_name': course.orginfo.cityinfo.name,
+            'org_teacher_num': course.orginfo.teacherinfo_set.count(),
+            'relate_courses': serializers.serialize("json", relate_courses),
             'lovecourse': lovecourse,
-            'loveorg': loveorg
+            'loveorg': loveorg,
+            'course_lessoninfo_count': course_lessoninfo_count
         })
 
 
 @login_decorator
 def course_video(request, course_id):
     if course_id:
-        course = CourseInfo.objects.filter(id=int(course_id))[0]
+        courseQuerySet = CourseInfo.objects.filter(id=int(course_id))
+        course = courseQuerySet[0]
 
         # 当用户点击开始学习以后，代表这个用户学习了这个课程，我们需要去判断用户学习课程的表当中有没有学习这门课程的记录，如果没有，需要给加上这条记录，代表用户学习了这门课程
         usercourse_list = UserCourse.objects.filter(study_man=request.user, study_course=course)
@@ -108,34 +119,54 @@ def course_video(request, course_id):
         usercourse_list = UserCourse.objects.filter(study_man__in=user_list).exclude(study_course=course)
 
         # 第四步：从获取到的用户课程列表当中，拿到我们需要的其它课程
-        course_list = list(set([usercourse.study_course for usercourse in usercourse_list]))[:6]
+        courseList = list(set([usercourse.study_course for usercourse in usercourse_list]))[:6]
 
-        return render(request, 'courses/course-video.html', {
-            'course': course,
-            'course_list': course_list
+        course_sources = SourceInfo.objects.filter(courseinfo=course)
+        lesson_list = LessonInfo.objects.filter(courseinfo=course)
+        lessons =[]
+        for lesson in lesson_list:
+            video_list = VideoInfo.objects.filter(lessoninfo=lesson)
+            # print(video_list)
+            videos = []
+            for video in video_list:
+                a = {'name': video.name, 'url': str(video.url), 'study_time': video.study_time}
+                videos.append(a)
+            lessons.append({'name': lesson.name, 'video': videos})
+
+        print(lessons)
+        return JsonResponse({
+            'course': serializers.serialize("json", courseQuerySet),
+            'course_list': serializers.serialize("json", courseList),
+            'course_sources': serializers.serialize("json", course_sources),
+            'lesson_list': json.dumps(lessons),
         })
 
 
 def course_comment(request, course_id):
     if course_id:
-        course = CourseInfo.objects.filter(id=int(course_id))[0]
+        courseQuerySet = CourseInfo.objects.filter(id=int(course_id))
+        course = courseQuerySet[0]
         all_comments = course.usercomment_set.all()[:10]
-
+        comment_vo = []
+        for comment in all_comments:
+            user = UserProfile.objects.filter(id=comment.comment_man_id)[0]
+            comment_info = {'add_time': str(comment.add_time), 'comment_content': comment.comment_content, 'image': str(user.image), 'nick_name': user.nick_name}
+            comment_vo.append(comment_info)
         # 学过该课的同学还学过什么课程
         # 第一步：我们需要从中间表用户课程表当中找到学过该课的所有对象
-        usercourse_list = UserCourse.objects.filter(study_course=course)
+        # usercourse_list = UserCourse.objects.filter(study_course=course)
 
         # 第二步：根据找到的用户学习课程列表，遍历拿到所有学习过这门课程的用户列表
-        user_list = [usercourse.study_man for usercourse in usercourse_list]
+        # user_list = [usercourse.study_man for usercourse in usercourse_list]
 
         # 第三步：再根据找到的用户，从中间用户学习课程表当中，找到所有用户学习其它课程的 整个对象,需要用到exclude去除当前学过的这个课程对象
-        usercourse_list = UserCourse.objects.filter(study_man__in=user_list).exclude(study_course=course)
+        # usercourse_list = UserCourse.objects.filter(study_man__in=user_list).exclude(study_course=course)
 
         # 第四步：从获取到的用户课程列表当中，拿到我们需要的其它课程
-        course_list = list(set([usercourse.study_course for usercourse in usercourse_list]))
+        # course_list = list(set([usercourse.study_course for usercourse in usercourse_list]))
 
-        return render(request, 'courses/course-comment.html', {
-            'course': course,
-            'all_comments': all_comments,
-            'course_list': course_list
+        return JsonResponse({
+            'course': serializers.serialize('json', courseQuerySet),
+            'comment_vo': json.dumps(comment_vo),
+            # 'course_list': course_list
         })

@@ -4,16 +4,10 @@
       <div class="wp">
         <div class="crumbs">
           <ul>
-            <li>
-              <a href="/">首页</a>>
-            </li>
-            <li>
-              <a href="{% url 'courses:course_list' %}">公开课程</a>>
-            </li>
-            <li>
-              <a href="{% url 'courses:course_detail' course.id %}">课程详情</a>>
-            </li>
-            <li>章节信息</li>
+            <li><a @click="$router.push(`/home`)">首页</a>&gt;</li>
+            <li><a @click="$router.push(`/courses/course_list`)">公开课程</a>&gt;</li>
+            <li><a @click="$router.push(`/courses/course_detail/${course.pk}`)">课程详情</a>&gt;</li>
+            <li>课程评论</li>
           </ul>
         </div>
       </div>
@@ -25,58 +19,11 @@
             <div class="content">
               <div class="mod-tab-menu">
                 <ul class="course-menu clearfix">
-                  <li>
-                    <a
-                      class="ui-tabs-active active"
-                      id="learnOn"
-                      href="{% url 'courses:course_video' course.id %}"
-                    >
-                      <span>章节</span>
-                    </a>
-                  </li>
-                  <li>
-                    <a id="commentOn" class href="{% url 'courses:course_comment' course.id %}">
-                      <span>评论</span>
-                    </a>
-                  </li>
+                  <li><router-link :to="'/courses/course_video/'+course.pk"><span>章节</span></router-link></li>
+                  <li><router-link :to="'/courses/course_comment/'+course.pk"><span>评论</span></router-link></li>
                 </ul>
               </div>
-              <div id="notice" class="clearfix">
-                <div class="l tnotice">
-                  <strong>课程须知:</strong>
-                  <a href="javascript:void(0)">{{ course.course_need }}</a>
-                </div>
-              </div>
-
-              <div class="mod-chapters">
-                {% for lesson in course.lessoninfo_set.all %}
-                <div class="chapter chapter-active">
-                  <h3>
-                    <strong>
-                      <i class="state-expand"></i>
-                      {{ lesson.name }}
-                    </strong>
-                  </h3>
-                  <ul class="video">
-                    {% for video in lesson.videoinfo_set.all %}
-                    <li>
-                      <a
-                        target="_blank"
-                        href="{{MEDIA_URL }}{{ video.url }}"
-                        class="J-media-item studyvideo"
-                      >
-                        {{ video.name }}
-                        ({{ video.study_time }})
-                        <i
-                          class="study-state"
-                        ></i>
-                      </a>
-                    </li>
-                    {% endfor %}
-                  </ul>
-                </div>
-                {% endfor %}
-              </div>
+              <router-view :course="course" :lesson_list="lesson_list"></router-view>
             </div>
             <div class="aside r vedioright">
               <div class="bd">
@@ -84,62 +31,46 @@
                   <h4>课程信息</h4>
                   <div class="course-info-tip">
                     <dl class="first">
-                      <dt>课程名称：{{ course.name }}</dt>
+                      <dt>课程名称：{{course.fields.name}}</dt>
                     </dl>
                     <dl class="first">
-                      <dt>课程时长：{{ course.study_time }}分钟</dt>
+                      <dt>课程时长：{{course.fields.study_time}}分钟</dt>
                     </dl>
                     <dl class="first">
-                      <dt>学习人数： {{ course.study_num }}</dt>
+                      <dt>学习人数： {{course.fields.study_num}}</dt>
                     </dl>
                     <dl class="first">
                       <dt>如何学习:</dt>
-                      <dd class="autowrap">&nbsp;&nbsp;&nbsp;{{ course.teacher_tell }}</dd>
+                      <dd class="autowrap">&nbsp;&nbsp;&nbsp;{{course.fields.teacher_tell}}</dd>
                     </dl>
                   </div>
                 </div>
                 <div class="box mb40">
                   <h4>资料下载</h4>
                   <ul class="downlist">
-                    {% for source in course.sourceinfo_set.all %}
-                    <li>
-                      <span>
-                        <i class="aui-iconfont aui-icon-file"></i>
-                        &nbsp;&nbsp;{{ source.name }}
-                      </span>
-                      <a
-                        href="{{ MEDIA_URL }}{{ source.down_load }}"
-                        class="downcode"
-                        target="_blank"
-                        download
-                        data-id="274"
-                        title
-                      >下载</a>
+                    <li v-for="(source, index) in course_sources" :index="index" :key="index">
+                      <span><i class="aui-iconfont aui-icon-file"></i>&nbsp;&nbsp;{{source.fields.name}}</span>
+                      <a :href="getSourceUrl(source.fields.down_load)" class="downcode"
+                         :title="source.fields.name">下载</a>
                     </li>
-                    {% endfor %}
                   </ul>
                 </div>
 
-                <div class="cp-other-learned js-comp-tabs">
+                <div class="cp-other-learned  js-comp-tabs">
                   <div class="cp-header clearfix">
                     <h2 class="cp-tit l">学过该课的同学还学过</h2>
                   </div>
                   <div class="cp-body">
-                    <div
-                      class="cp-tab-pannel js-comp-tab-pannel"
-                      data-pannel="course"
-                      style="display: block"
-                    >
+                    <div class="cp-tab-pannel js-comp-tab-pannel" data-pannel="course"
+                         style="display: block">
                       <!-- img 200 x 112 -->
                       <ul class="other-list">
-                        {% for course1 in course_list %}
-                        <li class="curr">
-                          <a href="{% url 'courses:course_detail' course1.id %}" target="_blank">
-                            <img width="240" src="{{ MEDIA_URL }}{{ course1.image }}">
-                            <span class="name autowrap">{{ course1.name }}</span>
+                        <li v-for="(course1, index) in course_list" :index="index" :key="index" class="curr">
+                          <a @click="$router.push(`/courses/course_detail/${course1.pk}`)" target="_blank">
+                            <img width="240" :src="getImgUrl(course1.fields.image)">
+                            <span class="name autowrap">{{course1.fields.name}}</span>
                           </a>
                         </li>
-                        {% endfor %}
                       </ul>
                     </div>
                   </div>
@@ -154,12 +85,52 @@
   </div>
 </template>
 <script>
-import HeaderWithSearch from "../HeaderWithSearch";
-export default {
-  components: {
-    HeaderWithSearch
-  }
-};
+  import axios from 'axios'
+  import Qs from 'qs'
+
+  export default {
+    data() {
+      return {
+        course: {},
+        course_list: [],
+        course_sources: [],
+        lesson_list: [],
+      };
+    },
+    mounted() {
+      axios({
+        url: `/api/courses/course_video/${this.$route.params.pathMatch}/`,
+        method: 'GET'
+      }).then(response => {
+        var res = response.data
+        console.log(res)
+        this.course = JSON.parse(res.course)[0]
+        this.course_list = JSON.parse(res.course_list)
+        this.course_sources = JSON.parse(res.course_sources)
+        this.lesson_list = JSON.parse(res.lesson_list)
+        console.log(this.lesson_list)
+      }).catch(err => {
+        console.log(err)
+      })
+    },
+    methods: {
+      getSourceUrl: (bannerUrl) => {
+        console.log(bannerUrl)
+        return "../../static/media/" + bannerUrl
+      },
+      getImgUrl: (bannerUrl) => {
+        return "../../static/media/" + bannerUrl
+      }
+    },
+  };
 </script>
-<style scoped>
+<style>
+  @import "../../../static/css/zc-education/course/learn-less.css";
+  @import "../../../static/css/zc-education/course/common-less.css";
+  .router-link-active {
+    border-bottom: 2px solid #f01400;
+    color: #f01400;
+    height: 55px;
+    font-weight: bold;
+  }
 </style>

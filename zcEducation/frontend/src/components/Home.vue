@@ -142,9 +142,6 @@ export default {
         this.banner_courses = JSON.parse(res.banner_courses)
         this.all_courses = JSON.parse(res.all_courses)
         this.all_orgs = JSON.parse(res.all_orgs)
-        console.log(this.all_courses[0].fields)
-        console.log(this.all_courses[0].fields.orginfo)
-        console.log(this.all_courses[0].fields.orginfo.name)
 
         // 渲染完成, 操作 dom 元素
         this.$nextTick(function(){
