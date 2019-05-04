@@ -11,19 +11,10 @@
           <div class="imgslide">
             <ul class="imgs">
               <li>
-                <a href>
                   <img width="483" height="472" src="../../../static/images/mysql.jpg">
-                </a>
-              </li>
-              <li>
-                <a href>
-                  <img width="483" height="472" src="../../../static/images/mongoDB.jpg">
-                </a>
               </li>
             </ul>
           </div>
-          <div class="unslider-arrow prev"></div>
-          <div class="unslider-arrow next"></div>
         </div>
         <div class="fl form-box">
           <h2>帐号登录</h2>
@@ -68,8 +59,6 @@
 </template>
 
 <script>
-import "../../../static/js/unslider.js";
-import "../../../static/js/login.js";
 import axios from "axios";
 import Qs from 'qs'
 
@@ -110,8 +99,6 @@ export default {
 </script>
 
 <style scoped>
-@import "../../../static/css/login.css";
-@import "../../../static/css/reset.css";
 .loginbg{
   background-color: green;
   width: 100%;

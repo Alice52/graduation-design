@@ -106,13 +106,15 @@
         method: 'GET'
       }).then(response => {
         var res = response.data
-        this.course = JSON.parse(res.course)[0]
-        this.course_list = JSON.parse(res.course_list)
-        this.course_sources = JSON.parse(res.course_sources)
-        this.lesson_list = JSON.parse(res.lesson_list)
-        this.showComponent = true
+          this.course = JSON.parse(res.course)[0]
+          this.course_list = JSON.parse(res.course_list)
+          this.course_sources = JSON.parse(res.course_sources)
+          this.lesson_list = JSON.parse(res.lesson_list)
+          this.showComponent = true
+
       }).catch(err => {
         console.log(err)
+        this.$router.push(`/users/user_login`)
       })
     },
     methods: {

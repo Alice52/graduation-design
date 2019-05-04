@@ -10,22 +10,9 @@
           <div class="imgslide">
             <ul class="imgs">
               <li>
-                <a href>
-                  <img width="483" height="472" src="../../../static/images/mysql.jpg">
-                </a>
+                  <img class="f-img" width="483" height="472" src="../../../static/images/mysql.jpg">
               </li>
 
-              <li>
-                <a href>
-                  <img width="483" height="472" src="../../../static/images/mongoDB.jpg">
-                </a>
-              </li>
-
-              <li>
-                <a href>
-                  <img width="483" height="472" src="../../../static/images/mysql.jpg">
-                </a>
-              </li>
             </ul>
           </div>
           <div class="unslider-arrow prev"></div>
@@ -80,8 +67,6 @@
   </section>
 </template>
 <script>
-  import '../../../static/js/validateDialog.js'
-  import '../../../static/js/login.js'
   import axios from 'axios'
   import Qs from 'qs'
   import SIdintity from '../identity'
@@ -151,9 +136,6 @@
   };
 </script>
 <style scoped>
-  @import "../../../static/css/reset.css";
-  @import "../../../static/css/login.css";
-
   #jsEmailRegBtn{
    text-indent: 108px;
   }
@@ -161,5 +143,8 @@
     background-color: green;
     width: 100%;
     height: 100%;
+  }
+  .f-img{
+    cursor: pointer;
   }
 </style>

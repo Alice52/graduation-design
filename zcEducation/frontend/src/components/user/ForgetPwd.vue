@@ -11,19 +11,7 @@
           <div class="imgslide">
             <ul class="imgs">
               <li>
-                <a href>
-                  <img width="483" height="472" src="../../../static/images/mysql.jpg">
-                </a>
-              </li>
-              <li>
-                <a href>
-                  <img width="483" height="472" src="../../../static/images/mongoDB.jpg">
-                </a>
-              </li>
-              <li>
-                <a href>
-                  <img width="483" height="472" src="../../../static/images/mysql.jpg">
-                </a>
+                  <img class="f-img" width="483" height="472" src="../../../static/images/mysql.jpg">
               </li>
             </ul>
           </div>
@@ -85,7 +73,7 @@
     mounted() {
       this.identifyCode = "";
       this.makeCode(this.identifyCodes, 4);
-      showComponent=true
+      this.showComponent=true
     },
 
     methods:{
@@ -132,8 +120,6 @@
   };
 </script>
 <style scoped>
-  @import "../../../static/css/login.css";
-  @import "../../../static/css/reset.css";
   .loginbg{
     background-color: green;
     width: 100%;
@@ -141,5 +127,8 @@
   }
   #jsFindPwdBtn {
     text-indent: 108px;
+  }
+  .f-img{
+    cursor: pointer;
   }
 </style>

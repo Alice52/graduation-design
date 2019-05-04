@@ -69,7 +69,6 @@ export default new Router({
         {
           path: '/courses/course_detail/(\\d+)',
           component: Detail,
-
         },
         {
           path: '/courses/course_video/(\\d+)',

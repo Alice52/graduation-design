@@ -70,35 +70,32 @@ def user_register(request):
 
 @csrf_exempt
 def user_login(request):
-    if request.method == 'GET':
-        return render(request, 'users/login.html')
-    else:
-        user_login_form = UserLoginForm(request.POST)
-        if user_login_form.is_valid():
-            username = user_login_form.cleaned_data['username']
-            password = user_login_form.cleaned_data['password']
+    user_login_form = UserLoginForm(request.POST)
+    if user_login_form.is_valid():
+        username = user_login_form.cleaned_data['username']
+        password = user_login_form.cleaned_data['password']
 
-            user = authenticate(username=username, password=password)
-            if user:
-                if user.is_start:
-                    login(request, user)
-                    url = request.COOKIES.get('url', '/')
-                    return JsonResponse({
-                        'errMsg': 'ok',
-                        'url': url
-                    })
-                else:
-                    return JsonResponse({
-                        'errMsg': '请去邮箱激活账号'
-                    })
+        user = authenticate(username=username, password=password)
+        if user:
+            if user.is_start:
+                login(request, user)
+                url = request.COOKIES.get('url', '/')
+                return JsonResponse({
+                    'errMsg': 'ok',
+                    'url': url
+                })
             else:
                 return JsonResponse({
-                    'errMsg': '邮箱或密码不对'
+                    'errMsg': '请去邮箱激活账号'
                 })
         else:
             return JsonResponse({
-                'errMsg': '请出入正确格式的邮箱'
+                'errMsg': '邮箱或密码不对'
             })
+    else:
+        return JsonResponse({
+            'errMsg': '请出入正确格式的邮箱'
+        })
 
 
 def user_logout(request):

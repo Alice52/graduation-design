@@ -130,9 +130,9 @@
   }
 </script>
 <style>
-  @import "../../../static/css/reset.css";
-  @import "../../../static/css/animate.css";
-  @import "../../../static/css/style.css";
+  /*@import "../../../static/css/reset.css";*/
+  /*@import "../../../static/css/animate.css";*/
+  /*@import "../../../static/css/style.css";*/
   .personal_list .inforcon .right li input[type=date] {
     color: #3d3d3d;
     height: 30px;

@@ -12,9 +12,9 @@ def login_decorator(func):
             # 拿到目前访问的完整url，不只是路径部分
             url = request.get_full_path()
             ret = redirect(reverse('users:user_login'))
-            ret.set_cookie('url', url)
+            if 'courses' in url:
+                ret.set_cookie('url', url)
             return ret
-
     return inner
 
 # f1 = login_decorator(f1)

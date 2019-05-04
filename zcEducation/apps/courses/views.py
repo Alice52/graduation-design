@@ -78,7 +78,7 @@ def course_detail(request, course_id):
             'relate_courses': serializers.serialize("json", relate_courses),
             'lovecourse': lovecourse,
             'loveorg': loveorg,
-            'course_lessoninfo_count': course_lessoninfo_count
+            'course_lessoninfo_count': course_lessoninfo_count,
         })
 
 
@@ -133,12 +133,12 @@ def course_video(request, course_id):
                 videos.append(a)
             lessons.append({'name': lesson.name, 'video': videos})
 
-        print(lessons)
         return JsonResponse({
             'course': serializers.serialize("json", courseQuerySet),
             'course_list': serializers.serialize("json", courseList),
             'course_sources': serializers.serialize("json", course_sources),
             'lesson_list': json.dumps(lessons),
+            'status': 'login',
         })
 
 

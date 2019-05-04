@@ -45,7 +45,7 @@
                   <div class="btns">
                     <div v-if="lovecourse" class="btn colectgroupbtn" @click="CancelLove(course.pk, 2)" > 取消收藏</div>
                     <div v-else class="btn colectgroupbtn" @click="CancelLove(course.pk, 2)"  > 收藏 </div>
-                    <div class="buy btn"><a style="color: white" @click="$router.push(`/courses/course_video/${course.pk}`)" >开始学习</a></div>
+                    <div class="buy btn"><a style="color: white; text-decoration: none;" @click="$router.push(`/courses/course_video/${course.pk}`)" >开始学习</a></div>
                   </div>
                 </div>
               </div>
@@ -139,7 +139,7 @@
         },
         mounted() {
           axios({
-            url: `/api/courses/course_video/${this.$route.params.pathMatch}/`,
+            url: `/api/courses/course_detail/${this.$route.params.pathMatch}/`,
             methods: 'GET'
           }).then(response=> {
             var res = response.data

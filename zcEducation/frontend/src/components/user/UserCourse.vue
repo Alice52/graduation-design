@@ -47,6 +47,7 @@ export default {
   data() {
     return {
       course_list:[],
+      showComponent: false,
     }
   },
   mounted() {

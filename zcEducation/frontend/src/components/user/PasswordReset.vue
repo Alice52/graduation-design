@@ -12,19 +12,10 @@
             <ul class="imgs">
               <li>
                 <a href>
-                  <img width="483" height="472" src="../../../static/images/mysql.jpg">
+                  <img class="f-img" width="483" height="472" src="../../../static/images/mysql.jpg">
                 </a>
               </li>
-              <li>
-                <a href>
-                  <img width="483" height="472" src="../../../static/images/mongoDB.jpg">
-                </a>
-              </li>
-              <li>
-                <a href>
-                  <img width="483" height="472" src="../../../static/images/mysql.jpg">
-                </a>
-              </li>
+
             </ul>
           </div>
           <div class="unslider-arrow prev"></div>
@@ -97,8 +88,6 @@
   };
 </script>
 <style scoped>
-  @import "../../../static/css/login.css";
-  @import "../../../static/css/reset.css";
   .loginbg{
     background-color: green;
     width: 100%;
@@ -106,5 +95,8 @@
   }
   #jsEmailRegBtn {
     text-indent: 108px;
+  }
+  .f-img{
+    cursor: pointer;
   }
 </style>

@@ -32,13 +32,13 @@
             </div>
             <a
               v-if="user==null"
-              style="color:white"
+              style="color:white; text-decoration: none;"
               class="fr registerbtn"
               @click="$router.push(`/users/user_register`)"
             >注册</a>
             <a
               v-if="user==null"
-              style="color:white"
+              style="color:white; text-decoration: none;"
               class="fr loginbtn"
               @click="$router.push(`/users/user_login`)"
             >登录</a>
@@ -68,7 +68,7 @@
             <div class="wp">
               <ul>
                 <li  >
-                  <router-link to="/home" class="list-group-item">首页</router-link>
+                  <router-link to="/" class="list-group-item">首页</router-link>
                 </li>
                 <li  >
                   <router-link to="/courses/course_list" class="list-group-item">公开课</router-link>
@@ -209,7 +209,7 @@ export default {
   }
   .selectOption {
     color: black;
-    background: url(../../../static/images/select_arrow.png) no-repeat 93% 50%;
+    background: url(../../static/images/select_arrow.png) no-repeat 93% 50%;
     display: block;
     cursor: pointer;
     text-align: center;

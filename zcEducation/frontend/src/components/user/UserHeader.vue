@@ -106,9 +106,9 @@
   };
 </script>
 <style >
-  @import "../../../static/css/reset.css";
-  @import "../../../static/css/animate.css";
-  @import "../../../static/css/style.css";
+  /*@import "../../../static/css/reset.css";*/
+  /*@import "../../../static/css/animate.css";*/
+  /*@import "../../../static/css/style.css";*/
   a{
     cursor:pointer;
   }

@@ -3,10 +3,15 @@
 import Vue from 'vue'
 import App from './App'
 import router from './router'
-// import '../static/js/jquery.min.js'
+import '../static/css/login.css'
+import '../static/css/reset.css'
+import '../static/css/style.css'
+import '../static/css/animate.css'
+import '../static/js/jquery.min'
+import SIdentify from './components/identity'
+
 
 Vue.config.productionTip = false
-import SIdentify from './components/identity'
 Vue.use(SIdentify)
 
 router.beforeEach((to, from, next) => {

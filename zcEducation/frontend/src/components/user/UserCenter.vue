@@ -68,9 +68,9 @@
   };
 </script>
 <style >
-  @import "../../../static/css/reset.css";
-  @import "../../../static/css/animate.css";
-  @import "../../../static/css/style.css";
+  /*@import "../../../static/css/reset.css";*/
+  /*@import "../../../static/css/animate.css";*/
+  /*@import "../../../static/css/style.css";*/
   .personal_list .left li{
     width: 100%;
     height: 60px;
