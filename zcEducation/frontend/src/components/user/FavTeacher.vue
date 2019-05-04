@@ -1,5 +1,5 @@
 <template>
-  <div class="messagelist">
+  <div class="messagelist" v-if="showComponent">
     <div v-for="(teacher, index) in teacher_list" :index="index" :key="index" class="butler_list butler-fav-box">
       <dl class="des users">
         <dt>
@@ -48,18 +48,18 @@
         method: 'GET'
       }).then((response)=>{
         var res = response.data
-        console.log(res)
         this.teacher_list = JSON.parse(res.teacher_list)
+        this.showComponent = true
       })
     },
     data() {
       return {
         teacher_list:[],
+        showComponent: false,
       }
     },
     methods:{
       getImgUrl: (bannerUrl) =>{
-        console.log(bannerUrl)
         return "../../static/media/" + bannerUrl
       },
       deleteLove(favId, index) {
@@ -68,7 +68,6 @@
           method: 'GET'
         }).then((response)=>{
           var res = response.data
-          console.log(res)
           if (res.status == 'ok') {
             this.teacher_list.splice(index, 1)
           } else {

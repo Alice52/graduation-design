@@ -15,7 +15,7 @@ Including another URLconf
 """
 
 from django.conf.urls import url
-from .views import org_list, org_detail, org_detail_course, org_detail_desc, org_detail_teacher, teacher_list, \
+from .views import org_list, org_detail, org_detail_course, org_detail_teacher, teacher_list, \
     teacher_detail, org_header
 
 urlpatterns = [
@@ -23,7 +23,6 @@ urlpatterns = [
     url(r'^org_detail/(\d+)/$', org_detail, name='org_detail'),
     url(r'^org_header/(\d+)/$', org_header, name='org_header'),
     url(r'^org_detail_course/(\d+)/$', org_detail_course, name='org_detail_course'),
-    url(r'^org_detail_desc/(\d+)/$', org_detail_desc, name='org_detail_desc'),
     url(r'^org_detail_teacher/(\d+)/$', org_detail_teacher, name='org_detail_teacher'),
 
     url(r'^teacher_list/$', teacher_list, name='teacher_list'),

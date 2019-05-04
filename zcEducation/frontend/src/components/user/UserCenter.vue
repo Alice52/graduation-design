@@ -1,10 +1,10 @@
 <template>
-  <div>
+  <div v-if="showComponent">
     <UserHeader :user="user"/>
     <section>
       <div class="wp">
         <ul  class="crumbs">
-          <li><a href="/">首页</a>></li>
+          <li><a  @click="$router.push(`/`)" >首页</a>></li>
           <li><a @click="$router.push(`/users/user_info/`)" > 个人中心</a></li>
           <li> > 个人信息</li>
         </ul>
@@ -22,7 +22,9 @@
             <li ><router-link to="/users/user_favors" class="list-group-item">我的收藏</router-link> </li>
           </ul>
         </div>
+        <keep-alive>
         <router-view :user="user"></router-view>
+        </keep-alive>
       </div>
     </section>
   </div>
@@ -35,6 +37,7 @@
     data() {
       return {
         user: null,
+        showComponent: false,
       }
     },
     mounted: function () {
@@ -45,13 +48,10 @@
       })
         .then(respanse => {
           let res = respanse.data;
-          console.log(res)
           if (res.user!=null){
             this.user = JSON.parse(res.user)[0].fields
           }
-
-          console.log(this.user)
-          console.log(this.user.image)
+          this.showComponent = true
         })
         .catch(function(error) {
           console.log(error);
@@ -59,7 +59,6 @@
     },
     methods:{
       getUserImgUrl: (bannerUrl) =>{
-        console.log(bannerUrl)
         return "../../static/media/" + bannerUrl
       }
     },

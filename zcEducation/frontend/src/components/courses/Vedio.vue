@@ -1,10 +1,10 @@
 <template>
-  <div>
+  <div v-if="showComponent">
     <section>
       <div class="wp">
         <div class="crumbs">
           <ul>
-            <li><a @click="$router.push(`/home`)">首页</a>&gt;</li>
+            <li><a @click="$router.push(`/`)">首页</a>&gt;</li>
             <li><a @click="$router.push(`/courses/course_list`)">公开课程</a>&gt;</li>
             <li><a @click="$router.push(`/courses/course_detail/${course.pk}`)">课程详情</a>&gt;</li>
             <li>课程评论</li>
@@ -23,7 +23,9 @@
                   <li><router-link :to="'/courses/course_comment/'+course.pk"><span>评论</span></router-link></li>
                 </ul>
               </div>
+              <keep-alive>
               <router-view :course="course" :lesson_list="lesson_list"></router-view>
+              </keep-alive>
             </div>
             <div class="aside r vedioright">
               <div class="bd">
@@ -95,6 +97,7 @@
         course_list: [],
         course_sources: [],
         lesson_list: [],
+        showComponent: false,
       };
     },
     mounted() {
@@ -103,19 +106,17 @@
         method: 'GET'
       }).then(response => {
         var res = response.data
-        console.log(res)
         this.course = JSON.parse(res.course)[0]
         this.course_list = JSON.parse(res.course_list)
         this.course_sources = JSON.parse(res.course_sources)
         this.lesson_list = JSON.parse(res.lesson_list)
-        console.log(this.lesson_list)
+        this.showComponent = true
       }).catch(err => {
         console.log(err)
       })
     },
     methods: {
       getSourceUrl: (bannerUrl) => {
-        console.log(bannerUrl)
         return "../../static/media/" + bannerUrl
       },
       getImgUrl: (bannerUrl) => {
@@ -132,5 +133,17 @@
     color: #f01400;
     height: 55px;
     font-weight: bold;
+  }
+  .course-info-tip:before{
+    content: '';
+    display: block;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 0;
+    height: 0;
+    border: 10px solid transparent;
+    border-top: 0 none;
+    border-bottom-color: #edf1f2;
   }
 </style>

@@ -1,10 +1,10 @@
 <template>
-  <div>
+  <div v-if="showComponent">
     <section>
       <div class="wp">
         <ul class="crumbs">
           <li>
-            <a href="/">首页</a>>
+            <a  @click="$router.push(`/`)" >首页</a>>
           </li>
           <li>公开课</li>
         </ul>
@@ -121,6 +121,7 @@
         has_next: true,
         current_page_number: '',
         page_range: '',
+        showComponent: false,
       };
     },
     methods: {
@@ -134,7 +135,6 @@
           params: {"pagenum": current_page_number - 1, "keyword": keyword, 'sort': sort},
         }).then(response => {
           var res = response.data
-          console.log(res)
           this.pages = JSON.parse(res.pages)
           this.has_previous = res.has_previous
           this.has_next = res.has_next
@@ -151,7 +151,6 @@
           params: {"pagenum": current_page_number + 1, "keyword": keyword, 'sort': sort},
         }).then(response => {
           var res = response.data
-          console.log(res)
           this.pages = JSON.parse(res.pages)
           this.has_previous = res.has_previous
           this.has_next = res.has_next
@@ -168,7 +167,6 @@
           params: {"pagenum": targetPage, "keyword": keyword, 'sort': sort},
         }).then(response => {
           var res = response.data
-          console.log(res)
           this.pages = JSON.parse(res.pages)
           this.has_previous = res.has_previous
           this.has_next = res.has_next
@@ -196,25 +194,35 @@
             console.log(err)
           })
       },
+      getInitAndSearchData() {
+        this.keyword = this.$route.query.keyword
+        axios({
+          url: '/api/courses/course_list/',
+          params: {'keyword': this.keyword},
+          method: 'GET'
+        }).then(response => {
+          var res = response.data
+          this.recommend_courses = JSON.parse(res.recommend_courses)
+          this.pages = JSON.parse(res.pages)
+          this.has_previous = res.has_previous
+          this.has_next = res.has_next
+          this.current_page_number = res.current_page_number
+          this.page_range = res.page_range
+          this.keyword = res.keyword
+          this.showComponent = true
+        }).catch(err => {
+          console.log(err)
+        })
+      }
     },
     mounted() {
-      axios({
-        url: '/api/courses/course_list/',
-        method: 'GET'
-      }).then(response => {
-        var res = response.data
-        console.log(res)
-        this.recommend_courses = JSON.parse(res.recommend_courses)
-        this.pages = JSON.parse(res.pages)
-        this.has_previous = res.has_previous
-        this.has_next = res.has_next
-        this.current_page_number = res.current_page_number
-        this.page_range = res.page_range
-        this.keyword = res.keyword
-      }).catch(err => {
-        console.log(err)
-      })
+      this.getInitAndSearchData()
     },
+    watch:{
+      $route(from, to) {
+        this.getInitAndSearchData()
+      }
+    }
   }
 </script>
 

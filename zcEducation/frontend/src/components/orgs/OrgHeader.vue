@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div v-if="showComponent">
     <section class="headerwrap">
       <header>
         <div class="header">
@@ -74,7 +74,7 @@
     <section>
       <div class="wp">
         <ul class="crumbs">
-          <li><a href="/">首页</a>></li>
+          <li><a  @click="$router.push(`/`)" >首页</a>></li>
           <li><a @click="$router.push(`/orgs/org_list`)">课程机构</a>></li>
         </ul>
       </div>
@@ -97,7 +97,9 @@
             </li>
           </ul>
         </div>
-        <router-view></router-view>
+        <keep-alive>
+        <router-view :org="org"></router-view>
+        </keep-alive>
       </div>
     </section>
   </div>
@@ -116,6 +118,7 @@
         lovestatus: '',
         user: "",
         org: '',
+        showComponent: false,
       }
     },
     methods: {
@@ -143,10 +146,7 @@
         })
           .then(respanse => {
             let res = respanse.data;
-            console.log(res)
             if (res.errMsg == "ok") {
-              // this.$router.push(`/`);
-              // location.reload()
               this.user = null
             } else {
               alert(res.errMsg);
@@ -166,7 +166,6 @@
           params: {"loveid": favId,"lovetype": type}
         }).then((response)=>{
           var res = response.data
-          console.log(res)
           if (res.status == 'ok') {
             if (type == 1) {
               this.lovestatus = !this.lovestatus
@@ -191,9 +190,7 @@
           }
           this.lovestatus = res.lovestatus
           this.org = JSON.parse(res.org)[0]
-
-          console.log(this.user)
-          console.log(this.org_id)
+          this.showComponent = true
         })
         .catch(function (error) {
           console.log(error);
@@ -217,4 +214,5 @@
   margin: 0;
 
 }
+
 </style>

@@ -16,7 +16,7 @@ Including another URLconf
 from django.conf.urls import url
 from .views import user_register, user_login, user_logout, user_active, user_forget, user_reset, user_info, \
     user_changeimage, user_changeinfo, user_changeemail, user_resetemail, user_course, user_loveteacher, user_loveorg, \
-    user_lovecourse, user_message, user_deletemessage, get_user
+    user_lovecourse, user_deletemessage, get_user
 
 urlpatterns = [
     url(r'^user_register/$', user_register, name='user_register'),
@@ -40,10 +40,7 @@ urlpatterns = [
     url(r'^user_loveteacher/$', user_loveteacher, name='user_loveteacher'),
     url(r'^user_lovecourse/$', user_lovecourse, name='user_lovecourse'),
 
-    url(r'^user_message/$', user_message, name='user_message'),
     url(r'^user_deletemessage/$', user_deletemessage, name='user_deletemessage'),
     url(r'^get_user/$', get_user, name='get_user'),
-
-
 
 ]

@@ -1,5 +1,5 @@
 <template>
-  <div class="messagelist">
+  <div class="messagelist" v-if="showComponent">
     <div v-for="(org, index) in org_list" :index="index" :key="index" class="messages butler_list company company-fav-box">
       <dl class="des fr">
         <dt>
@@ -28,8 +28,8 @@ export default {
       method: 'GET'
     }).then((response)=>{
       var res = response.data
-      console.log(res)
       this.org_list = JSON.parse(res.org_list)
+      this.showComponent=true
     }).catch((err)=> {
       console.log(err)
     })
@@ -37,11 +37,11 @@ export default {
   data() {
     return {
       org_list:[],
+      showComponent: false,
     }
   },
   methods:{
     getImgUrl: (bannerUrl) =>{
-      console.log(bannerUrl)
       return "../../static/media/" + bannerUrl
     },
     deleteLove(favId, index) {
@@ -50,7 +50,6 @@ export default {
         method: 'GET'
       }).then((response)=>{
         var res = response.data
-        console.log(res)
         if (res.status == 'ok') {
           this.org_list.splice(index, 1)
         } else {

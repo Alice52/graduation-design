@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div v-if="showComponent">
     <section v-cloak class="headerwrap">
     <header>
       <div class="header">
@@ -7,25 +7,21 @@
           <div class="wp">
             <!-- TODO 判断用户是否登录状态 -->
             <div v-if="user!=null" class="personal">
-              <dl @mouseenter="enter()" @mouseleave="leave()" class="user fr">
+              <dl @mouseenter="enter(1)" @mouseleave="leave()" class="user fr">
                 <dd >
-                  {{ user.username }}
-                  <!--<img-->
-                    <!--class="down fr"-->
-                    <!--src="../../static/images/top_down.png"-->
-                  <!--&gt;-->
+                  {{user.username}}
                 </dd>
                 <dt>
                   <img width="30" height="30" :src="getImgUrl(user.image)">
                 </dt>
               </dl>
-              <div @mouseenter="enter()" @mouseleave="leave2()" v-show="showUserScale" class="userdetail">
+              <div @mouseenter="enter(1)" @mouseleave="leave2()" v-show="showUserScale" class="userdetail">
                 <dl>
                   <dt>
                     <img width="80" height="80" :src="getImgUrl(user.image)">
                   </dt>
                   <dd>
-                    <p>{{ user.username }}</p>
+                    <p>{{user.username}}</p>
                   </dd>
                 </dl>
                 <div class="btn">
@@ -50,24 +46,20 @@
         </div>
         <div class="middle">
           <div class="wp">
-            <a href="/">
+            <a  @click="$router.push(`/`)" >
               <img class="fl logo" src="../../static/images/logo1.png">
             </a>
             <div class="searchbox fr">
               <div class="selectContainer fl">
-                <span class="selectOption" id="jsSelectOption" data-value="course">公开课</span>
-                <ul  class="selectMenu" id="jsSelectMenu">
-                  <li data-value="course">公开课</li>
-                  <li data-value="org">课程机构</li>
-                  <li data-value="teacher">授课老师</li>
+                <span class="selectOption" id="jsSelectOption" data-value="course" @mouseenter="enter(2)" @mouseleave="leave()">公开课</span>
+                <ul v-if="showDropdownList" class="selectMenu"  @mouseenter="enter(2)" @mouseleave="leave2()">
+                  <li  @click="selectType('course')">公开课</li>
+                  <li  @click="selectType('org')">课程机构</li>
+                  <li  @click="selectType('teacher')">授课老师</li>
                 </ul>
               </div>
-              <input id="search_keywords" class="fl" type="text" value placeholder="请输入搜索内容" v-model="searchKeywords">
-              <img
-                class="search_btn fr"
-                id="jsSearchBtn"
-                src="../../static/images/search_btn.png"
-              >
+              <input id="search_keywords" class="fl" type="text" value placeholder="请输入搜索的课程" v-model="keyword">
+              <img class="search_btn fr" id="jsSearchBtn" src="../../static/images/search_btn.png" @click="SearchCourse">
             </div>
           </div>
         </div>
@@ -94,7 +86,9 @@
       </div>
     </header>
   </section>
-    <router-view ></router-view>
+    <keep-alive>
+      <router-view></router-view>
+    </keep-alive>
   </div>
 </template>
 
@@ -105,8 +99,10 @@ export default {
     return {
       showUserScale: false,
       timer: '',
-      searchKeywords: '',
+      keyword: '',
       user : null,
+      showDropdownList: false,
+      showComponent: false,
     }
   },
   mounted: function () {
@@ -120,6 +116,7 @@ export default {
         if (res.user!=null){
           this.user = JSON.parse(res.user)[0].fields
         }
+        this.showComponent = true
       })
       .catch(function(error) {
         console.log(error);
@@ -130,19 +127,25 @@ export default {
     getImgUrl: (bannerUrl) =>{
       return "../../static/media/" + bannerUrl
     },
-    enter(){
-      this.showUserScale = true
+    enter(type){
+      if (type == 1) {
+        this.showUserScale = true
+      } else {
+        this.showDropdownList = true
+      }
       if (this.timer != null){
         clearTimeout(this.timer);
       }
     },
     leave(){
       this.timer = setTimeout(()=>{
-        this.showUserScale = false
+          this.showUserScale = false
+          this.showDropdownList = false
       }, 100)
     },
     leave2(){
-      this.showUserScale = false
+        this.showUserScale = false
+        this.showDropdownList = false
     },
     userLogout() {
       axios({
@@ -151,10 +154,7 @@ export default {
       })
         .then(respanse => {
           let res = respanse.data;
-          console.log(res)
           if (res.errMsg == "ok") {
-            // this.$router.push(`/`);
-            // location.reload()
             this.user=null
           } else {
             alert(res.errMsg);
@@ -163,6 +163,35 @@ export default {
         .catch(function(error) {
           console.log(error);
         });
+    },
+    selectType(type) {
+      var targetDom = document.querySelector('#jsSelectOption');
+      targetDom.setAttribute('data-value', type)
+      if (type == 'course') {
+        targetDom.innerHTML = '公开课'
+        this.showDropdownList = !this.showDropdownList
+      } else if (type == 'org'){
+        targetDom.innerHTML = '课程机构'
+        this.showDropdownList = !this.showDropdownList
+      } else {
+        // teacher
+        targetDom.innerHTML = '授课老师'
+        this.showDropdownList = !this.showDropdownList
+      }
+    },
+
+    SearchCourse() {
+      var targetDom = document.querySelector('#jsSelectOption');
+      var type = targetDom.getAttribute('data-value')
+      if (type == 'course') {
+        // this.$router.push({name: 'courseList', params: {keyword: this.keyword}}) // 被路由器分配之后, 当前路由没有变化
+        this.$router.push({path: '/courses/course_list', query: {keyword: this.keyword}}) // 被路由器分配之后, 当前路由变化
+      } else if (type == 'org'){
+        this.$router.push({path: '/orgs/org_list', query: {keyword: this.keyword}}) // 被路由器分配之后, 当前路由变化
+      } else {
+        // teacher
+        this.$router.push({path: '/orgs/teacher_list', query: {keyword: this.keyword}}) // 被路由器分配之后, 当前路由变化
+      }
     },
   },
 };
@@ -177,5 +206,23 @@ export default {
   }
   .router-link-exact-active {
     background: #3D9328 !important;
+  }
+  .selectOption {
+    color: black;
+    background: url(../../../static/images/select_arrow.png) no-repeat 93% 50%;
+    display: block;
+    cursor: pointer;
+    text-align: center;
+  }
+  .selectMenu {
+     width: 91px;
+     border: 1px solid black;
+     background: #fff;
+     display: block;
+    overflow: hidden;
+    margin-left: -7px;
+    margin-top: 6px;
+    position: relative;
+    z-index: 99;
   }
 </style>

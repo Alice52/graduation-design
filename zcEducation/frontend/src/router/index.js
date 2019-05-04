@@ -53,14 +53,17 @@ export default new Router({
         },
         {
           path: '/courses/course_list',
+          name: 'courseList',
           component: CourseList,
         },
         {
           path: '/orgs/teacher_list',
+          name: 'teacherList',
           component: TeacherList
         },
         {
           path: '/orgs/org_list',
+          name: 'orgList',
           component: OrgList
         },
         {

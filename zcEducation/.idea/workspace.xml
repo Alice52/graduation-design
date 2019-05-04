@@ -4,22 +4,48 @@
     <list default="true" id="96dd5053-9309-4961-9cff-4ad65a12edc9" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/../django-vue-test/myproject/appfront/src/components/Hello.vue" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/courses/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/courses/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/apps/courses/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/courses/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/operations/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/operations/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/operations/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/operations/views.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/apps/orgs/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/orgs/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/apps/orgs/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/orgs/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/components/CourseList.vue" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/courses/CourseList.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/users/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/users/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/users/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/users/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/App.vue" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/App.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/components/HeaderWithSearch.vue" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/HeaderWithSearch.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/components/Home.vue" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/Home.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/components/OrgList.vue" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/orgs/OrgList.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/components/TeacherList.vue" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/teachers/TeacherList.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/components/courses/Comment.vue" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/components/courses/Detail.vue" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/components/courses/ListCourse.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/common/Pager.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/courses/Comment.vue" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/courses/Comment.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/courses/CourseList.vue" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/courses/CourseList.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/courses/Detail.vue" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/courses/Detail.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/components/courses/Vedio.vue" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/courses/Vedio.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/login.vue" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/login.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/orgs/OrgDetaiilCourse.vue" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/orgs/OrgDetaiilCourse.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/orgs/OrgDetail.vue" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/orgs/OrgDetail.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/orgs/OrgDetailDesc.vue" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/orgs/OrgDetailDesc.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/orgs/OrgDetailTeacher.vue" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/orgs/OrgDetailTeacher.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/orgs/OrgHeader.vue" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/orgs/OrgHeader.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/orgs/OrgList.vue" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/orgs/OrgList.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/teachers/TeacherDetail.vue" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/teachers/TeacherDetail.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/teachers/TeacherList.vue" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/teachers/TeacherList.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/user/FavCourse.vue" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/user/FavCourse.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/user/FavOrgs.vue" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/user/FavOrgs.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/user/FavTeacher.vue" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/user/FavTeacher.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/user/ForgetPwd.vue" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/user/ForgetPwd.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/user/Login.vue" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/user/Login.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/user/PasswordReset.vue" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/user/PasswordReset.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/user/Register.vue" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/user/Register.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/user/UserActive.vue" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/user/UserActive.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/user/UserCenter.vue" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/user/UserCenter.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/user/UserCourse.vue" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/user/UserCourse.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/user/UserFav.vue" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/user/UserFav.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/user/UserHeader.vue" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/user/UserHeader.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/user/UserInfo.vue" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/user/UserInfo.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/user/UserLogout.vue" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/user/UserLogout.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/router/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/router/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/courses/course-comment.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/courses/course-comment.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/orgs/org-detail-homepage.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/orgs/org-detail-homepage.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/zcEducation/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/zcEducation/settings.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -33,58 +59,28 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-      <file leaf-file-name="OrgHeader.vue" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/frontend/src/components/orgs/OrgHeader.vue">
+      <file leaf-file-name="Detail.vue" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/frontend/src/components/courses/Detail.vue">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="358">
-              <caret line="171" column="48" selection-start-line="171" selection-start-column="48" selection-end-line="171" selection-end-column="48" />
+            <state relative-caret-position="635">
+              <caret line="139" column="19" lean-forward="true" selection-start-line="139" selection-start-column="19" selection-end-line="139" selection-end-column="19" />
               <folding>
-                <element signature="n#div#0;n#div#0;n#header#0;n#section#0;n#div#0;n#template#0;n#!!top" />
-                <element signature="n#div#0;n#div#0;n#div#0;n#header#0;n#section#0;n#div#0;n#template#0;n#!!top" />
-                <element signature="n#div#0;n#div#0;n#div#0;n#div#0;n#header#0;n#section#0;n#div#0;n#template#0;n#!!top" />
-                <element signature="n#style#0;n#a#0;n#div#0;n#div#0;n#div#0;n#header#0;n#section#0;n#div#0;n#template#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#a#1;n#div#0;n#div#0;n#div#0;n#header#0;n#section#0;n#div#0;n#template#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#img#0;n#div#0;n#div#1;n#div#0;n#header#0;n#section#0;n#div#0;n#template#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#span#0;n#p#0;n#div#0;n#div#0;n#div#1;n#div#0;n#header#0;n#section#0;n#div#0;n#template#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#span#1;n#p#0;n#div#0;n#div#0;n#div#1;n#div#0;n#header#0;n#section#0;n#div#0;n#template#0;n#!!top" expanded="true" />
-                <element signature="e#2244#2250#1" expanded="true" />
-                <element signature="e#2308#2314#1" expanded="true" />
-                <element signature="e#2372#2378#1" expanded="true" />
-                <element signature="e#2436#2442#1" expanded="true" />
-                <element signature="e#4127#4593#0" />
-                <element signature="e#4109#4431#0" />
+                <element signature="n#section#0;n#div#0;n#template#0;n#!!top" />
+                <element signature="n#div#0;n#section#0;n#div#0;n#template#0;n#!!top" />
+                <element signature="n#style#0;n#img#0;n#a#0;n#div#1;n#div#1;n#div#0;n#div#0;n#div#0;n#section#1;n#div#0;n#template#0;n#!!top" expanded="true" />
+                <element signature="n#div#1;n#div#0;n#div#0;n#div#0;n#section#2;n#div#0;n#template#0;n#!!top" />
+                <element signature="e#6467#7291#0" />
+                <element signature="e#7308#8036#0" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="TeacherDetail.vue" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/frontend/src/components/teachers/TeacherDetail.vue">
+      <file leaf-file-name="Comment.vue" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/frontend/src/components/courses/Comment.vue">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="141">
-              <caret line="185" column="11" lean-forward="true" selection-start-line="162" selection-start-column="10" selection-end-line="185" selection-end-column="11" />
-              <folding>
-                <element signature="n#div#1;n#div#0;n#div#0;n#section#1;n#div#0;n#template#0;n#!!top" />
-                <element signature="n#div#0;n#div#0;n#div#1;n#div#0;n#div#1;n#div#0;n#div#0;n#section#1;n#div#0;n#template#0;n#!!top" />
-                <element signature="e#6566#7275#0" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="views.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/apps/orgs/views.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="234">
-              <caret line="72" column="23" selection-start-line="72" selection-start-column="15" selection-end-line="72" selection-end-column="23" />
-              <folding>
-                <element signature="e#0#35#0" expanded="true" />
-                <element signature="e#2614#3459#0" />
-                <element signature="e#3504#3985#0" />
-                <element signature="e#4033#4521#0" />
-                <element signature="e#4555#5606#0" />
-                <element signature="e#5654#7183#0" />
-              </folding>
+            <state relative-caret-position="254">
+              <caret line="51" column="37" selection-start-line="51" selection-start-column="37" selection-end-line="51" selection-end-column="37" />
             </state>
           </provider>
         </entry>
@@ -92,44 +88,11 @@
       <file leaf-file-name="index.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/frontend/src/router/index.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="178">
-              <caret line="154" column="29" selection-start-line="154" selection-start-column="19" selection-end-line="154" selection-end-column="29" />
+            <state relative-caret-position="85">
+              <caret line="74" column="38" selection-start-line="74" selection-start-column="26" selection-end-line="74" selection-end-column="38" />
               <folding>
                 <element signature="e#0#21#0" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="urls.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/apps/orgs/urls.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="330">
-              <caret line="23" column="21" selection-start-line="23" selection-start-column="11" selection-end-line="23" selection-end-column="21" />
-              <folding>
-                <element signature="e#636#668#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="views.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/apps/users/views.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="440">
-              <caret line="44" column="6" lean-forward="true" selection-start-line="37" selection-start-column="4" selection-end-line="44" selection-end-column="6" />
-              <folding>
-                <element signature="e#0#68#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="org-detail-base.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/templates/orgs/org-detail-base.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="242">
-              <caret line="20" column="48" selection-start-line="20" selection-start-column="41" selection-end-line="20" selection-end-column="48" />
             </state>
           </provider>
         </entry>
@@ -147,36 +110,36 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>$router.</find>
-      <find>url:`</find>
-      <find>href=&quot;/ho</find>
-      <find>难度</find>
-      <find>href=&quot;/home&quot;</find>
-      <find>课程类别</find>
-      <find>cance</find>
-      <find>learning</find>
-      <find>{{</find>
-      <find>getImgUrl</find>
-      <find>@click=</find>
-      <find>course.pk</find>
-      <find>router-link to</find>
-      <find>pub-editor-wrap</find>
-      <find>`</find>
-      <find>href=&quot;{% url 'courses:course_detail' course.id %}&quot;</find>
-      <find>bottom</find>
-      <find>all</find>
-      <find>work_company</find>
-      <find>company_location</find>
-      <find>收藏</find>
-      <find>排行</find>
-      <find>取消收藏</find>
-      <find>orgs/org_de</find>
-      <find>breach</find>
       <find>}}</find>
       <find>.params</find>
       <find>${this.router.params</find>
       <find>image</find>
       <find>推荐指数：</find>
+      <find>datetime</find>
+      <find>.params.</find>
+      <find>{{</find>
+      <find>all_teacher</find>
+      <find>.params.p</find>
+      <find>params</find>
+      <find>teacher</find>
+      <find>all_courses</find>
+      <find>desc</find>
+      <find>nextTick</find>
+      <find>org</find>
+      <find>teacher.</find>
+      <find>params: {</find>
+      <find>key_word</find>
+      <find>watch:</find>
+      <find>courseList</find>
+      <find>授课机构排名</find>
+      <find>console.l</find>
+      <find>console</find>
+      <find>router-view</find>
+      <find>$router.push(`/home`)</find>
+      <find>href=&quot;/&quot;</find>
+      <find>&lt;router-view</find>
+      <find>router-v</find>
+      <find>fullPath</find>
     </findStrings>
     <replaceStrings>
       <replace>{% static '</replace>
@@ -190,14 +153,15 @@
       <replace>sort_teachers</replace>
       <replace>@click=&quot;$router.push(`/orgs/teacher_list/${teacher.pk}`)&quot;</replace>
       <replace>/api/orgs/org_list/</replace>
-      <replace>{{</replace>
       <replace>@click=&quot;$router.push(`/courses/course_detail/${course.pk}`)&quot;</replace>
+      <replace>{{</replace>
       <replace>}}</replace>
     </replaceStrings>
     <dirStrings>
       <dir>F:\graduation-design\graduation-design\zcEducation\static\css</dir>
       <dir>F:\graduation-design\graduation-design\zcEducation\frontend\static\images</dir>
       <dir>F:\graduation-design\graduation-design\zcEducation</dir>
+      <dir>F:\graduation-design\graduation-design\zcEducation\frontend\src</dir>
     </dirStrings>
   </component>
   <component name="Git.Settings">
@@ -206,57 +170,57 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/templates/index.html" />
-        <option value="$PROJECT_DIR$/static/css/style.css" />
-        <option value="$PROJECT_DIR$/frontend/src/components/user/Header.vue" />
+        <option value="$PROJECT_DIR$/frontend/src/components/user/OrgList.vue" />
+        <option value="$PROJECT_DIR$/frontend/src/components/courses/List.vue" />
+        <option value="$PROJECT_DIR$/frontend/src/components/common/Pager.vue" />
+        <option value="$PROJECT_DIR$/frontend/src/components/courses/ListCourse.vue" />
+        <option value="$PROJECT_DIR$/frontend/src/components/CourseList.vue" />
+        <option value="$PROJECT_DIR$/frontend/src/components/TeacherList.vue" />
+        <option value="$PROJECT_DIR$/frontend/config/index.js" />
+        <option value="$PROJECT_DIR$/apps/courses/models.py" />
+        <option value="$PROJECT_DIR$/frontend/src/components/courses/Chapter.vue" />
+        <option value="$PROJECT_DIR$/templates/courses/course-comment.html" />
+        <option value="$PROJECT_DIR$/frontend/index.html" />
+        <option value="$PROJECT_DIR$/frontend/src/components/orgs/OrgIndex.vue" />
+        <option value="$PROJECT_DIR$/apps/users/models.py" />
+        <option value="$PROJECT_DIR$/templates/orgs/org-detail-homepage.html" />
+        <option value="$PROJECT_DIR$/apps/orgs/urls.py" />
+        <option value="$PROJECT_DIR$/templates/base.html" />
+        <option value="$PROJECT_DIR$/apps/courses/views.py" />
+        <option value="$PROJECT_DIR$/apps/courses/urls.py" />
+        <option value="$PROJECT_DIR$/apps/orgs/views.py" />
+        <option value="$PROJECT_DIR$/frontend/src/router/index.js" />
+        <option value="$PROJECT_DIR$/apps/operations/views.py" />
+        <option value="$PROJECT_DIR$/apps/operations/urls.py" />
+        <option value="$PROJECT_DIR$/apps/users/views.py" />
+        <option value="$PROJECT_DIR$/apps/users/urls.py" />
+        <option value="$PROJECT_DIR$/zcEducation/settings.py" />
+        <option value="$PROJECT_DIR$/frontend/src/components/user/PasswordReset.vue" />
         <option value="$PROJECT_DIR$/frontend/src/components/user/UserHeader.vue" />
-        <option value="$PROJECT_DIR$/frontend/src/components/user/UserCourse.vue" />
+        <option value="$PROJECT_DIR$/frontend/src/components/user/UserInfo.vue" />
+        <option value="$PROJECT_DIR$/frontend/src/components/user/UserLogout.vue" />
+        <option value="$PROJECT_DIR$/frontend/src/components/HeaderWithSearch.vue" />
+        <option value="$PROJECT_DIR$/frontend/src/components/courses/CourseList.vue" />
+        <option value="$PROJECT_DIR$/frontend/src/components/courses/Vedio.vue" />
+        <option value="$PROJECT_DIR$/frontend/src/components/orgs/OrgDetaiilCourse.vue" />
+        <option value="$PROJECT_DIR$/frontend/src/components/orgs/OrgDetail.vue" />
+        <option value="$PROJECT_DIR$/frontend/src/components/orgs/OrgDetailDesc.vue" />
+        <option value="$PROJECT_DIR$/frontend/src/components/orgs/OrgDetailTeacher.vue" />
+        <option value="$PROJECT_DIR$/frontend/src/components/orgs/OrgHeader.vue" />
+        <option value="$PROJECT_DIR$/frontend/src/components/orgs/OrgList.vue" />
+        <option value="$PROJECT_DIR$/frontend/src/components/teachers/TeacherDetail.vue" />
+        <option value="$PROJECT_DIR$/frontend/src/components/teachers/TeacherList.vue" />
         <option value="$PROJECT_DIR$/frontend/src/components/user/FavCourse.vue" />
         <option value="$PROJECT_DIR$/frontend/src/components/user/FavOrgs.vue" />
         <option value="$PROJECT_DIR$/frontend/src/components/user/FavTeacher.vue" />
-        <option value="$PROJECT_DIR$/frontend/static/css/style.css" />
+        <option value="$PROJECT_DIR$/frontend/src/components/user/ForgetPwd.vue" />
+        <option value="$PROJECT_DIR$/frontend/src/components/user/UserActive.vue" />
         <option value="$PROJECT_DIR$/frontend/src/components/user/UserCenter.vue" />
+        <option value="$PROJECT_DIR$/frontend/src/components/user/UserCourse.vue" />
         <option value="$PROJECT_DIR$/frontend/src/components/user/UserFav.vue" />
-        <option value="$PROJECT_DIR$/templates/users/usercenter-info.html" />
-        <option value="$PROJECT_DIR$/frontend/src/main.js" />
-        <option value="$PROJECT_DIR$/static/js/bootstrap-date-picker.js" />
-        <option value="$PROJECT_DIR$/static/js/bootstrap-datepicker.js" />
-        <option value="$PROJECT_DIR$/frontend/static/js/bootstrap-datepicker.js" />
-        <option value="$PROJECT_DIR$/frontend/src/components/user/UserInfo.vue" />
-        <option value="$PROJECT_DIR$/frontend/src/components/user/CourseList.vue" />
-        <option value="$PROJECT_DIR$/frontend/src/components/user/OrgList.vue" />
-        <option value="$PROJECT_DIR$/frontend/src/components/courses/List.vue" />
-        <option value="$PROJECT_DIR$/apps/users/urls.py" />
-        <option value="$PROJECT_DIR$/apps/users/views.py" />
-        <option value="$PROJECT_DIR$/frontend/src/components/common/Pager.vue" />
-        <option value="$PROJECT_DIR$/frontend/src/components/courses/ListCourse.vue" />
-        <option value="$PROJECT_DIR$/frontend/src/components/HeaderWithSearch.vue" />
-        <option value="$PROJECT_DIR$/frontend/src/components/CourseList.vue" />
-        <option value="$PROJECT_DIR$/frontend/src/components/TeacherList.vue" />
-        <option value="$PROJECT_DIR$/frontend/src/components/courses/CourseList.vue" />
-        <option value="$PROJECT_DIR$/frontend/src/components/teachers/TeacherList.vue" />
         <option value="$PROJECT_DIR$/frontend/src/components/Home.vue" />
-        <option value="$PROJECT_DIR$/frontend/config/index.js" />
-        <option value="$PROJECT_DIR$/apps/courses/models.py" />
-        <option value="$PROJECT_DIR$/apps/courses/urls.py" />
-        <option value="$PROJECT_DIR$/frontend/src/components/courses/Chapter.vue" />
-        <option value="$PROJECT_DIR$/apps/courses/views.py" />
-        <option value="$PROJECT_DIR$/templates/courses/course-comment.html" />
-        <option value="$PROJECT_DIR$/frontend/src/components/courses/Comment.vue" />
-        <option value="$PROJECT_DIR$/frontend/src/components/courses/Vedio.vue" />
-        <option value="$PROJECT_DIR$/frontend/src/components/orgs/OrgList.vue" />
         <option value="$PROJECT_DIR$/frontend/src/components/courses/Detail.vue" />
-        <option value="$PROJECT_DIR$/frontend/index.html" />
-        <option value="$PROJECT_DIR$/frontend/src/components/teachers/TeacherDetail.vue" />
-        <option value="$PROJECT_DIR$/frontend/src/components/orgs/OrgIndex.vue" />
-        <option value="$PROJECT_DIR$/frontend/src/components/orgs/OrgDetail.vue" />
-        <option value="$PROJECT_DIR$/frontend/src/components/orgs/OrgDetaiilCourse.vue" />
-        <option value="$PROJECT_DIR$/frontend/src/components/orgs/OrgDetailTeacher.vue" />
-        <option value="$PROJECT_DIR$/frontend/src/components/orgs/OrgDetailDesc.vue" />
-        <option value="$PROJECT_DIR$/apps/orgs/urls.py" />
-        <option value="$PROJECT_DIR$/frontend/src/router/index.js" />
-        <option value="$PROJECT_DIR$/apps/orgs/views.py" />
-        <option value="$PROJECT_DIR$/frontend/src/components/orgs/OrgHeader.vue" />
+        <option value="$PROJECT_DIR$/frontend/src/components/courses/Comment.vue" />
       </list>
     </option>
   </component>
@@ -294,6 +258,17 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope">
+        <subPane subId="Project Files">
+          <expand>
+            <path>
+              <item name="Root" type="cbb8eebc:String" user="Root" />
+              <item name="zcEducation" type="cbb8eebc:String" user="zcEducation" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -304,30 +279,7 @@
             <path>
               <item name="zcEducation" type="b2602c69:ProjectViewProjectNode" />
               <item name="zcEducation" type="462c0819:PsiDirectoryNode" />
-              <item name="apps" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="zcEducation" type="b2602c69:ProjectViewProjectNode" />
-              <item name="zcEducation" type="462c0819:PsiDirectoryNode" />
-              <item name="apps" type="462c0819:PsiDirectoryNode" />
-              <item name="orgs" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="zcEducation" type="b2602c69:ProjectViewProjectNode" />
-              <item name="zcEducation" type="462c0819:PsiDirectoryNode" />
-              <item name="apps" type="462c0819:PsiDirectoryNode" />
-              <item name="users" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="zcEducation" type="b2602c69:ProjectViewProjectNode" />
-              <item name="zcEducation" type="462c0819:PsiDirectoryNode" />
               <item name="frontend" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="zcEducation" type="b2602c69:ProjectViewProjectNode" />
-              <item name="zcEducation" type="462c0819:PsiDirectoryNode" />
-              <item name="frontend" type="462c0819:PsiDirectoryNode" />
-              <item name="config" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="zcEducation" type="b2602c69:ProjectViewProjectNode" />
@@ -341,6 +293,22 @@
               <item name="frontend" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="components" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="zcEducation" type="b2602c69:ProjectViewProjectNode" />
+              <item name="zcEducation" type="462c0819:PsiDirectoryNode" />
+              <item name="frontend" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="components" type="462c0819:PsiDirectoryNode" />
+              <item name="courses" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="zcEducation" type="b2602c69:ProjectViewProjectNode" />
+              <item name="zcEducation" type="462c0819:PsiDirectoryNode" />
+              <item name="frontend" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="components" type="462c0819:PsiDirectoryNode" />
+              <item name="orgs" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="zcEducation" type="b2602c69:ProjectViewProjectNode" />
@@ -354,29 +322,16 @@
               <item name="zcEducation" type="b2602c69:ProjectViewProjectNode" />
               <item name="zcEducation" type="462c0819:PsiDirectoryNode" />
               <item name="frontend" type="462c0819:PsiDirectoryNode" />
-              <item name="static" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="components" type="462c0819:PsiDirectoryNode" />
+              <item name="user" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="zcEducation" type="b2602c69:ProjectViewProjectNode" />
               <item name="zcEducation" type="462c0819:PsiDirectoryNode" />
-              <item name="templates" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="zcEducation" type="b2602c69:ProjectViewProjectNode" />
-              <item name="zcEducation" type="462c0819:PsiDirectoryNode" />
-              <item name="templates" type="462c0819:PsiDirectoryNode" />
-              <item name="orgs" type="462c0819:PsiDirectoryNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
-      <pane id="Scope">
-        <subPane subId="Project Files">
-          <expand>
-            <path>
-              <item name="Root" type="cbb8eebc:String" user="Root" />
-              <item name="zcEducation" type="cbb8eebc:String" user="zcEducation" />
+              <item name="frontend" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="router" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -478,21 +433,21 @@
       <window_info anchor="bottom" id="Version Control" order="1" sideWeight="0.49947917" weight="0.2974537" />
       <window_info anchor="bottom" id="Python Console" order="3" weight="0.3298611" />
       <window_info anchor="bottom" id="Run" order="7" weight="0.24074075" />
-      <window_info anchor="bottom" id="Terminal" order="12" sideWeight="0.49892932" visible="true" weight="0.2962963" />
-      <window_info active="true" content_ui="combo" id="Project" order="1" visible="true" weight="0.19379015" />
+      <window_info anchor="bottom" id="Terminal" order="12" sideWeight="0.49892932" weight="0.29282406" />
+      <window_info active="true" content_ui="combo" id="Project" order="1" visible="true" weight="0.19914347" />
       <window_info anchor="bottom" id="Docker" order="0" show_stripe_button="false" />
       <window_info anchor="right" id="Database" order="2" />
-      <window_info anchor="bottom" id="Find" order="6" weight="0.3298611" />
       <window_info anchor="right" id="SciView" order="0" />
       <window_info id="Structure" order="2" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="0" side_tool="true" />
-      <window_info anchor="bottom" id="Debug" order="8" weight="0.5069444" />
+      <window_info anchor="bottom" id="Debug" order="8" visible="true" weight="0.4363426" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="10" weight="0.4" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="1" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="3" weight="0.25" />
       <window_info anchor="bottom" id="Message" order="5" />
       <window_info anchor="bottom" id="Cvs" order="9" weight="0.25" />
+      <window_info anchor="bottom" id="Find" order="6" weight="0.3298611" />
       <window_info anchor="bottom" id="Concurrent Activities Diagram" order="13" weight="0.3298611" />
     </layout>
   </component>
@@ -543,33 +498,28 @@
       <breakpoints>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/apps/users/views.py</url>
-          <line>160</line>
+          <line>155</line>
           <option name="timeStamp" value="5" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/apps/users/views.py</url>
-          <line>161</line>
+          <line>156</line>
           <option name="timeStamp" value="6" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/apps/users/views.py</url>
-          <line>139</line>
+          <line>134</line>
           <option name="timeStamp" value="26" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/apps/users/views.py</url>
-          <line>233</line>
+          <line>228</line>
           <option name="timeStamp" value="38" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/apps/users/views.py</url>
-          <line>229</line>
+          <line>224</line>
           <option name="timeStamp" value="39" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/apps/operations/views.py</url>
-          <line>97</line>
-          <option name="timeStamp" value="78" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/frontend/src/components/user/Login.vue</url>
@@ -577,22 +527,16 @@
           <option name="timeStamp" value="13" />
         </line-breakpoint>
       </breakpoints>
-      <option name="time" value="82" />
+      <option name="time" value="97" />
     </breakpoint-manager>
-    <watches-manager>
-      <configuration name="Python.DjangoServer">
-        <watch expression="pagenum" />
-        <watch expression="pages.paginator.num_pages" language="Python" />
-        <watch expression="pages.has_previous()" language="Python" />
-        <watch expression="pages.paginator.num_pages" language="Python" />
-        <watch expression="course.orginfo" language="Python" />
-        <watch expression="pages" language="Python" />
-        <watch expression="lesson.name" language="Python" />
-      </configuration>
-    </watches-manager>
   </component>
   <component name="debuggerHistoryManager">
     <expressions id="watch">
+      <expression>
+        <expression-string>teacher.courseinfo_set.count()</expression-string>
+        <language-id>Python</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
       <expression>
         <expression-string>lesson.name</expression-string>
         <language-id>Python</language-id>
@@ -638,11 +582,6 @@
         <language-id>Python</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
-      <expression>
-        <expression-string>p[0].fields</expression-string>
-        <language-id>Python</language-id>
-        <evaluation-mode>EXPRESSION</evaluation-mode>
-      </expression>
     </expressions>
     <expressions id="setValue">
       <expression>
@@ -660,117 +599,13 @@
     </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/frontend/src/components/user/Register.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="173">
-          <caret line="113" column="82" lean-forward="true" selection-start-line="113" selection-start-column="9" selection-end-line="113" selection-end-column="82" />
-          <folding>
-            <element signature="e#2765#2810#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/orgs/teachers-list.html">
+    <entry file="file://$PROJECT_DIR$/templates/orgs/org-detail-desc.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="88">
-          <caret line="92" column="10" lean-forward="true" selection-start-line="3" selection-start-column="4" selection-end-line="92" selection-end-column="10" />
+          <caret line="13" column="10" lean-forward="true" selection-start-line="4" selection-start-column="4" selection-end-line="13" selection-end-column="10" />
           <folding>
-            <element signature="n#section#0;n#!!top" />
-            <element signature="n#section#1;n#!!top" />
+            <element signature="n#div#0;n#!!top" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://E:/dev/Python/Python36/Lib/site-packages/django/utils/deprecation.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="296">
-          <caret line="139" selection-start-line="139" selection-end-line="139" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/orgs/org-detail-desc.html">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/orgs/org-list.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="109">
-          <caret line="140" column="14" lean-forward="true" selection-start-line="4" selection-start-column="3" selection-end-line="140" selection-end-column="14" />
-          <folding>
-            <element signature="n#section#0;n#!!top" />
-            <element signature="n#section#1;n#!!top" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/frontend/src/components/Login.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="333">
-          <caret line="105" column="30" lean-forward="true" selection-start-line="105" selection-start-column="30" selection-end-line="105" selection-end-column="30" />
-          <folding>
-            <element signature="e#2336#2373#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/frontend/src/components/user/UserLogout.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="418">
-          <caret line="19" column="11" selection-start-line="19" selection-start-column="10" selection-end-line="19" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/frontend/config/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="308">
-          <caret line="14" column="37" selection-start-line="14" selection-start-column="36" selection-end-line="14" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://E:/dev/Python/Python36/Lib/site-packages/django/db/models/base.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="172">
-          <caret line="24" selection-start-line="24" selection-end-line="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/frontend/src/components/user/FavTeacher.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="466">
-          <caret line="76" column="10" lean-forward="true" selection-start-line="65" selection-start-column="8" selection-end-line="76" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/frontend/src/components/courses/ListCourse.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="22">
-          <caret line="46" column="8" selection-start-line="46" selection-start-column="8" selection-end-line="46" selection-end-column="8" />
-          <folding>
-            <element signature="n#div#0;n#template#0;n#!!top" />
-            <element signature="n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#template#0;n#!!top" />
-            <element signature="n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#template#0;n#!!top" />
-            <element signature="n#div#1;n#div#0;n#div#0;n#template#0;n#!!top" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/courses/course-detail.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="848">
-          <caret line="162" column="15" lean-forward="true" selection-start-line="144" selection-start-column="12" selection-end-line="162" selection-end-column="15" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/jsLanguageServicesImpl/external/lib.dom.d.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="175">
-          <caret line="2969" column="12" selection-start-line="2969" selection-start-column="12" selection-end-line="2969" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/apps/courses/models.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="490">
-          <caret line="26" selection-start-line="26" selection-end-line="26" />
         </state>
       </provider>
     </entry>
@@ -781,106 +616,204 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/utils/decorators.py">
+    <entry file="file://$PROJECT_DIR$/templates/orgs/org-detail-homepage.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="132">
-          <caret line="7" selection-start-line="7" selection-end-line="7" />
+        <state relative-caret-position="266">
+          <caret line="50" column="14" lean-forward="true" selection-start-line="36" selection-start-column="8" selection-end-line="50" selection-end-column="14" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/apps/courses/urls.py">
+    <entry file="file://$PROJECT_DIR$/apps/courses/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="88">
+          <caret line="6" selection-start-line="6" selection-end-line="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/apps/orgs/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="506">
+          <caret line="25" selection-start-line="25" selection-end-line="25" />
+          <folding>
+            <element signature="e#636#668#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1185" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/base.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="352">
-          <caret line="16" selection-start-line="16" selection-end-line="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/apps/users/models.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="132">
-          <caret line="8" column="4" selection-start-line="8" selection-start-column="4" selection-end-line="8" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/apps/operations/models.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="138">
-          <caret line="54" column="4" selection-start-line="54" selection-start-column="4" selection-end-line="54" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/courses/course-video.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="9" column="99" selection-start-line="9" selection-start-column="60" selection-end-line="9" selection-end-column="99" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/frontend/src/components/courses/Chapter.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-111">
-          <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/courses/course-comment.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="264">
-          <caret line="12" column="80" lean-forward="true" selection-start-line="7" selection-start-column="6" selection-end-line="12" selection-end-column="80" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/frontend/src/components/courses/Comment.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="161">
-          <caret line="75" column="16" selection-start-line="75" selection-start-column="16" selection-end-line="75" selection-end-column="16" />
+          <caret line="136" column="38" lean-forward="true" selection-start-line="125" selection-start-column="11" selection-end-line="136" selection-end-column="38" />
         </state>
       </provider>
     </entry>
     <entry file="file://E:/dev/Python/Python36/Lib/site-packages/django/core/handlers/base.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="329">
-          <caret line="184" selection-start-line="184" selection-end-line="184" />
+        <state relative-caret-position="168">
+          <caret line="186" selection-start-line="186" selection-end-line="186" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frontend/src/App.vue">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/apps/courses/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="311">
+          <caret line="19" column="24" lean-forward="true" selection-start-line="19" selection-start-column="23" selection-end-line="19" selection-end-column="24" />
+          <folding>
+            <element signature="e#641#673#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/apps/users/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="88">
+          <caret line="334" lean-forward="true" selection-start-line="334" selection-end-line="334" />
+          <folding>
+            <element signature="e#0#68#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/apps/users/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="792">
+          <caret line="42" selection-start-line="42" selection-end-line="42" />
+          <folding>
+            <element signature="e#635#667#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/apps/operations/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-810">
+          <caret line="9" selection-start-line="9" selection-end-line="9" />
+          <folding>
+            <element signature="e#0#47#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/apps/courses/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="619">
-          <caret line="169" selection-start-line="169" selection-end-line="169" />
+        <state relative-caret-position="-2677">
+          <caret line="19" selection-start-line="19" selection-end-line="19" />
           <folding>
             <element signature="e#0#35#0" expanded="true" />
-            <element signature="e#372#1461#0" />
-            <element signature="e#1507#2926#0" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/orgs/teacher-detail.html">
+    <entry file="file://$PROJECT_DIR$/apps/orgs/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="83">
-          <caret line="126" column="10" lean-forward="true" selection-start-line="3" selection-start-column="3" selection-end-line="126" selection-end-column="10" />
+        <state relative-caret-position="726">
+          <caret line="165" selection-start-line="165" selection-end-line="165" />
           <folding>
-            <element signature="e#102#367#0#HTML" />
-            <element signature="e#372#6296#0#HTML" />
+            <element signature="e#0#35#0" expanded="true" />
+            <element signature="e#445#1963#0" />
+            <element signature="e#2003#2600#0" />
+            <element signature="e#2640#3536#0" />
+            <element signature="e#3583#4276#0" />
+            <element signature="e#4324#5508#0" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/frontend/src/components/teachers/TeacherList.vue">
+    <entry file="file://$PROJECT_DIR$/apps/operations/urls.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="638">
-          <caret line="203" column="8" lean-forward="true" selection-start-line="185" selection-start-column="6" selection-end-line="203" selection-end-column="8" />
+        <state relative-caret-position="208">
+          <caret line="18" column="15" selection-start-line="18" selection-start-column="15" selection-end-line="18" selection-end-column="15" />
           <folding>
-            <element signature="n#div#1;n#div#0;n#div#0;n#section#1;n#div#0;n#template#0;n#!!top" />
+            <element signature="e#641#673#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/zcEducation/settings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="220">
+          <caret line="132" column="37" selection-start-line="132" selection-start-column="37" selection-end-line="132" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frontend/src/components/courses/Chapter.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="660">
+          <caret line="30" column="13" selection-start-line="30" selection-start-column="13" selection-end-line="30" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frontend/src/components/courses/CourseList.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="22">
+          <caret line="1" column="26" selection-start-line="1" selection-start-column="26" selection-end-line="1" selection-end-column="26" />
+          <folding>
+            <element signature="n#section#0;n#div#0;n#template#0;n#!!top" />
+            <element signature="n#div#1;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#section#1;n#div#0;n#template#0;n#!!top" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frontend/src/components/courses/Vedio.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="112" column="33" selection-start-line="112" selection-start-column="33" selection-end-line="112" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frontend/src/components/orgs/OrgDetaiilCourse.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="286">
+          <caret line="68" column="35" selection-start-line="68" selection-start-column="35" selection-end-line="68" selection-end-column="35" />
+          <folding>
+            <element signature="n#div#2;n#div#0;n#template#0;n#!!top" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frontend/src/components/orgs/OrgDetail.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="22">
+          <caret line="1" column="26" selection-start-line="1" selection-start-column="26" selection-end-line="1" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frontend/src/components/orgs/OrgDetailDesc.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="594">
+          <caret line="27" column="34" selection-start-line="27" selection-start-column="34" selection-end-line="27" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frontend/src/components/orgs/OrgDetailTeacher.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="22">
+          <caret line="1" column="26" selection-start-line="1" selection-start-column="26" selection-end-line="1" selection-end-column="26" />
+          <folding>
+            <element signature="n#style#0;n#li#1;n#ul#0;n#dd#0;n#dl#0;n#div#0;n#div#1;n#div#0;n#template#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frontend/src/components/orgs/OrgHeader.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="308">
+          <caret line="192" column="35" selection-start-line="192" selection-start-column="35" selection-end-line="192" selection-end-column="35" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/frontend/src/components/orgs/OrgList.vue">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="750">
-          <caret line="101" column="35" selection-start-line="101" selection-start-column="28" selection-end-line="101" selection-end-column="35" />
+        <state relative-caret-position="22">
+          <caret line="1" column="24" selection-start-line="1" selection-start-column="24" selection-end-line="1" selection-end-column="24" />
           <folding>
             <element signature="n#section#0;n#div#0;n#template#0;n#!!top" />
             <element signature="n#div#0;n#li#0;n#ul#0;n#div#0;n#div#0;n#div#0;n#section#1;n#div#0;n#template#0;n#!!top" />
@@ -891,244 +824,213 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/apps/orgs/models.py">
+    <entry file="file://$PROJECT_DIR$/frontend/src/components/teachers/TeacherDetail.vue">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="196">
-          <caret line="49" column="6" selection-start-line="49" selection-start-column="6" selection-end-line="49" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/apps/operations/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-323">
-          <caret line="30" column="23" selection-start-line="30" selection-start-column="23" selection-end-line="30" selection-end-column="23" />
+        <state relative-caret-position="22">
+          <caret line="1" column="26" selection-start-line="1" selection-start-column="26" selection-end-line="1" selection-end-column="26" />
           <folding>
-            <element signature="e#0#35#0" expanded="true" />
-            <element signature="e#981#2736#0" />
+            <element signature="n#div#1;n#div#0;n#div#0;n#section#1;n#div#0;n#template#0;n#!!top" />
+            <element signature="n#div#0;n#div#0;n#div#1;n#div#0;n#div#1;n#div#0;n#div#0;n#section#1;n#div#0;n#template#0;n#!!top" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/frontend/index.html">
+    <entry file="file://$PROJECT_DIR$/frontend/src/components/teachers/TeacherList.vue">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="368">
-          <caret line="23" selection-start-line="23" selection-end-line="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/frontend/src/components/courses/Detail.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="571">
-          <caret line="225" column="40" selection-start-line="225" selection-start-column="35" selection-end-line="225" selection-end-column="40" />
+        <state relative-caret-position="22">
+          <caret line="1" column="26" selection-start-line="1" selection-start-column="26" selection-end-line="1" selection-end-column="26" />
           <folding>
-            <element signature="n#section#0;n#div#0;n#template#0;n#!!top" />
-            <element signature="n#div#0;n#section#0;n#div#0;n#template#0;n#!!top" />
-            <element signature="n#style#0;n#img#0;n#a#0;n#div#1;n#div#1;n#div#0;n#div#0;n#div#0;n#section#1;n#div#0;n#template#0;n#!!top" expanded="true" />
-            <element signature="n#div#1;n#div#0;n#div#0;n#div#0;n#section#2;n#div#0;n#template#0;n#!!top" />
-            <element signature="e#5414#5681#0" />
-            <element signature="e#5701#6387#0" />
-            <element signature="e#6407#7262#0" />
+            <element signature="n#div#1;n#div#0;n#div#0;n#section#1;n#div#0;n#template#0;n#!!top" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/frontend/src/components/courses/CourseList.vue">
+    <entry file="file://$PROJECT_DIR$/frontend/src/components/user/FavCourse.vue">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="500">
-          <caret line="78" column="90" selection-start-line="78" selection-start-column="84" selection-end-line="78" selection-end-column="90" />
+        <state relative-caret-position="22">
+          <caret line="1" column="48" selection-start-line="1" selection-start-column="48" selection-end-line="1" selection-end-column="48" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frontend/src/components/user/FavOrgs.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="22">
+          <caret line="1" column="46" selection-start-line="1" selection-start-column="46" selection-end-line="1" selection-end-column="46" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frontend/src/components/user/FavTeacher.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="22">
+          <caret line="1" column="46" selection-start-line="1" selection-start-column="46" selection-end-line="1" selection-end-column="46" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frontend/src/components/user/ForgetPwd.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="22">
+          <caret line="1" column="46" selection-start-line="1" selection-start-column="46" selection-end-line="1" selection-end-column="46" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frontend/src/components/user/Login.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="563">
+          <caret line="83" column="11" selection-start-line="83" selection-start-column="11" selection-end-line="83" selection-end-column="11" />
           <folding>
-            <element signature="n#section#0;n#div#0;n#template#0;n#!!top" />
-            <element signature="n#div#1;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#section#1;n#div#0;n#template#0;n#!!top" />
+            <element signature="e#2516#3150#0" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/frontend/src/components/orgs/OrgDetail.vue">
+    <entry file="file://$PROJECT_DIR$/frontend/src/components/user/PasswordReset.vue">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="22">
-          <caret line="1" selection-start-line="1" selection-end-line="1" />
+        <state relative-caret-position="472">
+          <caret line="70" column="12" selection-start-line="70" selection-start-column="12" selection-end-line="70" selection-end-column="12" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/frontend/src/components/orgs/OrgIndex.vue">
+    <entry file="file://$PROJECT_DIR$/frontend/src/components/user/Register.vue">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="22">
-          <caret line="1" column="4" selection-start-line="1" selection-start-column="4" selection-end-line="1" selection-end-column="4" />
+        <state relative-caret-position="51">
+          <caret line="106" column="43" lean-forward="true" selection-start-line="106" selection-start-column="43" selection-end-line="106" selection-end-column="43" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/frontend/src/components/orgs/OrgDetaiilCourse.vue">
+    <entry file="file://$PROJECT_DIR$/frontend/src/components/user/UserActive.vue">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="22">
-          <caret line="1" selection-start-line="1" selection-end-line="1" />
+        <state relative-caret-position="396">
+          <caret line="18" column="11" lean-forward="true" selection-start-line="18" selection-start-column="11" selection-end-line="18" selection-end-column="11" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/frontend/src/components/orgs/OrgDetailTeacher.vue">
+    <entry file="file://$PROJECT_DIR$/frontend/src/components/user/UserCenter.vue">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="22">
-          <caret line="1" selection-start-line="1" selection-end-line="1" />
+          <caret line="1" column="26" selection-start-line="1" selection-start-column="26" selection-end-line="1" selection-end-column="26" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/frontend/src/components/orgs/OrgDetailDesc.vue">
+    <entry file="file://$PROJECT_DIR$/frontend/src/components/user/UserCourse.vue">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="22">
-          <caret line="1" selection-start-line="1" selection-end-line="1" />
+          <caret line="1" column="40" selection-start-line="1" selection-start-column="40" selection-end-line="1" selection-end-column="40" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/base.html">
+    <entry file="file://$PROJECT_DIR$/frontend/src/components/user/UserFav.vue">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-660" />
+        <state relative-caret-position="22">
+          <caret line="1" column="20" selection-start-line="1" selection-start-column="20" selection-end-line="1" selection-end-column="20" />
+        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/frontend/src/components/user/UserHeader.vue">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="242">
-          <caret line="62" column="18" lean-forward="true" selection-start-line="62" selection-start-column="8" selection-end-line="62" selection-end-column="18" />
+        <state relative-caret-position="1320">
+          <caret line="65" column="13" selection-start-line="65" selection-start-column="13" selection-end-line="65" selection-end-column="13" />
           <folding>
-            <element signature="n#div#0;n#div#0;n#header#0;n#section#0;n#template#0;n#!!top" />
-            <element signature="n#div#1;n#div#0;n#header#0;n#section#0;n#template#0;n#!!top" />
+            <element signature="e#1921#2000#0" />
+            <element signature="e#2015#2889#0" />
+            <element signature="e#2030#2152#0" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/orgs/org-detail-course.html">
+    <entry file="file://$PROJECT_DIR$/frontend/src/components/user/UserInfo.vue">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="44">
-          <caret line="2" column="15" selection-start-line="2" selection-start-column="9" selection-end-line="2" selection-end-column="15" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/frontend/src/components/Home.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="492">
-          <caret line="156" column="9" lean-forward="true" selection-start-line="131" selection-start-column="3" selection-end-line="156" selection-end-column="9" />
+        <state relative-caret-position="1562">
+          <caret line="72" column="13" selection-start-line="72" selection-start-column="13" selection-end-line="72" selection-end-column="13" />
           <folding>
-            <element signature="n#section#1;n#div#0;n#template#0;n#!!top" />
-            <element signature="n#div#0;n#div#0;n#div#0;n#div#0;n#section#1;n#div#0;n#template#0;n#!!top" />
-            <element signature="e#4394#4444#0" expanded="true" />
+            <element signature="e#3394#4884#0" />
+            <element signature="e#3515#4001#0" />
+            <element signature="e#4106#4877#0" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/apps/users/views.py">
+    <entry file="file://$PROJECT_DIR$/frontend/src/components/user/UserLogout.vue">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="440">
-          <caret line="44" column="6" lean-forward="true" selection-start-line="37" selection-start-column="4" selection-end-line="44" selection-end-column="6" />
-          <folding>
-            <element signature="e#0#68#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/apps/orgs/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="23" column="21" selection-start-line="23" selection-start-column="11" selection-end-line="23" selection-end-column="21" />
-          <folding>
-            <element signature="e#636#668#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/frontend/src/components/courses/Vedio.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="242">
-          <caret line="101" column="66" lean-forward="true" selection-start-line="101" selection-start-column="66" selection-end-line="101" selection-end-column="66" />
-          <folding>
-            <element signature="n#section#0;n#div#0;n#template#0;n#!!top" />
-            <element signature="n#div#0;n#section#0;n#div#0;n#template#0;n#!!top" />
-            <element signature="n#div#0;n#div#0;n#section#0;n#div#0;n#template#0;n#!!top" />
-            <element signature="n#ul#0;n#div#0;n#div#0;n#section#0;n#div#0;n#template#0;n#!!top" />
-            <element signature="n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#template#0;n#!!top" />
-            <element signature="n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#template#0;n#!!top" />
-            <element signature="n#dl#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#template#0;n#!!top" />
-            <element signature="n#dl#1;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#template#0;n#!!top" />
-            <element signature="n#dl#2;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#template#0;n#!!top" />
-            <element signature="n#dl#3;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#template#0;n#!!top" />
-            <element signature="n#div#0;n#div#2;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#template#0;n#!!top" />
-            <element signature="n#style#0;n#div#0;n#div#1;n#div#2;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#template#0;n#!!top" expanded="true" />
-            <element signature="n#a#0;n#li#0;n#ul#0;n#div#0;n#div#1;n#div#2;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#template#0;n#!!top" />
-          </folding>
+        <state relative-caret-position="308">
+          <caret line="14" selection-start-line="14" selection-end-line="14" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/frontend/src/components/HeaderWithSearch.vue">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="224">
-          <caret line="114" column="32" selection-start-line="114" selection-start-column="32" selection-end-line="114" selection-end-column="32" />
+        <state relative-caret-position="1980">
+          <caret line="118" column="33" lean-forward="true" selection-start-line="118" selection-start-column="33" selection-end-line="118" selection-end-column="33" />
           <folding>
-            <element signature="e#4441#4907#0" />
+            <element signature="n#nav#0;n#div#0;n#header#0;n#section#0;n#div#0;n#template#0;n#!!top" />
+            <element signature="e#3561#3727#0" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frontend/src/components/Home.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="22">
+          <caret line="1" column="26" selection-start-line="1" selection-start-column="26" selection-end-line="1" selection-end-column="26" />
+          <folding>
+            <element signature="n#section#1;n#div#0;n#template#0;n#!!top" />
+            <element signature="n#div#0;n#div#0;n#div#0;n#div#0;n#section#1;n#div#0;n#template#0;n#!!top" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frontend/src/components/identity.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="110">
+          <caret line="5" column="8" lean-forward="true" selection-start-line="5" selection-start-column="8" selection-end-line="5" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frontend/src/components/Login.vue">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frontend/src/components/ToTop.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="154">
+          <caret line="7" column="8" lean-forward="true" selection-start-line="7" selection-start-column="8" selection-end-line="7" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frontend/src/components/Footer.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="103">
+          <caret line="6" column="10" selection-start-line="6" selection-start-column="10" selection-end-line="6" selection-end-column="10" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/frontend/src/router/index.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="178">
-          <caret line="154" column="29" selection-start-line="154" selection-start-column="19" selection-end-line="154" selection-end-column="29" />
+        <state relative-caret-position="85">
+          <caret line="74" column="38" selection-start-line="74" selection-start-column="26" selection-end-line="74" selection-end-column="38" />
           <folding>
             <element signature="e#0#21#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/apps/orgs/views.py">
+    <entry file="file://$PROJECT_DIR$/frontend/src/components/courses/Detail.vue">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="234">
-          <caret line="72" column="23" selection-start-line="72" selection-start-column="15" selection-end-line="72" selection-end-column="23" />
+        <state relative-caret-position="635">
+          <caret line="139" column="19" lean-forward="true" selection-start-line="139" selection-start-column="19" selection-end-line="139" selection-end-column="19" />
           <folding>
-            <element signature="e#0#35#0" expanded="true" />
-            <element signature="e#2614#3459#0" />
-            <element signature="e#3504#3985#0" />
-            <element signature="e#4033#4521#0" />
-            <element signature="e#4555#5606#0" />
-            <element signature="e#5654#7183#0" />
+            <element signature="n#section#0;n#div#0;n#template#0;n#!!top" />
+            <element signature="n#div#0;n#section#0;n#div#0;n#template#0;n#!!top" />
+            <element signature="n#style#0;n#img#0;n#a#0;n#div#1;n#div#1;n#div#0;n#div#0;n#div#0;n#section#1;n#div#0;n#template#0;n#!!top" expanded="true" />
+            <element signature="n#div#1;n#div#0;n#div#0;n#div#0;n#section#2;n#div#0;n#template#0;n#!!top" />
+            <element signature="e#6467#7291#0" />
+            <element signature="e#7308#8036#0" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/orgs/org-detail-base.html">
+    <entry file="file://$PROJECT_DIR$/frontend/src/components/courses/Comment.vue">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="242">
-          <caret line="20" column="48" selection-start-line="20" selection-start-column="41" selection-end-line="20" selection-end-column="48" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/frontend/src/components/teachers/TeacherDetail.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="141">
-          <caret line="185" column="11" lean-forward="true" selection-start-line="162" selection-start-column="10" selection-end-line="185" selection-end-column="11" />
-          <folding>
-            <element signature="n#div#1;n#div#0;n#div#0;n#section#1;n#div#0;n#template#0;n#!!top" />
-            <element signature="n#div#0;n#div#0;n#div#1;n#div#0;n#div#1;n#div#0;n#div#0;n#section#1;n#div#0;n#template#0;n#!!top" />
-            <element signature="e#6566#7275#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/frontend/src/components/orgs/OrgHeader.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="358">
-          <caret line="171" column="48" selection-start-line="171" selection-start-column="48" selection-end-line="171" selection-end-column="48" />
-          <folding>
-            <element signature="n#div#0;n#div#0;n#header#0;n#section#0;n#div#0;n#template#0;n#!!top" />
-            <element signature="n#div#0;n#div#0;n#div#0;n#header#0;n#section#0;n#div#0;n#template#0;n#!!top" />
-            <element signature="n#div#0;n#div#0;n#div#0;n#div#0;n#header#0;n#section#0;n#div#0;n#template#0;n#!!top" />
-            <element signature="n#style#0;n#a#0;n#div#0;n#div#0;n#div#0;n#header#0;n#section#0;n#div#0;n#template#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#a#1;n#div#0;n#div#0;n#div#0;n#header#0;n#section#0;n#div#0;n#template#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#img#0;n#div#0;n#div#1;n#div#0;n#header#0;n#section#0;n#div#0;n#template#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#span#0;n#p#0;n#div#0;n#div#0;n#div#1;n#div#0;n#header#0;n#section#0;n#div#0;n#template#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#span#1;n#p#0;n#div#0;n#div#0;n#div#1;n#div#0;n#header#0;n#section#0;n#div#0;n#template#0;n#!!top" expanded="true" />
-            <element signature="e#2244#2250#1" expanded="true" />
-            <element signature="e#2308#2314#1" expanded="true" />
-            <element signature="e#2372#2378#1" expanded="true" />
-            <element signature="e#2436#2442#1" expanded="true" />
-            <element signature="e#4127#4593#0" />
-            <element signature="e#4109#4431#0" />
-          </folding>
+        <state relative-caret-position="254">
+          <caret line="51" column="37" selection-start-line="51" selection-start-column="37" selection-end-line="51" selection-end-column="37" />
         </state>
       </provider>
     </entry>

@@ -3,9 +3,9 @@
     <div class="c-box bg-box">
       <div class="login-box clearfix">
         <div class="hd-login clearfix">
-          <a class="index-logo" href="/"></a>
+          <a class="index-logo" @click="$router.push(`/`)"></a>
           <h1>用户登录</h1>
-          <a class="index-font" href="/">回到首页</a>
+          <a class="index-font" @click="$router.push(`/`)" >回到首页</a>
         </div>
         <div class="fl slide">
           <div class="imgslide">

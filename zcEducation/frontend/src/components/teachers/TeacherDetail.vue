@@ -1,9 +1,9 @@
 <template>
-  <div>
+  <div v-if="showComponent">
     <section>
       <div class="wp">
         <ul  class="crumbs">
-          <li><a @click="$router.push(`/home`)">首页</a>></li>
+          <li><a @click="$router.push(`/`)">首页</a>></li>
           <li><a @click="$router.push(`/orgs/teacher_list`)">授课讲师</a>></li>
           <li>讲师详情</li>
         </ul>
@@ -133,6 +133,7 @@
             org_id: '',
             org_img: '',
             org_address: '',
+            showComponent: false,
           };
         },
         mounted() {
@@ -141,7 +142,6 @@
             method: 'GET'
           }).then(response => {
             var res = response.data
-            console.log(res)
             this.sort_teachers = JSON.parse(res.sort_teachers)
             this.teacher = JSON.parse(res.teacher)[0]
             this.all_courses = JSON.parse(res.all_courses)
@@ -152,6 +152,7 @@
             this.org_id =res.org_id
             this.org_img = res.org_img
             this.org_address =res.org_address
+            this.showComponent = true
           }).catch(err => {
             console.log(err)
           })
@@ -170,7 +171,6 @@
               params: {"loveid": favId,"lovetype": type}
             }).then((response)=>{
               var res = response.data
-              console.log(res)
               if (res.status == 'ok') {
                 if (type == 1) {
                   this.loveorg = !this.loveorg
@@ -192,7 +192,6 @@
             method: 'GET'
           }).then(response => {
             var res = response.data
-            console.log(res)
             this.sort_teachers = JSON.parse(res.sort_teachers)
             this.teacher = JSON.parse(res.teacher)[0]
             this.all_courses = JSON.parse(res.all_courses)

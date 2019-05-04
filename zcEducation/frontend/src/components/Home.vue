@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div v-if="showComponent">
     <!--<HeaderWithSearch :user="user"/>-->
     <div class="banner">
       <div class="wp">
@@ -124,6 +124,7 @@ export default {
       banner_courses: [],
       all_courses:[],
       all_orgs:[],
+      showComponent: false,
     };
   },
 
@@ -142,6 +143,7 @@ export default {
         this.banner_courses = JSON.parse(res.banner_courses)
         this.all_courses = JSON.parse(res.all_courses)
         this.all_orgs = JSON.parse(res.all_orgs)
+        this.showComponent =true
 
         // 渲染完成, 操作 dom 元素
         this.$nextTick(function(){

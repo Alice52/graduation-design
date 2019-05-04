@@ -1,10 +1,10 @@
 <template>
-    <div>
+    <div v-if="showComponent">
       <section>
         <div class="wp">
           <div class="crumbs">
             <ul>
-              <li><a @click="$router.push(`/home`)" >首页</a>></li>
+              <li><a @click="$router.push(`/`)" >首页</a>></li>
               <li><a @click="$router.push(`/courses/course_list`)" >公开课程</a>></li>
               <li>课程详情</li>
             </ul>
@@ -134,15 +134,15 @@
             org:'',
             org_teacher_num: '',
             city_name:'',
+            showComponent: false,
           };
         },
         mounted() {
           axios({
-            url: `/api${this.$route.fullPath}/`,
+            url: `/api/courses/course_video/${this.$route.params.pathMatch}/`,
             methods: 'GET'
           }).then(response=> {
             var res = response.data
-            console.log(res)
             this.course = JSON.parse(res.course)[0]
             this.relate_courses = JSON.parse(res.relate_courses)
             this.org = JSON.parse(res.org)[0]
@@ -151,6 +151,7 @@
             this.course_lessoninfo_count = res.course_lessoninfo_count
             this.org_teacher_num = res.org_teacher_num
             this.city_name = res.city_name
+            this.showComponent = true
           }).catch(err=> {
             console.log(err)
           })
@@ -170,7 +171,6 @@
               params: {"loveid": favId,"lovetype": type}
             }).then((response)=>{
               var res = response.data
-              console.log(res)
               if (res.status == 'ok') {
                 if (type == 1) {
                   this.loveorg = !this.loveorg
@@ -192,7 +192,6 @@
               methods: 'GET'
             }).then(response=> {
               var res = response.data
-              console.log(res)
               this.course = JSON.parse(res.course)[0]
               this.relate_courses = JSON.parse(res.relate_courses)
               this.org = JSON.parse(res.org)[0]

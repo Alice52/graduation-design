@@ -1,9 +1,9 @@
 <template>
-<div>
+<div v-if="showComponent">
   <section>
     <div class="wp">
       <ul class="crumbs">
-        <li><a @click="$router.push(`/home`)" >首页</a>></li>
+        <li><a @click="$router.push(`/`)" >首页</a>></li>
         <li>课程机构</li>
       </ul>
     </div>
@@ -98,7 +98,7 @@
         <dl v-for="(org, index) in sort_orgs" :index="index" :key="index" class="des">
           <dt class="num fl">{{index+1}}</dt>
           <dd>
-            <a @click="$router.push(`/orgs/org_list/${org.pk}`)" ><h1>{{org.fields.name}}</h1></a>
+            <a @click="$router.push(`/orgs/org_detail/${org.pk}`)" ><h1>{{org.fields.name}}</h1></a>
             <p>{{org.fields.address}}</p>
           </dd>
         </dl>
@@ -128,6 +128,7 @@
           has_next: true,
           current_page_number: '',
           page_range: '',
+          showComponent: false,
         };
       },
       methods: {
@@ -141,7 +142,6 @@
             params: {"pagenum": current_page_number - 1, "keyword": keyword, 'sort': sort, 'cityid': cityid, 'cate': cate},
           }).then(response => {
             var res = response.data
-            console.log(res)
             this.pages = JSON.parse(res.pages)
             this.all_citys = JSON.parse(res.all_citys)
             this.sort_orgs = JSON.parse(res.sort_orgs)
@@ -161,7 +161,6 @@
             params: {"pagenum": current_page_number + 1, "keyword": keyword, 'sort': sort, 'cityid': cityid, 'cate': cate},
           }).then(response => {
             var res = response.data
-            console.log(res)
             this.pages = JSON.parse(res.pages)
             this.all_citys = JSON.parse(res.all_citys)
             this.sort_orgs = JSON.parse(res.sort_orgs)
@@ -180,7 +179,6 @@
             params: {"pagenum": targetPage, "keyword": keyword, 'sort': sort, 'cityid': cityid, 'cate': cate},
           }).then(response => {
             var res = response.data
-            console.log(res)
             this.pages = JSON.parse(res.pages)
             this.all_citys = JSON.parse(res.all_citys)
             this.sort_orgs = JSON.parse(res.sort_orgs)
@@ -214,27 +212,37 @@
             console.log(err)
           })
         },
+        getInitAndSearchData() {
+          this.keyword = this.$route.query.keyword
+          axios({
+            url: '/api/orgs/org_list/',
+            params: {'keyword': this.keyword},
+            method: 'GET'
+          }).then(response => {
+            var res = response.data
+            this.pages = JSON.parse(res.pages)
+            this.all_citys = JSON.parse(res.all_citys)
+            this.sort_orgs = JSON.parse(res.sort_orgs)
+            this.has_previous = res.has_previous
+            this.has_next = res.has_next
+            this.current_page_number = res.current_page_number
+            this.page_range = res.page_range
+            this.all_orgs_count = res.all_orgs_count
+            this.keyword = res.keyword
+            this.showComponent = true
+          }).catch(err => {
+            console.log(err)
+          })
+        },
       },
       mounted() {
-        axios({
-          url: '/api/orgs/org_list/',
-          method: 'GET'
-        }).then(response => {
-          var res = response.data
-          console.log(res)
-          this.pages = JSON.parse(res.pages)
-          this.all_citys = JSON.parse(res.all_citys)
-          this.sort_orgs = JSON.parse(res.sort_orgs)
-          this.has_previous = res.has_previous
-          this.has_next = res.has_next
-          this.current_page_number = res.current_page_number
-          this.page_range = res.page_range
-          this.all_orgs_count = res.all_orgs_count
-          this.keyword = res.keyword
-        }).catch(err => {
-          console.log(err)
-        })
+       this.getInitAndSearchData()
       },
+      watch:{
+        $route(from, to) {
+          this.getInitAndSearchData()
+        }
+      }
     }
 </script>
 

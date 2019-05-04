@@ -1,9 +1,9 @@
 <template>
-  <div>
+  <div v-if="showComponent">
     <section>
       <div class="wp">
         <ul  class="crumbs">
-          <li><a @click="$router.push(`/home`)">首页</a>></li>
+          <li><a @click="$router.push(`/`)">首页</a>></li>
           <li>课程讲师</li>
         </ul>
       </div>
@@ -103,6 +103,7 @@
           has_next: true,
           current_page_number: '',
           page_range: '',
+          showComponent: false
         };
       },
       methods: {
@@ -116,7 +117,6 @@
             params: {"pagenum": current_page_number - 1, "keyword": keyword, 'sort': sort},
           }).then(response => {
             var res = response.data
-            console.log(res)
             this.pages = JSON.parse(res.pages)
             this.has_previous = res.has_previous
             this.has_next = res.has_next
@@ -134,7 +134,6 @@
             params: {"pagenum": current_page_number + 1, "keyword": keyword, 'sort': sort},
           }).then(response => {
             var res = response.data
-            console.log(res)
             this.pages = JSON.parse(res.pages)
             this.has_previous = res.has_previous
             this.has_next = res.has_next
@@ -152,7 +151,6 @@
             params: {"pagenum": targetPage, "keyword": keyword, 'sort': sort},
           }).then(response => {
             var res = response.data
-            console.log(res)
             this.pages = JSON.parse(res.pages)
             this.has_previous = res.has_previous
             this.has_next = res.has_next
@@ -182,25 +180,35 @@
             console.log(err)
           })
         },
+        getInitAndSearchData() {
+          this.keyword = this.$route.query.keyword
+          axios({
+            url: '/api/orgs/teacher_list/',
+            params: {'keyword': this.keyword},
+            method: 'GET'
+          }).then(response => {
+            var res = response.data
+            this.sort_teachers = JSON.parse(res.sort_teachers)
+            this.pages = JSON.parse(res.pages)
+            this.has_previous = res.has_previous
+            this.has_next = res.has_next
+            this.current_page_number = res.current_page_number
+            this.page_range = res.page_range
+            this.all_teachers_count = res.all_teachers_count
+            this.keyword = res.keyword
+            this.showComponent = true
+          }).catch(err => {
+            console.log(err)
+          })
+        },
       },
       mounted() {
-        axios({
-          url: '/api/orgs/teacher_list/',
-          method: 'GET'
-        }).then(response => {
-          var res = response.data
-          console.log(res)
-          this.sort_teachers = JSON.parse(res.sort_teachers)
-          this.pages = JSON.parse(res.pages)
-          this.has_previous = res.has_previous
-          this.has_next = res.has_next
-          this.current_page_number = res.current_page_number
-          this.page_range = res.page_range
-          this.all_teachers_count = res.all_teachers_count
-          this.keyword = res.keyword
-        }).catch(err => {
-          console.log(err)
-        })
+        this.getInitAndSearchData()
+      },
+      watch:{
+        $route(from, to) {
+          this.getInitAndSearchData()
+        }
       },
     }
 </script>

@@ -3,9 +3,9 @@
     <div class="c-box bg-box">
       <div class="login-box clearfix">
         <div class="hd-login clearfix">
-          <a class="index-logo" href="/"></a>
+          <a class="index-logo"  @click="$router.push(`/`)" ></a>
           <h1>修改密码</h1>
-          <a class="index-font" href="/">回到首页</a>
+          <a class="index-font"  @click="$router.push(`/`)" >回到首页</a>
         </div>
         <div class="fl slide">
           <div class="imgslide">
@@ -81,7 +81,6 @@
             }
           }).then(respanse => {
             let res = respanse.data;
-            console.log(res)
             if (res.errMsg == 'ok'){
               this.$router.push('/users/user_login')
             } else {

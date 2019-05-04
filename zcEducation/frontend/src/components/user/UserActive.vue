@@ -12,7 +12,6 @@
       })
         .then(respanse => {
           let res = respanse.data;
-          console.log(res)
           if (res.errMsg == "ok") {
             this.$router.push(`/users/user_login`);
           } else {

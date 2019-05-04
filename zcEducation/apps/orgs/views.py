@@ -7,6 +7,7 @@ from django.db.models import Q
 from django.http import JsonResponse
 from django.core import serializers
 from users.models import UserProfile
+import json
 
 
 # Create your views here.
@@ -17,8 +18,7 @@ def org_list(request):
     # 全局搜索功能的过滤
     keyword = request.GET.get('keyword', '')
     if keyword:
-        all_orgs = all_orgs.filter(
-            Q(name__icontains=keyword) | Q(desc__icontains=keyword) | Q(detail__icontains=keyword))
+        all_orgs = all_orgs.filter( Q(name__icontains=keyword) | Q(desc__icontains=keyword) | Q(detail__icontains=keyword))
 
     # category
     cate = request.GET.get('cate', '')
@@ -80,6 +80,7 @@ def org_header(request, org_id):
             'org': serializers.serialize('json', orgQuerySet),
         })
 
+
 def org_detail(request, org_id):
     if org_id:
         org = OrgInfo.objects.filter(id=int(org_id))[0]
@@ -87,33 +88,27 @@ def org_detail(request, org_id):
         org.click_num += 1
         org.save()
 
-        # 在返回页面数据的时候，需要返回收藏这个机构的状态，根据状态让模板页面显示收藏还是取消收藏。而不能让页面固定显示收藏。
-        lovestatus = False
-        if request.user.is_authenticated():
-            love = UserLove.objects.filter(love_man=request.user, love_id=int(org_id), love_type=1, love_status=True)
-            if love:
-                lovestatus = True
+        all_courses = org.courseinfo_set.all()
+        all_teacher = []
+        teachers = org.teacherinfo_set.all()
+        for teacher in teachers:
+            pop_course = teacher.courseinfo_set.all().order_by('-study_num')[0]
+            tea = {"id": teacher.id, "image": str(teacher.image), "count": teacher.courseinfo_set.count(), "name": teacher.name,
+                   "work_year": teacher.work_year, 'pop_course_id': pop_course.id, 'pop_course_name': pop_course.name,
+                   'pop_course_addtime': str(pop_course.add_time), 'pop_course_desc': pop_course.desc}
+            all_teacher.append(tea)
 
-
-
-        return render(request, 'orgs/org-detail-homepage.html', {
-            'org': org,
-            'detail_type': 'home',
-            'lovestatus': lovestatus
+        return JsonResponse({
+            'all_courses': serializers.serialize('json', all_courses),
+            'all_teacher': json.dumps(all_teacher),
         })
 
 
 def org_detail_course(request, org_id):
     if org_id:
         org = OrgInfo.objects.filter(id=int(org_id))[0]
+
         all_courses = org.courseinfo_set.all()
-
-        lovestatus = False
-        if request.user.is_authenticated():
-            love = UserLove.objects.filter(love_man=request.user, love_id=int(org_id), love_type=1, love_status=True)
-            if love:
-                lovestatus = True
-
         # 分页功能
         pagenum = request.GET.get('pagenum', '')
         pa = Paginator(all_courses, 4)
@@ -123,45 +118,43 @@ def org_detail_course(request, org_id):
             pages = pa.page(1)
         except EmptyPage:
             pages = pa.page(pa.num_pages)
-        return render(request, 'orgs/org-detail-course.html', {
-            'org': org,
-            'pages': pages,
-            'detail_type': 'course',
-            'lovestatus': lovestatus
-        })
-
-
-def org_detail_desc(request, org_id):
-    if org_id:
-        org = OrgInfo.objects.filter(id=int(org_id))[0]
-
-        lovestatus = False
-        if request.user.is_authenticated():
-            love = UserLove.objects.filter(love_man=request.user, love_id=int(org_id), love_type=1, love_status=True)
-            if love:
-                lovestatus = True
-
-        return render(request, 'orgs/org-detail-desc.html', {
-            'org': org,
-            'detail_type': 'desc',
-            'lovestatus': lovestatus
+        return JsonResponse({
+            'pages': serializers.serialize('json', pages),
+            'has_previous': pages.has_previous(),
+            'has_next': pages.has_next(),
+            'current_page_number': pages.number,
+            'page_range': pages.paginator.num_pages,
         })
 
 
 def org_detail_teacher(request, org_id):
     if org_id:
         org = OrgInfo.objects.filter(id=int(org_id))[0]
+        teachers = org.teacherinfo_set.all()
 
-        lovestatus = False
-        if request.user.is_authenticated():
-            love = UserLove.objects.filter(love_man=request.user, love_id=int(org_id), love_type=1, love_status=True)
-            if love:
-                lovestatus = True
+        pagenum = request.GET.get('pagenum', '')
+        pa = Paginator(teachers, 2)
+        try:
+            pages = pa.page(pagenum)
+        except PageNotAnInteger:
+            pages = pa.page(1)
+        except EmptyPage:
+            pages = pa.page(pa.num_pages)
 
-        return render(request, 'orgs/org-detail-teachers.html', {
-            'org': org,
-            'detail_type': 'teacher',
-            'lovestatus': lovestatus
+        all_teacher = []
+        for teacher in pages:
+            pop_course = teacher.courseinfo_set.all().order_by('-study_num')[0]
+            tea = {"id": teacher.id, "image": str(teacher.image), "count": teacher.courseinfo_set.count(), "name": teacher.name,
+                   "work_year": teacher.work_year, 'pop_course_id': pop_course.id, 'pop_course_name': pop_course.name,
+                   'pop_course_addtime': str(pop_course.add_time), 'pop_course_desc': pop_course.desc}
+            all_teacher.append(tea)
+
+        return JsonResponse({
+            'pages': json.dumps(all_teacher),
+            'has_previous': pages.has_previous(),
+            'has_next': pages.has_next(),
+            'current_page_number': pages.number,
+            'page_range': pages.paginator.num_pages,
         })
 
 

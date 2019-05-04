@@ -45,7 +45,7 @@
         </div>
         <div class="middle">
           <div class="wp">
-            <a href="/"><img class="fl" src="../../../static/images/logo1.png"></a>
+            <a  @click="$router.push(`/`)" ><img class="fl" src="../../../static/images/logo1.png"></a>
             <h1>617室 ZC在线学习平台</h1>
           </div>
         </div>
@@ -85,7 +85,6 @@
         })
           .then(respanse => {
             let res = respanse.data;
-            console.log(res)
             if (res.errMsg == "ok") {
               // this.$router.push(`/`);
               location.reload()
@@ -98,7 +97,6 @@
           });
       },
       getImgUrl: (bannerUrl) =>{
-        console.log(bannerUrl)
         return "../../static/media/" + bannerUrl
       },
     },

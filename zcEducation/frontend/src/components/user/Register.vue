@@ -4,7 +4,7 @@
       <div class="login-box clearfix">
         <div class="hd-login clearfix">
           <h1>用户注册</h1>
-          <a class="index-font" href="/">回到首页</a>
+          <a class="index-font" @click="$router.push(`/`)" >回到首页</a>
         </div>
         <div class="fl slide">
           <div class="imgslide">

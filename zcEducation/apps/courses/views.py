@@ -146,27 +146,14 @@ def course_comment(request, course_id):
     if course_id:
         courseQuerySet = CourseInfo.objects.filter(id=int(course_id))
         course = courseQuerySet[0]
-        all_comments = course.usercomment_set.all()[:10]
+        all_comments = course.usercomment_set.all().order_by('-add_time')[:10]
         comment_vo = []
         for comment in all_comments:
             user = UserProfile.objects.filter(id=comment.comment_man_id)[0]
             comment_info = {'add_time': str(comment.add_time), 'comment_content': comment.comment_content, 'image': str(user.image), 'nick_name': user.nick_name}
             comment_vo.append(comment_info)
-        # 学过该课的同学还学过什么课程
-        # 第一步：我们需要从中间表用户课程表当中找到学过该课的所有对象
-        # usercourse_list = UserCourse.objects.filter(study_course=course)
-
-        # 第二步：根据找到的用户学习课程列表，遍历拿到所有学习过这门课程的用户列表
-        # user_list = [usercourse.study_man for usercourse in usercourse_list]
-
-        # 第三步：再根据找到的用户，从中间用户学习课程表当中，找到所有用户学习其它课程的 整个对象,需要用到exclude去除当前学过的这个课程对象
-        # usercourse_list = UserCourse.objects.filter(study_man__in=user_list).exclude(study_course=course)
-
-        # 第四步：从获取到的用户课程列表当中，拿到我们需要的其它课程
-        # course_list = list(set([usercourse.study_course for usercourse in usercourse_list]))
 
         return JsonResponse({
             'course': serializers.serialize('json', courseQuerySet),
             'comment_vo': json.dumps(comment_vo),
-            # 'course_list': course_list
         })

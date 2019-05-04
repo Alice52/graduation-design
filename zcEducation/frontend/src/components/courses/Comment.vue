@@ -1,10 +1,10 @@
 <template>
-  <div>
+  <div v-if="showComponent">
     <div id="js-pub-container" class="issques clearfix js-form">
       <div class="wgt-ipt-wrap pub-editor-wrap " id="js-pl-input-fake">
-        <textarea id="js-pl-textarea" class="" placeholder="扯淡、吐槽、表扬、鼓励……想说啥就说啥！" ></textarea>
+        <textarea id="js-pl-textarea" v-model="comment_content" class="" placeholder="请自觉遵守互联网相关的政策法规，严禁发布色情、暴力、反动的言论。" ></textarea>
       </div>
-      <input type="button" id="js-pl-submit" class="pub-btn" data-cid="452" value="发表评论">
+      <input type="button" @click="pushComment" class="pub-btn" value="发表评论">
       <p class="global-errortip js-global-error"></p>
     </div>
     <div id="course_note">
@@ -19,7 +19,7 @@
             </div>
             <p class="cnt">{{comment.comment_content}}</p>
             <div class="footer clearfix">
-              <span title="创建时间" class="l timeago">时间：{{comment.add_time}}</span>
+              <span title="创建时间" class="l timeago">时间：{{comment.add_time.substring(0,19).replace('-', '年').replace('-', '月').replace(' ', '日 ')}}</span>
             </div>
           </div>
         </li>
@@ -30,12 +30,15 @@
 
 <script>
     import axios from 'axios'
+    import Qs from 'qs'
     export default {
         name: "Comment",
         data() {
           return {
             course: {},
             comment_vo: [],
+            comment_content: '',
+            showComponent: false,
           };
         },
         mounted() {
@@ -44,9 +47,9 @@
             method: 'GET'
           }).then(response => {
             var res = response.data
-            console.log(res)
             this.course = JSON.parse(res.course)[0]
             this.comment_vo = JSON.parse(res.comment_vo)
+            this.showComponent = true
           }).catch(err => {
             console.log(err)
           })
@@ -54,7 +57,31 @@
         methods:{
           getImgUrl: (bannerUrl) => {
             return "../../static/media/" + bannerUrl
-          }
+          },
+          pushComment() {
+            var data = Qs.stringify({"course": this.course.pk, "content": this.comment_content})
+            axios({
+              url: '/api/operations/user_comment/',
+              method: "POST",
+              data: data,
+              headers: {
+                "Content-Type": "application/x-www-form-urlencoded"
+              }
+            })
+              .then(respanse => {
+                let res = respanse.data;
+                if (res.status == "ok") {
+                  this.comment_vo.unshift(res.comment_info)
+                  this.comment_content = ''
+                } else {
+                  alert(res.msg)
+                }
+                this.showComponent = true
+              })
+              .catch(function(error) {
+                console.log(error);
+              });
+          },
         }
     }
 </script>
@@ -62,17 +89,8 @@
 <style scoped>
   @import "../../../static/css/zc-education/course/learn-less.css";
   @import "../../../static/css/zc-education/course/course-comment.css";
-  /*@import "../../../static/css/zc-education/course/learn-less.css";*/
-  /*@import "../../../static/css/zc-education/course/learn-less.css";*/
-  /*@import "../../../static/css/zc-education/course/learn-less.css";*/
-  /*@import "../../../static/css/zc-education/course/learn-less.css";*/
-  /*<link rel="stylesheet" type="text/css" href="{% static 'css/zc-education/course/course-comment.css' %}" />*/
-    /*<link rel="stylesheet" type="text/css" href="{% static 'css/zc-education/base.css' %}">*/
-                                /*<link rel="stylesheet" type="text/css" href="{% static 'css/zc-education/common-less.css' %}">*/
-                                   /*<link rel="stylesheet" type="text/css" href="{% static 'css/zc-education/course/common-less.css' %}">*/
-  /*<link rel="stylesheet" type="text/css" href="{% static 'css/mooc.css' %}" />*/
-
   .pub-editor-wrap{
     border: none;
   }
+
 </style>

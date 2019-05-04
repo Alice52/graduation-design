@@ -1,11 +1,11 @@
 <template>
-  <section class="loginbg">
+  <section class="loginbg" v-if="showComponent">
     <div class="c-box bg-box">
       <div class="login-box clearfix">
         <div class="hd-login clearfix">
-          <a class="index-logo" href="/"></a>
+          <a class="index-logo"  @click="$router.push(`/`)" ></a>
           <h1>忘记密码</h1>
-          <a class="index-font" href="/">回到首页</a>
+          <a class="index-font"  @click="$router.push(`/`)" >回到首页</a>
         </div>
         <div class="fl slide">
           <div class="imgslide">
@@ -78,12 +78,14 @@
         identifyCodes: "1234567890",
         identifyCode: "", // os
         verifyCode: '', // manual
+        showComponent: false,
       }
     },
 
     mounted() {
       this.identifyCode = "";
       this.makeCode(this.identifyCodes, 4);
+      showComponent=true
     },
 
     methods:{
@@ -105,7 +107,6 @@
       },
       userForget() {
         this.errMsg = ''
-        console.log(this.email)
         if (this.verifyCode === this.identifyCode) {
           var data = Qs.stringify({"email":this.email});
           axios({
@@ -118,9 +119,7 @@
           })
             .then(respanse => {
               let res = respanse.data;
-              console.log(res)
               this.errMsg = res.errMsg
-              console.log(this.errMsg)
             })
             .catch(function(error) {
               console.log(error);

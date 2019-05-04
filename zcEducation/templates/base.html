@@ -125,10 +125,7 @@
         $('#jsSearchBtn').click(function () {
             var search_type = $('#jsSelectOption').attr('data-value');
             var key_word = $('#search_keywords').val();
-
-
             var url = '';
-
             if(search_type == 'org'){
                 url = '{% url 'orgs:org_list' %}'
             }else if(search_type == 'course'){
@@ -136,9 +133,7 @@
             }else {
                 url = '{% url 'orgs:teacher_list' %}'
             }
-
             url = url + '?keyword='+key_word
-
             window.location.href = url
 
         })

@@ -1,5 +1,5 @@
 <template>
-  <div class="right">
+  <div class="right" v-if="showComponent">
     <div class="personal_des Releasecont">
       <div class="head">
         <h1>我的课程</h1>
@@ -55,18 +55,14 @@ export default {
       method: 'GET',
     }).then((response)=>{
       var res = response.data
-      console.log(res)
       this.course_list = JSON.parse(res.course_list)
-      console.log(this.course_list[0])
-      console.log(this.course_list[0].fields)
-      console.log(this.course_list[0].fields.image)
+      this.showComponent = true
     }).catch((err)=> {
       console.log(err)
     })
   },
   methods:{
     getImgUrl: (bannerUrl) =>{
-      console.log(bannerUrl)
       return "../../static/media/" + bannerUrl
     }
   },

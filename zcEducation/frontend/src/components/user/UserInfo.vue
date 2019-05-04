@@ -72,7 +72,6 @@
 
     methods: {
       getUserImgUrl: (bannerUrl) => {
-        console.log(bannerUrl)
         return "../../static/media/" + bannerUrl
       },
       UserChangeInfo() {
@@ -87,7 +86,6 @@
           }
         }).then(response => {
           var res = response.data
-          console.log(res)
           if (res.status == 'ok') {
 
           } else {
@@ -121,16 +119,12 @@
           }
         }).then(response => {
           var res = response.data
-          console.log(res)
           if (res.status == 'ok') {
             this.user.image = 'user/' + img1.name
           }
         }).catch(err => {
           console.log(err)
         })
-      },
-      userChangeEmail() {
-
       },
     },
   }

@@ -1,30 +1,11 @@
-from django.shortcuts import render
 from .forms import UserAskForm, UserCommentForm
 from django.http import JsonResponse
 from .models import UserLove, UserComment
 from orgs.models import OrgInfo, TeacherInfo
 from courses.models import CourseInfo
-from django.core.serializers import serialize
 from utils.decorators import login_decorator
-
-
-# Create your views here.
-def user_ask(request):
-    user_ask_form = UserAskForm(request.POST)
-    if user_ask_form.is_valid():
-        user_ask_form.save(commit=True)
-        # name = user_ask_form.cleaned_data['name']
-        # phone = user_ask_form.cleaned_data['phone']
-        # course = user_ask_form.cleaned_data['course']
-        #
-        # a = UserAsk()
-        # a.name = name
-        # a.phone = phone
-        # a.course = course
-        # a.save()
-        return JsonResponse({'status': 'ok', 'msg': '咨询成功'})
-    else:
-        return JsonResponse({'status': 'fail', 'msg': '咨询失败'})
+from users.models import UserProfile
+from datetime import datetime
 
 
 @login_decorator
@@ -83,13 +64,8 @@ def user_comment(request):
         a.comment_content = content
         a.comment_course_id = course
         a.save()
-
-        # all_comments = UserComment.objects.filter(comment_course_id=course)
-        #
-        # all_comments = serialize('json',all_comments)
-        #
-        # return JsonResponse(all_comments,safe=False)
-        return JsonResponse({'status': 'ok', 'msg': '评论成功'})
+        comment_info = {'add_time': str(datetime.now()), 'comment_content': content, 'image': str(request.user.image), 'nick_name': request.user.nick_name}
+        return JsonResponse({'status': 'ok', 'msg': '评论成功', 'comment_info': comment_info})
     else:
         return JsonResponse({'status': 'fail', 'msg': '评论失败'})
 

@@ -20,13 +20,8 @@ def index(request):
     banner_courses = serializers.serialize("json", CourseInfo.objects.filter(is_banner=True)[:3])
     all_courses = serializers.serialize("json", CourseInfo.objects.filter(is_banner=False)[:6])
     all_orgs = serializers.serialize("json", OrgInfo.objects.all()[:15])
-    # user = None
-    # u = UserProfile.objects.filter(username=request.user.username)
-    # if u.count() > 0:
-    #     user = serializers.serialize("json", u),
 
     return JsonResponse({
-        # 'user': user,
         'all_banners': all_banners,
         'banner_courses': banner_courses,
         'all_courses': all_courses,
@@ -335,13 +330,6 @@ def user_lovecourse(request):
 
     return JsonResponse({
         'course_list': course_list
-    })
-
-
-def user_message(request):
-    msg_list = UserMessage.objects.filter(message_man=request.user.id)
-    return render(request, 'users/usercenter-message.html', {
-        'msg_list': msg_list
     })
 
 
