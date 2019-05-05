@@ -47,9 +47,16 @@ INSTALLED_APPS = [
     'crispy_forms',
     'captcha',
     'DjangoUeditor',
+    'online_status',
 ]
-
 AUTH_USER_MODEL = 'users.UserProfile'
+# session 使user_login 过期
+SESSION_COOKIE_AGE = 60 * 20
+SESSION_EXPIRE_AT_BROWSER_CLOSE = False
+SESSION_SAVE_EVERY_REQUEST = True
+# USER_ONLINE_TIMEOUT = 20
+# 缓存过期时间
+USER_LAST_LOGIN_EXPIRE = 60
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -59,6 +66,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'online_status.middleware.OnlineStatusMiddleware',
 ]
 
 ROOT_URLCONF = 'zcEducation.urls'

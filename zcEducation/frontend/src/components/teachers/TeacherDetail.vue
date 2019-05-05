@@ -182,6 +182,11 @@
               } else {
                 alert(res.msg)
               }
+            }).catch(err => {
+              if (err.message == "Request failed with status code 404")
+                alert("登录之后才能收藏")
+              else
+                console.log(err)
             })
           }
         },
