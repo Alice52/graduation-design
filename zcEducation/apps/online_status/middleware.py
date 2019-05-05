@@ -51,6 +51,14 @@ class OnlineStatusMiddleware(MiddlewareMixin):
     #             cache.set(cache_key, now, settings.USER_LAST_LOGIN_EXPIRE)
     def process_request(self, request):
         if request.user.is_authenticated():
+            # 缓存整个 user 的信息
+            cache_key = 'userinfo_'+request.user.username
+            userinfo = cache.get(cache_key)
+            if not userinfo:
+                # cache.set(cache_key, json.dumps(user_name), settings.NEVER_REDIS_TIMEOUT)
+                cache.set(cache_key, request.user, settings.REDIS_TIMEOUT)
+            else:
+                cache.expire(cache_key, settings.REDIS_TIMEOUT)
             now = datetime.now()
             userrecord = UserRecord.objects.filter(user=request.user).order_by('-start_time')
             if not userrecord:

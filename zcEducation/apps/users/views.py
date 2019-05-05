@@ -12,6 +12,12 @@ from operations.models import UserLove, UserMessage
 from orgs.models import OrgInfo, TeacherInfo
 from courses.models import CourseInfo
 from django.views.decorators.csrf import csrf_exempt
+from .jobs import job_session_invalid, job_send_sumary_email
+from django.core.cache import cache
+from zcEducation import settings
+from apscheduler.schedulers.background import BackgroundScheduler
+from django_apscheduler.jobstores import DjangoJobStore, register_events, register_job
+
 
 
 # @cache_page(15 * 60)
@@ -223,6 +229,9 @@ def user_changeimage(request):
     user_changeimage_form = UserChangeImageForm(request.POST, request.FILES, instance=request.user)
     if user_changeimage_form.is_valid():
         user_changeimage_form.save(commit=True)
+        u = UserProfile.objects.filter(id=request.user.id)
+        cache_key = 'userinfo_'+request.user.username
+        cache.set(cache_key, u, settings.REDIS_TIMEOUT)
         return JsonResponse({'status': 'ok'})
     else:
         return JsonResponse({'status': 'fail'})
@@ -232,6 +241,9 @@ def user_changeinfo(request):
     user_changeinfo_form = UserChangeInfoForm(request.POST, instance=request.user)
     if user_changeinfo_form.is_valid():
         user_changeinfo_form.save(commit=True)
+        u = UserProfile.objects.filter(id=request.user.id)
+        cache_key = 'userinfo_'+request.user.username
+        cache.set(cache_key, u, settings.REDIS_TIMEOUT)
         return JsonResponse({"status": 'ok', 'msg': '修改成功'})
     else:
         return JsonResponse({"status": 'fail', 'msg': '修改失败'})
@@ -347,3 +359,58 @@ def handler_404(request):
 
 def handler_500(request):
     return render(request, 'handler_500.html')
+
+
+try:
+    # 实例化调度器
+    scheduler = BackgroundScheduler()
+    # 调度器使用DjangoJobStore()
+    scheduler.add_jobstore(DjangoJobStore(), "default")
+
+    # 设置定时任务，选择方式为interval，时间间隔为10s
+    # 另一种方式为每天固定时间执行任务，对应代码为：
+    # @register_job(scheduler, 'cron', day_of_week='mon-fri', hour='9', minute='30', second='10',id='task_time')
+    @register_job(scheduler, "interval", seconds=5 * 60,  replace_existing=True, misfire_grace_time=4 * 60)
+    def my_job():
+        # 这里写你要执行的任务
+        print("dsaddasdsa")
+        job_session_invalid()
+
+    register_events(scheduler)
+    scheduler.start()
+except Exception as e:
+    print(e)
+    pass
+    # 有错误就停止定时器
+    # scheduler.shutdown()
+
+# from apscheduler.schedulers.blocking import BlockingScheduler
+# import datetime
+# from apscheduler.jobstores.memory import MemoryJobStore
+# from apscheduler.executors.pool import ThreadPoolExecutor, ProcessPoolExecutor
+#
+#
+# def my_job(id='my_job'):
+#     print('sdsdsadsd_job')
+#     # job_session_invalid()
+#
+#
+# jobstores = {
+#     'default': MemoryJobStore()
+#
+# }
+# executors = {
+#     'default': ThreadPoolExecutor(20),
+#     'processpool': ProcessPoolExecutor(10)
+# }
+# job_defaults = {
+#     'coalesce': False,
+#     'max_instances': 3
+# }
+# scheduler = BlockingScheduler(jobstores=jobstores, executors=executors, job_defaults=job_defaults)
+# scheduler.add_job(my_job, args=['job_interval', ], id='job_interval', trigger='interval', seconds=50, replace_existing=True)
+# try:
+#     scheduler.start()
+# except SystemExit:
+#     print('exit')
+#     exit()

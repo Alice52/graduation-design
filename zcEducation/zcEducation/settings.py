@@ -36,7 +36,7 @@ INSTALLED_APPS = [
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
-    'django.contrib.sessions',
+    # 'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'users.apps.UsersConfig',
@@ -47,16 +47,9 @@ INSTALLED_APPS = [
     'crispy_forms',
     'captcha',
     'DjangoUeditor',
-    'online_status',
+    'online_status.apps.OnlineStatusConfig',
+    'django_apscheduler',  # 定时执行任务
 ]
-AUTH_USER_MODEL = 'users.UserProfile'
-# session 使user_login 过期
-SESSION_COOKIE_AGE = 60 * 20
-SESSION_EXPIRE_AT_BROWSER_CLOSE = False
-SESSION_SAVE_EVERY_REQUEST = True
-# USER_ONLINE_TIMEOUT = 20
-# 缓存过期时间
-USER_LAST_LOGIN_EXPIRE = 60
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -144,19 +137,51 @@ STATICFILES_DIRS = [
 MEDIA_URL = '/frontend/static/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'frontend/static/media')
 
-
 EMAIL_HOST = 'smtp.qq.com'
 EMAIL_PORT = 465
 EMAIL_HOST_USER = '1252068782@qq.com'
 EMAIL_HOST_PASSWORD = 'eclzegtgaytufidi'
 EMAIL_FROM = '1252068782@qq.com'
 
-# CACHES = {
-#     "default": {
-#         "BACKEND": "django_redis.cache.RedisCache",
-#         "LOCATION": "redis://127.0.0.1:6379/4",
-#         "OPTIONS": {
-#             "CLIENT_CLASS": "django_redis.client.DefaultClient",
-#         }
-#     }
-# }
+CACHES = {
+    "default": {
+        "BACKEND": "django_redis.cache.RedisCache",
+        "LOCATION": "redis://101.132.45.28:6379/4",
+        "OPTIONS": {
+            "CLIENT_CLASS": "django_redis.client.DefaultClient",
+        }
+    }
+}
+
+CACHES = {
+    "default": {
+        "BACKEND": "django_redis.cache.RedisCache",
+        "LOCATION": "redis://101.132.45.28:6379/1",  # 指明使用redis的1号数据库 user
+        "OPTIONS": {
+            "CLIENT_CLASS": "django_redis.client.DefaultClient",
+        }
+    },
+    "session": {
+        "BACKEND": "django_redis.cache.RedisCache",
+        "LOCATION": "redis://101.132.45.28:6379/2",  # 指明使用redis的2号数据库 session
+        "OPTIONS": {
+            "CLIENT_CLASS": "django_redis.client.DefaultClient",
+        }
+    }
+}
+# session 信息转存 redis, 并且使 user_login 过期
+# session使用的存储方式
+SESSION_ENGINE = "django.contrib.sessions.backends.cache"
+# 指明使用哪一个库保存session数据
+SESSION_CACHE_ALIAS = "session"
+# SESSION_COOKIE_AGE = 60 * 1
+SESSION_COOKIE_AGE = 60 * 20
+SESSION_EXPIRE_AT_BROWSER_CLOSE = False
+SESSION_SAVE_EVERY_REQUEST = True
+
+# redis 数据过期时间
+# REDIS_TIMEOUT = 60 * 2
+REDIS_TIMEOUT = 60 * 25
+
+
+AUTH_USER_MODEL = 'users.UserProfile'
