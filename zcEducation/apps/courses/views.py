@@ -10,6 +10,7 @@ from orgs.models import OrgInfo
 from courses.models import LessonInfo, VideoInfo
 from users.models import UserProfile
 import json
+from django.views.decorators.cache import cache_page
 
 
 def course_list(request):
@@ -83,6 +84,7 @@ def course_detail(request, course_id):
 
 
 @login_decorator
+# @cache_page(10 * 60)
 def course_video(request, course_id):
     if course_id:
         courseQuerySet = CourseInfo.objects.filter(id=int(course_id))

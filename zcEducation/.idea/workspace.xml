@@ -3,13 +3,14 @@
   <component name="ChangeListManager">
     <list default="true" id="96dd5053-9309-4961-9cff-4ad65a12edc9" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/courses/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/courses/views.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/apps/online_status/middleware.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/online_status/middleware.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/apps/online_status/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/online_status/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/online_status/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/online_status/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/operations/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/operations/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/orgs/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/orgs/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/users/jobs.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/users/jobs.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/apps/users/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/users/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/utils/sendEmail.py" beforeDir="false" afterPath="$PROJECT_DIR$/utils/sendEmail.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/zcEducation/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/zcEducation/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/static/images/favaor.png" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/static/images/favaor.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/static/images/logo1.png" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/static/images/logo1.png" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -22,33 +23,31 @@
     <option name="myCustomStartScript" value="import sys; print('Python %s on %s' % (sys.version, sys.platform))&#10;import django; print('Django %s' % django.get_version())&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;if 'setup' in dir(django): django.setup()&#10;import django_manage_shell; django_manage_shell.run(PROJECT_ROOT)" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-      <file leaf-file-name="views.py" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/apps/users/views.py">
+    <leaf>
+      <file leaf-file-name="middleware.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/apps/online_status/middleware.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="289">
-              <caret line="372" column="104" selection-start-line="372" selection-start-column="104" selection-end-line="372" selection-end-column="104" />
+            <state relative-caret-position="48">
+              <caret line="52" column="8" selection-start-line="52" selection-start-column="8" selection-end-line="52" selection-end-column="8" />
               <folding>
-                <element signature="e#0#68#0" expanded="true" />
-                <element signature="e#906#1445#0" />
-                <element signature="e#1475#1680#0" />
-                <element signature="e#1715#2524#0" />
-                <element signature="e#2569#3399#0" />
-                <element signature="e#3432#3523#0" />
-                <element signature="e#3562#4121#0" />
-                <element signature="e#4154#4712#0" />
-                <element signature="e#4750#6245#0" />
-                <element signature="e#6276#6479#0" />
-                <element signature="e#6482#6514#0" />
-                <element signature="e#7181#7758#0" />
-                <element signature="e#7795#8263#0" />
-                <element signature="e#8301#9715#0" />
-                <element signature="e#9752#10639#0" />
-                <element signature="e#10672#10900#0" />
-                <element signature="e#10934#11250#0" />
-                <element signature="e#11298#11654#0" />
-                <element signature="e#11691#12037#0" />
-                <element signature="e#12077#12387#0" />
+                <element signature="e#0#29#0" expanded="true" />
+                <element signature="e#237#274#0" />
+                <element signature="e#3524#3679#0" />
+                <element signature="e#4136#4407#0" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="views.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/apps/orgs/views.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="136">
+              <caret line="137" column="12" lean-forward="true" selection-start-line="137" selection-start-column="12" selection-end-line="137" selection-end-column="12" />
+              <folding>
+                <element signature="e#0#35#0" expanded="true" />
+                <element signature="e#493#2011#0" />
+                <element signature="e#2051#2648#0" />
               </folding>
             </state>
           </provider>
@@ -57,74 +56,10 @@
       <file leaf-file-name="jobs.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/apps/users/jobs.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="286">
-              <caret line="13" column="9" lean-forward="true" selection-start-line="13" selection-start-column="9" selection-end-line="13" selection-end-column="9" />
+            <state relative-caret-position="484">
+              <caret line="22" column="24" selection-start-line="22" selection-start-column="24" selection-end-line="22" selection-end-column="24" />
               <folding>
                 <element signature="e#0#43#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="models.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/apps/online_status/models.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="176">
-              <caret line="10" column="60" selection-start-line="10" selection-start-column="60" selection-end-line="10" selection-end-column="73" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="views.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/apps/operations/views.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="135">
-              <caret line="30" column="30" lean-forward="true" selection-start-line="30" selection-start-column="15" selection-end-line="30" selection-end-column="30" />
-              <folding>
-                <element signature="e#0#47#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="compiler.py" pinned="false" current-in-tab="false">
-        <entry file="file://E:/dev/Python/Python36/Lib/site-packages/django/db/models/sql/compiler.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="155">
-              <caret line="34" selection-start-line="34" selection-end-line="34" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="middleware.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/apps/online_status/middleware.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="182">
-              <caret line="61" column="32" lean-forward="true" selection-start-line="61" selection-start-column="12" selection-end-line="61" selection-end-column="32" />
-              <folding>
-                <element signature="e#0#29#0" expanded="true" />
-                <element signature="e#237#274#0" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="deprecation.py" pinned="false" current-in-tab="false">
-        <entry file="file://E:/dev/Python/Python36/Lib/site-packages/django/utils/deprecation.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="175">
-              <caret line="137" selection-start-line="137" selection-end-line="137" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="settings.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/zcEducation/settings.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1662">
-              <caret line="93" column="23" lean-forward="true" selection-start-line="93" selection-start-column="23" selection-end-line="93" selection-end-column="23" />
-              <folding>
-                <element signature="e#311#320#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -143,19 +78,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>org</find>
-      <find>teacher.</find>
-      <find>params: {</find>
-      <find>key_word</find>
-      <find>watch:</find>
-      <find>courseList</find>
-      <find>授课机构排名</find>
-      <find>console.l</find>
-      <find>console</find>
-      <find>router-view</find>
-      <find>$router.push(`/home`)</find>
-      <find>href=&quot;/&quot;</find>
-      <find>&lt;router-view</find>
       <find>router-v</find>
       <find>fullPath</find>
       <find>login.js</find>
@@ -173,6 +95,19 @@
       <find>req</find>
       <find>cache_key</find>
       <find>job_session_invalid</find>
+      <find>cache_request_path_key</find>
+      <find>e.set(cache_request_pat</find>
+      <find>vedio</find>
+      <find>video</find>
+      <find>type =1</find>
+      <find>course_video</find>
+      <find>course_chapter</find>
+      <find>开始</find>
+      <find>@cli</find>
+      <find>course</find>
+      <find>is_authenticated</find>
+      <find>filter</find>
+      <find>userrecord</find>
     </findStrings>
     <replaceStrings>
       <replace>{% static '</replace>
@@ -203,7 +138,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/frontend/src/components/orgs/OrgDetail.vue" />
         <option value="$PROJECT_DIR$/frontend/src/components/orgs/OrgDetailTeacher.vue" />
         <option value="$PROJECT_DIR$/frontend/src/components/orgs/OrgHeader.vue" />
         <option value="$PROJECT_DIR$/frontend/src/components/orgs/OrgList.vue" />
@@ -227,7 +161,6 @@
         <option value="$PROJECT_DIR$/frontend/index.html" />
         <option value="$PROJECT_DIR$/frontend/src/components/user/Login.vue" />
         <option value="$PROJECT_DIR$/frontend/src/components/courses/Detail.vue" />
-        <option value="$PROJECT_DIR$/apps/courses/views.py" />
         <option value="$PROJECT_DIR$/frontend/src/components/courses/Vedio.vue" />
         <option value="$PROJECT_DIR$/frontend/src/components/HeaderWithSearch.vue" />
         <option value="$PROJECT_DIR$/frontend/src/components/user/UserInfo.vue" />
@@ -249,11 +182,13 @@
         <option value="$PROJECT_DIR$/apps/zc_job/apps.py" />
         <option value="$PROJECT_DIR$/apps/zc_job/views.py" />
         <option value="$PROJECT_DIR$/apps/online_status/views.py" />
-        <option value="$PROJECT_DIR$/apps/online_status/models.py" />
         <option value="$PROJECT_DIR$/zcEducation/settings.py" />
-        <option value="$PROJECT_DIR$/apps/online_status/middleware.py" />
-        <option value="$PROJECT_DIR$/apps/users/jobs.py" />
+        <option value="$PROJECT_DIR$/apps/online_status/models.py" />
         <option value="$PROJECT_DIR$/apps/users/views.py" />
+        <option value="$PROJECT_DIR$/apps/courses/views.py" />
+        <option value="$PROJECT_DIR$/apps/orgs/views.py" />
+        <option value="$PROJECT_DIR$/apps/users/jobs.py" />
+        <option value="$PROJECT_DIR$/apps/online_status/middleware.py" />
       </list>
     </option>
   </component>
@@ -277,7 +212,7 @@
       <path value="$PROJECT_DIR$/frontend/package.json" />
     </packageJsonPaths>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds" extendedState="7">
     <option name="x" value="-8" />
     <option name="y" value="-8" />
     <option name="width" value="1400" />
@@ -291,6 +226,17 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope">
+        <subPane subId="Project Files">
+          <expand>
+            <path>
+              <item name="Root" type="cbb8eebc:String" user="Root" />
+              <item name="zcEducation" type="cbb8eebc:String" user="zcEducation" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -307,23 +253,63 @@
               <item name="zcEducation" type="b2602c69:ProjectViewProjectNode" />
               <item name="zcEducation" type="462c0819:PsiDirectoryNode" />
               <item name="apps" type="462c0819:PsiDirectoryNode" />
+              <item name="courses" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="zcEducation" type="b2602c69:ProjectViewProjectNode" />
+              <item name="zcEducation" type="462c0819:PsiDirectoryNode" />
+              <item name="apps" type="462c0819:PsiDirectoryNode" />
+              <item name="online_status" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="zcEducation" type="b2602c69:ProjectViewProjectNode" />
+              <item name="zcEducation" type="462c0819:PsiDirectoryNode" />
+              <item name="apps" type="462c0819:PsiDirectoryNode" />
               <item name="operations" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="zcEducation" type="b2602c69:ProjectViewProjectNode" />
               <item name="zcEducation" type="462c0819:PsiDirectoryNode" />
-              <item name="zcEducation" type="462c0819:PsiDirectoryNode" />
+              <item name="apps" type="462c0819:PsiDirectoryNode" />
+              <item name="orgs" type="462c0819:PsiDirectoryNode" />
             </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
-      <pane id="Scope">
-        <subPane subId="Project Files">
-          <expand>
             <path>
-              <item name="Root" type="cbb8eebc:String" user="Root" />
-              <item name="zcEducation" type="cbb8eebc:String" user="zcEducation" />
+              <item name="zcEducation" type="b2602c69:ProjectViewProjectNode" />
+              <item name="zcEducation" type="462c0819:PsiDirectoryNode" />
+              <item name="frontend" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="zcEducation" type="b2602c69:ProjectViewProjectNode" />
+              <item name="zcEducation" type="462c0819:PsiDirectoryNode" />
+              <item name="frontend" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="zcEducation" type="b2602c69:ProjectViewProjectNode" />
+              <item name="zcEducation" type="462c0819:PsiDirectoryNode" />
+              <item name="frontend" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="components" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="zcEducation" type="b2602c69:ProjectViewProjectNode" />
+              <item name="zcEducation" type="462c0819:PsiDirectoryNode" />
+              <item name="frontend" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="components" type="462c0819:PsiDirectoryNode" />
+              <item name="courses" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="zcEducation" type="b2602c69:ProjectViewProjectNode" />
+              <item name="zcEducation" type="462c0819:PsiDirectoryNode" />
+              <item name="frontend" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="router" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="zcEducation" type="b2602c69:ProjectViewProjectNode" />
+              <item name="zcEducation" type="462c0819:PsiDirectoryNode" />
+              <item name="zcEducation" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -417,8 +403,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
-    <editor active="true" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="7" />
     <layout>
       <window_info anchor="bottom" id="TODO" order="11" weight="0.3298611" />
       <window_info anchor="bottom" id="Event Log" order="4" sideWeight="0.5010707" side_tool="true" weight="0.4722222" />
@@ -426,21 +411,21 @@
       <window_info anchor="bottom" id="Version Control" order="1" sideWeight="0.49947917" weight="0.2974537" />
       <window_info anchor="bottom" id="Python Console" order="3" weight="0.3298611" />
       <window_info anchor="bottom" id="Run" order="7" weight="0.3784722" />
-      <window_info anchor="bottom" id="Terminal" order="12" sideWeight="0.49892932" weight="0.5196759" />
-      <window_info content_ui="combo" id="Project" order="1" visible="true" weight="0.2098501" />
+      <window_info anchor="bottom" id="Terminal" order="12" sideWeight="0.49892932" weight="0.2986111" />
+      <window_info content_ui="combo" id="Project" order="1" visible="true" weight="0.21252677" />
       <window_info anchor="bottom" id="Docker" order="0" show_stripe_button="false" />
       <window_info anchor="right" id="Database" order="2" />
+      <window_info anchor="bottom" id="Find" order="6" weight="0.3298611" />
       <window_info anchor="right" id="SciView" order="0" />
       <window_info id="Structure" order="2" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="0" side_tool="true" />
-      <window_info anchor="bottom" id="Debug" order="8" weight="0.6458333" />
+      <window_info active="true" anchor="bottom" id="Debug" order="8" visible="true" weight="0.7233796" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="10" weight="0.4" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="1" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="3" weight="0.25" />
       <window_info anchor="bottom" id="Message" order="5" />
       <window_info anchor="bottom" id="Cvs" order="9" weight="0.25" />
-      <window_info anchor="bottom" id="Find" order="6" weight="0.3298611" />
       <window_info anchor="bottom" id="Concurrent Activities Diagram" order="13" weight="0.59375" />
     </layout>
   </component>
@@ -499,11 +484,6 @@
           <line>14</line>
           <option name="timeStamp" value="117" />
         </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/apps/users/jobs.py</url>
-          <line>17</line>
-          <option name="timeStamp" value="131" />
-        </line-breakpoint>
       </breakpoints>
       <breakpoints-dialog>
         <breakpoints-dialog />
@@ -515,20 +495,64 @@
           </properties>
         </breakpoint>
       </default-breakpoints>
-      <option name="time" value="132" />
+      <option name="time" value="157" />
     </breakpoint-manager>
     <watches-manager>
       <configuration name="Python.DjangoServer">
         <watch expression="now.month" language="Python" />
         <watch expression="request.path" language="Python" />
         <watch expression="userrecord[0]" language="Python" />
+        <watch expression="request.user" language="Python" />
         <watch expression="datetime.now()" language="Python" />
+        <watch expression="request.user.is_authenticated()" language="Python" />
         <watch expression="datetime.now()" language="Python" />
+        <watch expression="re.findall(r'(?&lt;=/)(\w+).*(?=/)', this_path)" language="Python" />
+        <watch expression="data_detail" language="Python" />
       </configuration>
     </watches-manager>
   </component>
   <component name="debuggerHistoryManager">
     <expressions id="watch">
+      <expression>
+        <expression-string>request.user</expression-string>
+        <language-id>Python</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>request.user.is_authenticated()</expression-string>
+        <language-id>Python</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>re.findall(r'(?&lt;=/)(\w+).*(?=/)', this_path)</expression-string>
+        <language-id>Python</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>re.findall(r'(?&lt;=(\w)\/)(\w+).*(?=/)', this_path)</expression-string>
+        <language-id>Python</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>re.findall(r'(?&lt;=(\w+)\/)(\w+).*(?=/)', this_path)</expression-string>
+        <language-id>Python</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>re.findall(r'(?&lt;=(\w+)/)(\w+).*(?=/)', this_path)</expression-string>
+        <language-id>Python</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>re.findall(r'(?&lt;=(\w)/)(\w+).*(?=/)', this_path)</expression-string>
+        <language-id>Python</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>data_detail</expression-string>
+        <language-id>Python</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
       <expression>
         <expression-string>datetime.now()</expression-string>
         <language-id>Python</language-id>
@@ -536,41 +560,6 @@
       </expression>
       <expression>
         <expression-string>userrecord[0]</expression-string>
-        <language-id>Python</language-id>
-        <evaluation-mode>EXPRESSION</evaluation-mode>
-      </expression>
-      <expression>
-        <expression-string>request.path</expression-string>
-        <language-id>Python</language-id>
-        <evaluation-mode>EXPRESSION</evaluation-mode>
-      </expression>
-      <expression>
-        <expression-string>now.month</expression-string>
-        <language-id>Python</language-id>
-        <evaluation-mode>EXPRESSION</evaluation-mode>
-      </expression>
-      <expression>
-        <expression-string>noe.month</expression-string>
-        <language-id>Python</language-id>
-        <evaluation-mode>EXPRESSION</evaluation-mode>
-      </expression>
-      <expression>
-        <expression-string>teacher.courseinfo_set.count()</expression-string>
-        <language-id>Python</language-id>
-        <evaluation-mode>EXPRESSION</evaluation-mode>
-      </expression>
-      <expression>
-        <expression-string>lesson.name</expression-string>
-        <language-id>Python</language-id>
-        <evaluation-mode>EXPRESSION</evaluation-mode>
-      </expression>
-      <expression>
-        <expression-string>course.orginfo</expression-string>
-        <language-id>Python</language-id>
-        <evaluation-mode>EXPRESSION</evaluation-mode>
-      </expression>
-      <expression>
-        <expression-string>pages.paginator.num_pages</expression-string>
         <language-id>Python</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
@@ -591,48 +580,6 @@
     </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/frontend/src/components/courses/Comment.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1936">
-          <caret line="89" column="67" selection-start-line="89" selection-start-column="67" selection-end-line="89" selection-end-column="67" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/frontend/src/components/courses/Chapter.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="660">
-          <caret line="30" column="13" selection-start-line="30" selection-start-column="13" selection-end-line="30" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/frontend/src/components/user/ForgetPwd.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2640">
-          <caret line="122" selection-start-line="122" selection-end-line="123" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/frontend/src/components/user/UserInfo.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1694">
-          <caret line="134" column="38" selection-start-line="134" selection-start-column="33" selection-end-line="134" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/frontend/src/components/user/UserCourse.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1078">
-          <caret line="49" column="27" selection-start-line="49" selection-start-column="27" selection-end-line="49" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/frontend/src/components/orgs/OrgDetailDesc.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="22">
-          <caret line="1" column="41" selection-start-line="1" selection-start-column="41" selection-end-line="1" selection-end-column="41" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/frontend/src/components/orgs/OrgDetaiilCourse.vue">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="22">
@@ -705,13 +652,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="198">
           <caret line="9" selection-start-line="9" selection-end-line="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://E:/dev/Python/Python36/Lib/site-packages/django/core/handlers/exception.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="219">
-          <caret line="40" selection-start-line="40" selection-end-line="40" />
         </state>
       </provider>
     </entry>
@@ -836,20 +776,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://E:/dev/Python/Python36/Lib/site-packages/django/utils/deprecation.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="175">
-          <caret line="137" selection-start-line="137" selection-end-line="137" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://E:/dev/Python/Python36/Lib/site-packages/django/db/models/sql/compiler.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="155">
-          <caret line="34" selection-start-line="34" selection-end-line="34" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://E:/dev/Python/Python36/Lib/site-packages/apscheduler/executors/base.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="285">
@@ -864,79 +790,165 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://E:/dev/Python/Python36/Lib/site-packages/django/db/models/sql/compiler.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="155">
+          <caret line="34" selection-start-line="34" selection-end-line="34" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/zcEducation/settings.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1662">
-          <caret line="93" column="23" lean-forward="true" selection-start-line="93" selection-start-column="23" selection-end-line="93" selection-end-column="23" />
+        <state relative-caret-position="568">
+          <caret line="182" column="24" lean-forward="true" selection-start-line="182" selection-start-column="24" selection-end-line="182" selection-end-column="24" />
           <folding>
             <element signature="e#311#320#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/apps/users/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="266">
+          <caret line="38" column="15" lean-forward="true" selection-start-line="38" selection-start-column="15" selection-end-line="38" selection-end-column="15" />
+          <folding>
+            <element signature="e#0#68#0" expanded="true" />
+            <element signature="e#1059#1598#0" />
+            <element signature="e#1868#2677#0" />
+            <element signature="e#2722#3552#0" />
+            <element signature="e#3715#4274#0" />
+            <element signature="e#4307#4865#0" />
+            <element signature="e#4903#6398#0" />
+            <element signature="e#6429#6632#0" />
+            <element signature="e#6635#6667#0" />
+            <element signature="e#7334#7911#0" />
+            <element signature="e#7948#8416#0" />
+            <element signature="e#8454#9868#0" />
+            <element signature="e#9905#10792#0" />
+            <element signature="e#10825#11053#0" />
+            <element signature="e#11087#11403#0" />
+            <element signature="e#11451#11807#0" />
+            <element signature="e#11844#12190#0" />
+            <element signature="e#12230#12540#0" />
+            <element signature="e#12573#12615#0" />
+            <element signature="e#12648#12690#0" />
+            <element signature="e#12702#13271#0" />
+            <element signature="e#13299#13359#0" />
+            <element signature="e#13361#13424#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://E:/dev/Python/Python36/Lib/site-packages/django/core/handlers/exception.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="94">
+          <caret line="41" selection-start-line="41" selection-end-line="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/apps/courses/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="506">
+          <caret line="87" column="22" lean-forward="true" selection-start-line="87" selection-start-column="22" selection-end-line="87" selection-end-column="22" />
+          <folding>
+            <element signature="e#0#35#0" expanded="true" />
+            <element signature="e#514#1603#0" />
+            <element signature="e#1649#3131#0" />
+            <element signature="e#3193#5762#0" />
+            <element signature="e#5809#6510#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/apps/operations/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="30" column="30" lean-forward="true" selection-start-line="30" selection-start-column="15" selection-end-line="30" selection-end-column="30" />
+        <state relative-caret-position="220">
+          <caret line="10" column="16" lean-forward="true" selection-start-line="10" selection-start-column="16" selection-end-line="10" selection-end-column="16" />
           <folding>
             <element signature="e#0#47#0" expanded="true" />
+            <element signature="e#369#2124#0" />
+            <element signature="e#2158#2835#0" />
+            <element signature="e#2872#3453#0" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/apps/online_status/models.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="176">
-          <caret line="10" column="60" selection-start-line="10" selection-start-column="60" selection-end-line="10" selection-end-column="73" />
+        <state relative-caret-position="220">
+          <caret line="12" column="59" selection-start-line="12" selection-start-column="50" selection-end-line="12" selection-end-column="59" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/apps/online_status/middleware.py">
+    <entry file="file://$PROJECT_DIR$/frontend/src/components/courses/CourseList.vue">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="182">
-          <caret line="61" column="32" lean-forward="true" selection-start-line="61" selection-start-column="12" selection-end-line="61" selection-end-column="32" />
+        <state relative-caret-position="1788">
+          <caret line="88" column="81" selection-start-line="88" selection-start-column="68" selection-end-line="88" selection-end-column="81" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frontend/src/router/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="151">
+          <caret line="79" column="32" lean-forward="true" selection-start-line="79" selection-start-column="25" selection-end-line="79" selection-end-column="37" />
           <folding>
-            <element signature="e#0#29#0" expanded="true" />
-            <element signature="e#237#274#0" />
+            <element signature="e#0#21#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frontend/src/components/courses/Detail.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="94">
+          <caret line="45" column="34" lean-forward="true" selection-start-line="45" selection-start-column="34" selection-end-line="45" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frontend/src/components/courses/Chapter.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-201">
+          <caret line="10" column="13" lean-forward="true" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://E:/dev/Python/Python36/Lib/site-packages/django/utils/deprecation.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="301">
+          <caret line="137" selection-start-line="137" selection-end-line="137" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/apps/orgs/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="137" column="12" lean-forward="true" selection-start-line="137" selection-start-column="12" selection-end-line="137" selection-end-column="12" />
+          <folding>
+            <element signature="e#0#35#0" expanded="true" />
+            <element signature="e#493#2011#0" />
+            <element signature="e#2051#2648#0" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/apps/users/jobs.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="286">
-          <caret line="13" column="9" lean-forward="true" selection-start-line="13" selection-start-column="9" selection-end-line="13" selection-end-column="9" />
+        <state relative-caret-position="484">
+          <caret line="22" column="24" selection-start-line="22" selection-start-column="24" selection-end-line="22" selection-end-column="24" />
           <folding>
             <element signature="e#0#43#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/apps/users/views.py">
+    <entry file="file://$PROJECT_DIR$/apps/online_status/middleware.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="372" column="104" selection-start-line="372" selection-start-column="104" selection-end-line="372" selection-end-column="104" />
+        <state relative-caret-position="48">
+          <caret line="52" column="8" selection-start-line="52" selection-start-column="8" selection-end-line="52" selection-end-column="8" />
           <folding>
-            <element signature="e#0#68#0" expanded="true" />
-            <element signature="e#906#1445#0" />
-            <element signature="e#1475#1680#0" />
-            <element signature="e#1715#2524#0" />
-            <element signature="e#2569#3399#0" />
-            <element signature="e#3432#3523#0" />
-            <element signature="e#3562#4121#0" />
-            <element signature="e#4154#4712#0" />
-            <element signature="e#4750#6245#0" />
-            <element signature="e#6276#6479#0" />
-            <element signature="e#6482#6514#0" />
-            <element signature="e#7181#7758#0" />
-            <element signature="e#7795#8263#0" />
-            <element signature="e#8301#9715#0" />
-            <element signature="e#9752#10639#0" />
-            <element signature="e#10672#10900#0" />
-            <element signature="e#10934#11250#0" />
-            <element signature="e#11298#11654#0" />
-            <element signature="e#11691#12037#0" />
-            <element signature="e#12077#12387#0" />
+            <element signature="e#0#29#0" expanded="true" />
+            <element signature="e#237#274#0" />
+            <element signature="e#3524#3679#0" />
+            <element signature="e#4136#4407#0" />
           </folding>
         </state>
       </provider>

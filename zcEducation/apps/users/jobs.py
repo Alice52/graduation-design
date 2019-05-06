@@ -13,10 +13,14 @@ def job_session_invalid():
         if expire_time < 60 * 4 + 58:
         # if expire_time < 60:
             userinfo = cache.get(cache_key)
-            userrecord = UserRecord.objects.filter(user=userinfo).order_by('-start_time')[0]
-            if not userrecord.end_time:
-                userrecord.end_time = datetime.now()
-                userrecord.save()
+            userrecord = UserRecord.objects.filter(user=userinfo, end_time=None).order_by('-start_time')
+            cache.delete_pattern(cache_key)
+            cache_request_path_key = "request_path" + userinfo.username
+            cache.delete_pattern(cache_request_path_key)
+            for record in userrecord:
+                record.end_time = datetime.now()
+                record.save()
+            # if not userrecord.end_time:
             else:
                 pass
         else:

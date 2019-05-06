@@ -14,13 +14,13 @@ from courses.models import CourseInfo
 from django.views.decorators.csrf import csrf_exempt
 from .jobs import job_session_invalid, job_send_sumary_email
 from django.core.cache import cache
+from django.views.decorators.cache import cache_page
 from zcEducation import settings
 from apscheduler.schedulers.background import BackgroundScheduler
 from django_apscheduler.jobstores import DjangoJobStore, register_events, register_job
 
 
-
-# @cache_page(15 * 60)
+@cache_page(10 * 60)
 def index(request):
     all_banners = serializers.serialize("json", BannerInfo.objects.all().order_by('-add_time')[:5])
     banner_courses = serializers.serialize("json", CourseInfo.objects.filter(is_banner=True)[:3])
@@ -106,6 +106,7 @@ def user_login(request):
 
 def user_logout(request):
     logout(request)
+
     return JsonResponse({
         'errMsg': 'ok',
         'url': '/'
@@ -196,6 +197,7 @@ def user_reset(request, code):
             })
 
 
+@cache_page(10 * 60)
 def user_info(request):
     user = None
     u = UserProfile.objects.filter(username=request.user.username)

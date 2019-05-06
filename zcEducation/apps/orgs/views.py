@@ -7,10 +7,11 @@ from django.db.models import Q
 from django.http import JsonResponse
 from django.core import serializers
 from users.models import UserProfile
+from django.views.decorators.cache import cache_page
 import json
 
 
-# Create your views here.
+@cache_page(10 * 60)
 def org_list(request):
     all_orgs = OrgInfo.objects.all().order_by('id')
     all_citys = CityInfo.objects.all().order_by('id')
@@ -108,7 +109,7 @@ def org_detail_course(request, org_id):
     if org_id:
         org = OrgInfo.objects.filter(id=int(org_id))[0]
 
-        all_courses = org.courseinfo_set.all()
+        all_courses = org.courseinfo_set.all().order_by('study_num')
         # 分页功能
         pagenum = request.GET.get('pagenum', '')
         pa = Paginator(all_courses, 4)
@@ -130,7 +131,7 @@ def org_detail_course(request, org_id):
 def org_detail_teacher(request, org_id):
     if org_id:
         org = OrgInfo.objects.filter(id=int(org_id))[0]
-        teachers = org.teacherinfo_set.all()
+        teachers = org.teacherinfo_set.all().order_by('-love_num')
 
         pagenum = request.GET.get('pagenum', '')
         pa = Paginator(teachers, 2)
@@ -193,6 +194,7 @@ def teacher_list(request):
     })
 
 
+@cache_page(10 * 60)
 def teacher_detail(request, teacher_id):
     if teacher_id:
         all_teachers = TeacherInfo.objects.all()
