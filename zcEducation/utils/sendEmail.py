@@ -17,6 +17,21 @@ def get_random_code(code_length):
     return code
 
 
+def send_email_code_job(email, learning_times, learning_courses_time, learning_time):
+    receiverlist = [email]
+    send_title = '617室 ZC在线学习每月的用户总结'
+    send_body = '你上个月在617室 ZC在线学习平台学习记录如下:' \
+                '进行学习的次数:' + learning_times + \
+                '学习课程的次数:' + learning_courses_time + \
+                '学习花费的时间:' + learning_time + \
+                '<br>欢迎到617室 ZC在线学习平台进行学习。' + """
+            <br>
+            <img src="https://t1.hddhhn.com/uploads/tu/201903/195/4554fds.jpg"  alt="美女" />
+            """
+    send_email1 = SendEmail(subject=send_title, content=send_body, receiver_list=receiverlist)
+    send_email1.send_email()
+
+
 def send_email_code(email, send_type):
     # save the info of email and code
     code = get_random_code(20)
@@ -48,11 +63,11 @@ def send_email_code(email, send_type):
 
     if send_type == 3:
         receiverlist = [email]
-        send_title = '617室 ZC在线学习平台修改邮箱验证码：'
-        send_body = '您的验证码是：' + code + """
-                <br>
-                <img src="https://t1.hddhhn.com/uploads/tu/201903/195/4554fds.jpg"  alt="美女" />
-                """
+        send_title = '617室 ZC在线学习每月的用户总结'
+        send_body = '你上个月没有在我们这里学习偶, 记得要为自己及时充电, 欢迎到617室 ZC在线学习平台进行学习。' + """
+                    <br>
+                    <img src="https://t1.hddhhn.com/uploads/tu/201903/195/4554fds.jpg"  alt="美女" />
+                    """
         send_email1 = SendEmail(subject=send_title, content=send_body, receiver_list=receiverlist)
         send_email1.send_email()
 

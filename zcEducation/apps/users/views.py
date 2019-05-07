@@ -354,15 +354,6 @@ def user_deletemessage(request):
     else:
         return JsonResponse({'status': 'fail', 'msg': '读取失败'})
 
-
-def handler_404(request):
-    return render(request, 'handler_404.html')
-
-
-def handler_500(request):
-    return render(request, 'handler_500.html')
-
-
 try:
     # 实例化调度器
     scheduler = BackgroundScheduler()
@@ -377,6 +368,11 @@ try:
         # 这里写你要执行的任务
         print("dsaddasdsa")
         job_session_invalid()
+
+    @register_job(scheduler, "cron", month='1-12', day='1', hour='7',  replace_existing=True, misfire_grace_time=4 * 60 * 60)
+    def emial_job():
+        # 这里写你要执行的任务
+        job_send_sumary_email()
 
     register_events(scheduler)
     scheduler.start()
