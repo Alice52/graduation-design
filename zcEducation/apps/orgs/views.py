@@ -11,7 +11,7 @@ from django.views.decorators.cache import cache_page
 import json
 
 
-@cache_page(10 * 60)
+@cache_page(60 * 24 * 60)
 def org_list(request):
     all_orgs = OrgInfo.objects.all().order_by('id')
     all_citys = CityInfo.objects.all().order_by('id')
@@ -81,7 +81,7 @@ def org_header(request, org_id):
             'org': serializers.serialize('json', orgQuerySet),
         })
 
-
+@cache_page(60 * 24 * 60)
 def org_detail(request, org_id):
     if org_id:
         org = OrgInfo.objects.filter(id=int(org_id))[0]
@@ -104,7 +104,7 @@ def org_detail(request, org_id):
             'all_teacher': json.dumps(all_teacher),
         })
 
-
+@cache_page(60 * 24 * 60)
 def org_detail_course(request, org_id):
     if org_id:
         org = OrgInfo.objects.filter(id=int(org_id))[0]
@@ -127,7 +127,7 @@ def org_detail_course(request, org_id):
             'page_range': pages.paginator.num_pages,
         })
 
-
+@cache_page(60 * 24 * 60)
 def org_detail_teacher(request, org_id):
     if org_id:
         org = OrgInfo.objects.filter(id=int(org_id))[0]
@@ -158,7 +158,7 @@ def org_detail_teacher(request, org_id):
             'page_range': pages.paginator.num_pages,
         })
 
-
+@cache_page(60 * 24 * 60)
 def teacher_list(request):
     all_teachers = TeacherInfo.objects.all().order_by('id')
     sort_teachers = all_teachers.order_by('-love_num')[:4]
@@ -194,7 +194,6 @@ def teacher_list(request):
     })
 
 
-@cache_page(10 * 60)
 def teacher_detail(request, teacher_id):
     if teacher_id:
         all_teachers = TeacherInfo.objects.all()

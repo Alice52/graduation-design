@@ -7,7 +7,7 @@
           <div class="imgSSlide">
             <ul class="imgsImgs">
               <li v-for="(banner, index) in all_banners" :key="index" :index="index">
-                <a :href="banner.fields.url">
+                <a @click="$router.push(`/courses/course_detail/${banner.pk}`)">
                   <img width="1200" height="478" :src="getImgUrl(banner.fields.image)"/>
                 </a>
               </li>

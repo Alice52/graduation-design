@@ -192,6 +192,7 @@
         },
         watch: {
           '$route' (to, from1) {
+            this.showComponent = false
             axios({
               url: `/api${this.$route.path}/`,
               methods: 'GET'
@@ -205,6 +206,7 @@
               this.course_lessoninfo_count = res.course_lessoninfo_count
               this.org_teacher_num = res.org_teacher_num
               this.city_name = res.city_name
+              this.showComponent = true
             }).catch(err=> {
               console.log(err)
             })

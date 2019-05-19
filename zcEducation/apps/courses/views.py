@@ -12,10 +12,10 @@ from users.models import UserProfile
 import json
 from django.views.decorators.cache import cache_page
 
-
+@cache_page(60 * 24 * 60)
 def course_list(request):
     all_courses = CourseInfo.objects.all().order_by('id')
-    recommend_courses = all_courses.order_by('-add_time')[:3]
+    recommend_courses = all_courses.order_by('-click_num')[:3]
 
     # 全局搜索功能的过滤
     keyword = request.GET.get('keyword', '')
@@ -84,7 +84,7 @@ def course_detail(request, course_id):
 
 
 @login_decorator
-# @cache_page(10 * 60)
+@cache_page(60 * 24 * 60)
 def course_video(request, course_id):
     if course_id:
         courseQuerySet = CourseInfo.objects.filter(id=int(course_id))

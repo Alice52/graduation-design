@@ -20,7 +20,7 @@ from apscheduler.schedulers.background import BackgroundScheduler
 from django_apscheduler.jobstores import DjangoJobStore, register_events, register_job
 
 
-@cache_page(10 * 60)
+@cache_page(60 * 24 * 60)
 def index(request):
     all_banners = serializers.serialize("json", BannerInfo.objects.all().order_by('-add_time')[:5])
     banner_courses = serializers.serialize("json", CourseInfo.objects.filter(is_banner=True)[:3])
@@ -197,7 +197,6 @@ def user_reset(request, code):
             })
 
 
-@cache_page(10 * 60)
 def user_info(request):
     user = None
     u = UserProfile.objects.filter(username=request.user.username)
