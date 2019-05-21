@@ -4,20 +4,6 @@ from users.models import UserProfile
 from courses.models import CourseInfo
 
 
-# Create your models here.
-class UserAsk(models.Model):
-    name = models.CharField(max_length=30, verbose_name="姓名")
-    phone = models.CharField(max_length=11, verbose_name="手机")
-    course = models.CharField(max_length=20, verbose_name="课程")
-    add_time = models.DateTimeField(default=datetime.now, verbose_name="添加时间")
-
-    def __str__(self):
-        return self.name
-
-    class Meta:
-        verbose_name = '咨询信息'
-        verbose_name_plural = verbose_name
-
 
 class UserLove(models.Model):
     love_man = models.ForeignKey(UserProfile, verbose_name="收藏用户", on_delete=models.CASCADE)
@@ -61,16 +47,3 @@ class UserComment(models.Model):
         verbose_name = '用户评论课程信息'
         verbose_name_plural = verbose_name
 
-
-class UserMessage(models.Model):
-    message_man = models.IntegerField(default=0, verbose_name="消息用户")
-    message_content = models.CharField(max_length=200, verbose_name="消息内容")
-    message_status = models.BooleanField(default=False, verbose_name="消息状态")
-    add_time = models.DateTimeField(default=datetime.now, verbose_name="添加时间")
-
-    def __str__(self):
-        return self.message_content
-
-    class Meta:
-        verbose_name = '用户消息信息'
-        verbose_name_plural = verbose_name

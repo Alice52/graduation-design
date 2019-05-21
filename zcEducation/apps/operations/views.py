@@ -1,4 +1,4 @@
-from .forms import UserAskForm, UserCommentForm
+from .forms import  UserCommentForm
 from django.http import JsonResponse
 from .models import UserLove, UserComment
 from orgs.models import OrgInfo, TeacherInfo

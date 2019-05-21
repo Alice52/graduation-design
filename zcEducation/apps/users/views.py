@@ -8,7 +8,7 @@ from utils.sendEmail import send_email_code
 from django.http import JsonResponse
 from django.core import serializers
 from datetime import datetime
-from operations.models import UserLove, UserMessage
+from operations.models import UserLove
 from orgs.models import OrgInfo, TeacherInfo
 from courses.models import CourseInfo
 from django.views.decorators.csrf import csrf_exempt
@@ -283,25 +283,25 @@ def user_changeemail(request):
         return JsonResponse({'status': 'fail', 'msg': '您的邮箱有问题'})
 
 
-def user_resetemail(request):
-    user_resetemail_form = UserResetEmailForm(request.POST)
-    if user_resetemail_form.is_valid():
-        email = user_resetemail_form.cleaned_data['email']
-        code = user_resetemail_form.cleaned_data['code']
-        email_ver_list = EmailVerifyCode.objects.filter(email=email, code=code)
-        if email_ver_list:
-            email_ver = email_ver_list[0]
-            if (datetime.now() - email_ver.add_time).seconds < 60:
-                request.user.username = email
-                request.user.email = email
-                request.user.save()
-                return JsonResponse({'status': 'ok', 'msg': '邮箱修改成功'})
-            else:
-                return JsonResponse({'status': 'fail', 'msg': '验证码失效，请重新发送验证码'})
-        else:
-            return JsonResponse({'status': 'fail', 'msg': '邮箱或者验证码有误'})
-    else:
-        return JsonResponse({'status': 'fail', 'msg': '邮箱或者验证码不合法'})
+# def user_resetemail(request):
+#     user_resetemail_form = UserResetEmailForm(request.POST)
+#     if user_resetemail_form.is_valid():
+#         email = user_resetemail_form.cleaned_data['email']
+#         code = user_resetemail_form.cleaned_data['code']
+#         email_ver_list = EmailVerifyCode.objects.filter(email=email, code=code)
+#         if email_ver_list:
+#             email_ver = email_ver_list[0]
+#             if (datetime.now() - email_ver.add_time).seconds < 60:
+#                 request.user.username = email
+#                 request.user.email = email
+#                 request.user.save()
+#                 return JsonResponse({'status': 'ok', 'msg': '邮箱修改成功'})
+#             else:
+#                 return JsonResponse({'status': 'fail', 'msg': '验证码失效，请重新发送验证码'})
+#         else:
+#             return JsonResponse({'status': 'fail', 'msg': '邮箱或者验证码有误'})
+#     else:
+#         return JsonResponse({'status': 'fail', 'msg': '邮箱或者验证码不合法'})
 
 
 def user_course(request):
@@ -341,17 +341,6 @@ def user_lovecourse(request):
     return JsonResponse({
         'course_list': course_list
     })
-
-
-def user_deletemessage(request):
-    delete_id = request.GET.get('delete_id', '')
-    if delete_id:
-        msg = UserMessage.objects.filter(id=int(delete_id))[0]
-        msg.message_status = True
-        msg.save()
-        return JsonResponse({'status': 'ok', 'msg': '已读'})
-    else:
-        return JsonResponse({'status': 'fail', 'msg': '读取失败'})
 
 try:
     # 实例化调度器

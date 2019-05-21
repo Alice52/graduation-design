@@ -1,14 +1,5 @@
 import xadmin
-from .models import UserAsk, UserLove, UserCourse, UserComment, UserMessage
-
-
-class UserAskXadmin(object):
-    # 显示内容
-    list_display = ['name', 'phone', 'course', 'add_time']
-    # 搜索字段
-    search_fields = ['name', 'phone', 'course']
-    # 筛选字段
-    list_filter = ['name', 'phone', 'course', 'add_time']
+from .models import UserLove, UserCourse, UserComment
 
 
 class UserLoveXadmin(object):
@@ -38,17 +29,7 @@ class UserCommentXadmin(object):
     list_filter = ['comment_content', 'comment_man', 'comment_course', 'add_time']
 
 
-class UserMessageXadmin(object):
-    # 显示内容
-    list_display = ['message_man', 'message_content', 'message_status', 'add_time']
-    # 搜索字段
-    search_fields = ['message_man', 'message_content', 'message_status']
-    # 筛选字段
-    list_filter = ['message_man', 'message_content', 'message_status', 'add_time']
 
-
-xadmin.site.register(UserAsk, UserAskXadmin)
 xadmin.site.register(UserLove, UserLoveXadmin)
 xadmin.site.register(UserCourse, UserCourseXadmin)
 xadmin.site.register(UserComment, UserCommentXadmin)
-xadmin.site.register(UserMessage, UserMessageXadmin)

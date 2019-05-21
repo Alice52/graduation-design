@@ -21,12 +21,7 @@ class BannerInfoXadmin(object):
     list_filter = ['image', 'url']
 
 
-class EmailVerifyCodeXadmin(object):
-    list_display = ['code', 'email', 'send_type', 'add_time']
-
-
 xadmin.site.register(BannerInfo, BannerInfoXadmin)
-xadmin.site.register(EmailVerifyCode, EmailVerifyCodeXadmin)
 # 注册主题类
 xadmin.site.register(views.BaseAdminView, BaseXadminSetting)
 # 注册全局样式的类

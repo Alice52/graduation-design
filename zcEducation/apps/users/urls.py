@@ -15,8 +15,8 @@ Including another URLconf
 """
 from django.conf.urls import url
 from .views import user_register, user_login, user_logout, user_active, user_forget, user_reset, user_info, \
-    user_changeimage, user_changeinfo, user_changeemail, user_resetemail, user_course, user_loveteacher, user_loveorg, \
-    user_lovecourse, user_deletemessage, get_user
+    user_changeimage, user_changeinfo, user_course, user_loveteacher, user_loveorg, \
+    user_lovecourse, get_user
 
 urlpatterns = [
     url(r'^user_register/$', user_register, name='user_register'),
@@ -32,15 +32,15 @@ urlpatterns = [
 
     url(r'^user_changeimage/$', user_changeimage, name='user_changeimage'),
     url(r'^user_changeinfo/$', user_changeinfo, name='user_changeinfo'),
-    url(r'^user_changeemail/$', user_changeemail, name='user_changeemail'),
-    url(r'^user_resetemail/$', user_resetemail, name='user_resetemail'),
+    # url(r'^user_changeemail/$', user_changeemail, name='user_changeemail'),
+    # url(r'^user_resetemail/$', user_resetemail, name='user_resetemail'),
 
     url(r'^user_course/$', user_course, name='user_course'),
     url(r'^user_loveorg/$', user_loveorg, name='user_loveorg'),
     url(r'^user_loveteacher/$', user_loveteacher, name='user_loveteacher'),
     url(r'^user_lovecourse/$', user_lovecourse, name='user_lovecourse'),
 
-    url(r'^user_deletemessage/$', user_deletemessage, name='user_deletemessage'),
+    # url(r'^user_deletemessage/$', user_deletemessage, name='user_deletemessage'),
     url(r'^get_user/$', get_user, name='get_user'),
 
 ]

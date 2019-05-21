@@ -77,12 +77,7 @@
 - django
 
 * xadmin
-* Django-simple-captcha
 * djangoueditor
-* django-REST-framework
-* django-filter
-* django-REST-framework-jwt
-* django-favicon
 
 - redis
 - mysql
@@ -92,7 +87,6 @@
 * vuex
 * axios
 * webpack
-* element-ui
 
 ## fail
 
