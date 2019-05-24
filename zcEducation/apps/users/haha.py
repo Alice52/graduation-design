@@ -1,55 +1,33 @@
 # 1. setting.py 文件中的 INSTALLED_APPS 加入 xadmin:
 INSTALLED_APPS = [
-    'django.contrib.admin',
-    'django.contrib.auth',
-    'django.contrib.contenttypes',
-    'django.contrib.messages',
-    'django.contrib.staticfiles',
-    'users.apps.UsersConfig',
-    'courses.apps.CoursesConfig',
-    'orgs.apps.OrgsConfig',
-    'operations.apps.OperationsConfig',
-    'crispy_forms',
-    'captcha',
     'DjangoUeditor',
-    'online_status.apps.OnlineStatusConfig',
-    'django_apscheduler',
     'xadmin',
 ]
-# 2. 在本项目的 url.py 文件de urlpatterns 中添加 url(r'^xadmin/', xadmin.site.urls):
+# 2. 在本项目的 url.py 文件中添加 url映射:
 urlpatterns = [
     # include 分发
     url(r'^xadmin/', xadmin.site.urls),
-    url(r'^uedit/', include('DjangoUeditor.urls')),
-    url(r'^users/', include(('users.urls', 'users'), namespace='users')),
-    url(r'^orgs/', include(('orgs.urls', 'orgs'), namespace='orgs')),
-    url(r'^operations/', include(('operations.urls', 'operations'), namespace='operations')),
-    url(r'^courses/', include(('courses.urls', 'courses'), namespace='courses')),
-    url(r'^$', index, name='index'),
 ]
 # 3. 在控制台同步下数据库, 并创建用户
 python manage.py makemigrations
 python manage.py migrate
 
-python manage.py createsuperuser --username=zack --email=zzhang_xz@163.com
-Password:
-Password (again):
+python manage.py createsuperuser
+    --username=zack --email=zzhang_xz@163.com
 # 4. 创建不同模块的 xadmin.py 文件: 这里只是以用户操作做为示例, 其他模块一样.
 import xadmin
 from .models import *
-
 class CityInfoXadmin(object):
     list_display = ['name', 'add_time']
     model_icon = 'fa fa-bath'
-
 class OrgInfoXadmin(object):
-    list_display = ['image', 'name', 'course_num', 'study_num', 'love_num', 'click_num', 'category', 'cityinfo']
+    list_display = ['image', 'name', 'course_num', 'study_num',
+    'love_num', 'click_num', 'category', 'cityinfo']
     model_icon = 'fa fa-gift'
     style_fields = {'detail': 'ueditor'}
-
 class TeacherInfoXadmin(object):
-    list_display = ['image', 'name', 'work_year', 'work_position', 'click_num', 'age', 'gender', 'love_num']
-
+    list_display = ['image', 'name', 'work_year',
+    'work_position', 'click_num', 'age', 'gender', 'love_num']
 xadmin.site.register(CityInfo, CityInfoXadmin)
 xadmin.site.register(OrgInfo, OrgInfoXadmin)
 xadmin.site.register(TeacherInfo, TeacherInfoXadmin)
@@ -75,13 +53,7 @@ def user_register(request):
                 'errMsg': '用户已经存在'
             })
         else:
-            a = UserProfile()
-            a.username = email
-            a.set_password(password)
-            a.email = email
-            a.image = 'user/default.jpg'
-            a.save()
-            send_email_code(email, 1)
+           ...
             return JsonResponse({
                 'errMsg': '请去邮箱激活账号'
             })
@@ -99,28 +71,18 @@ def user_active(request, code):
             email = email_ver.email
             user_list = UserProfile.objects.filter(username=email)
             if user_list:
-                user = user_list[0]
-                user.is_start = True
-                user.save()
+               ...
                 return JsonResponse({
                     'errMsg': 'ok'
                 })
-            else:
-                pass
-        else:
-            pass
-    else:
-        pass
 
 
 # usercourse
-<div v-for="(course, index) in course_list" :key='index' :index='index' class="module1_5 box">
-    <a @click="$router.push(`/courses/course_detail/${course.pk}`)" >
-        <img width="214" height="190" class="scrollLoading" :src="getImgUrl(course.fields.image)">
-    </a>
+<div v-for="(course, index) in course_list" >
     <div class="des">
-        <a @click="$router.push(`/courses/course_detail/${course.pk}`)" > <h2>{{course.fields.name}}</h2> </a>
-        <span class="fl"> 课时： <i class="key">{{course.fields.study_time}}</i> </span>
+        <a @click="$router.push(`/courses/course_detail/${course.pk}`)" >
+        <h2>{{course.fields.name}}</h2> </a>
+        <span class="fl"> 课时： <i class="key">{{course.fields.study_time}}</i></span>
         <span class="fr">学习人数：{{ course.fields.study_num }}</span>
     </div>
     <div class="bottom">
@@ -128,24 +90,20 @@ def user_active(request, code):
         <span class="star fr" title="收藏人数">{{course.fields.love_num}}</span>
     </div>
 </div>
-
-import axios from 'axios'
 export default {
     data() {
         course_list:[],
         showComponent: false,
     },
     mounted() {
-        axios({ url:'/api/users/user_course/', method: 'GET', }).then((response)=>{
-        var res = response.data
-        this.course_list = JSON.parse(res.course_list)
-        this.showComponent = true
+        axios({ url:'/api/users/user_course/', method: 'GET', })
+        .then((response)=>{
+            var res = response.data
+            this.course_list = JSON.parse(res.course_list)
+            this.showComponent = true
         }).catch((err)=> {
-        console.log(err)
+            console.log(err)
         })
-    },
-    methods:{
-        getImgUrl: (bannerUrl) =>{ return "../../static/media/" + bannerUrl }
     },
 };
 
@@ -156,27 +114,16 @@ export default {
 @cache_page(60 * 24 * 60)
 def course_video(request, course_id):
     if course_id:
-        courseQuerySet = CourseInfo.objects.filter(id=int(course_id))
-        course = courseQuerySet[0]
-
+        course = CourseInfo.objects.filter(id=int(course_id))
         usercourse_list = UserCourse.objects
                     .filter(study_man=request.user, study_course=course)
         if not usercourse_list:
-            a = UserCourse()
-            a.study_man = request.user
-            a.save()
-            course.study_num += 1
-            course.save()
-
+            ...
             # 维护机构的学习人数
             usercourse_list = UserCourse.objects
                     .filter(study_man=request.user).exclude(study_course=course)
             course_list = [usercourse.study_course for usercourse in usercourse_list]
             org_list = list(set([course1.orginfo for course1 in course_list]))
-            if course.orginfo not in org_list:
-                course.orginfo.study_num += 1
-                course.orginfo.save()
-
         # 学过该课的同学还学过什么课程
         usercourse_list = UserCourse.objects.filter(study_course=course)
         user_list = [usercourse.study_man for usercourse in usercourse_list]
@@ -185,35 +132,28 @@ def course_video(request, course_id):
         courseList = list(set([usercourse.study_course for usercourse in usercourse_list]))[:6]
         course_sources = SourceInfo.objects.filter(courseinfo=course)
         lesson_list = LessonInfo.objects.filter(courseinfo=course)
-        lessons =[]
         for lesson in lesson_list:
             video_list = VideoInfo.objects.filter(lessoninfo=lesson)
-            videos = []
             for video in video_list:
                 a = {'name': video.name, 'url': str(video.url), 'study_time': video.study_time}
                 videos.append(a)
             lessons.append({'name': lesson.name, 'video': videos})
-
         return JsonResponse({
             'course': serializers.serialize("json", courseQuerySet),
             'course_list': serializers.serialize("json", courseList),
             'course_sources': serializers.serialize("json", course_sources),
             'lesson_list': json.dumps(lessons),
-            'status': 'login',
         })
 # 用户评论
 def course_comment(request, course_id):
     if course_id:
-        courseQuerySet = CourseInfo.objects.filter(id=int(course_id))
-        course = courseQuerySet[0]
+        course = CourseInfo.objects.filter(id=int(course_id))
         all_comments = course.usercomment_set.all().order_by('-add_time')[:10]
-        comment_vo = []
         for comment in all_comments:
             user = UserProfile.objects.filter(id=comment.comment_man_id)[0]
             comment_info = {'add_time': str(comment.add_time), 'comment_content':
              comment.comment_content, 'image': str(user.image), 'nick_name': user.nick_name}
             comment_vo.append(comment_info)
-
         return JsonResponse({
             'course': serializers.serialize('json', courseQuerySet),
             'comment_vo': json.dumps(comment_vo),
