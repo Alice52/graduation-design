@@ -147,7 +147,7 @@ def course_video(request, course_id):
 # 用户评论
 def course_comment(request, course_id):
     if course_id:
-        course = CourseInfo.objects.filter(id=int(course_id))
+        courseQuerySet = CourseInfo.objects.filter(id=int(course_id))
         all_comments = course.usercomment_set.all().order_by('-add_time')[:10]
         for comment in all_comments:
             user = UserProfile.objects.filter(id=comment.comment_man_id)[0]
@@ -232,13 +232,7 @@ class OnlineStatusMiddleware(MiddlewareMixin):
         cache_key = 'userinfo_'+request.user.username
         cache_request_path_key = "request_path" + request.user.username
         user_expire = cache.ttl(cache_key)
-        islogin = False
-        if not user_expire:
-            if request.user.is_authenticated():
-                islogin = True
-        elif user_expire >= 5 * 60:
-            islogin = True
-        if islogin:
+        if request.user.is_authenticated():
             now = datetime.now()
             lastPath = cache.get(cache_request_path_key)
             this_path = request.path  # 将上一次的 path 缓存到 redis
@@ -253,7 +247,8 @@ class OnlineStatusMiddleware(MiddlewareMixin):
             else:
                 cache.expire(cache_key, settings.REDIS_TIMEOUT)
             # 记录 login/logout
-            userrecord = UserRecord.objects.filter(user=request.user, type=1).order_by('-start_time')
+            userrecord = UserRecord.objects
+                .filter(user=request.user, type=1).order_by('-start_time')
             if not userrecord:
                 ur = UserRecord()
                 ...
@@ -301,8 +296,7 @@ def job_send_sumary_email():
                 learning_courses_time = userrecored
                   .filter(type=2)
                 learning_time = 0
-                for record in userrecored:
-                    learning_time = learning_time+
+                for record in userrecored: learning_time = learning_time+
                     (record.end_time-record.start_time).seconds
                 send_email_code_job(user.email, learning_times,
                    learning_courses_time, learning_time)

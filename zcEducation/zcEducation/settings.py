@@ -92,7 +92,7 @@ DATABASES = {
         # 'NAME': 'zc-education-novue',
         'NAME': 'zc-education',
         'USER': 'root',
-        'PASSWORD': 'yu1252068782',
+        'PASSWORD': 'Yu1252068782?',
         'HOST': '101.132.45.28',
         'PORT': '3306',
     }
