@@ -89,11 +89,10 @@ WSGI_APPLICATION = 'zcEducation.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        # 'NAME': 'zc-education-novue',
         'NAME': 'zc-education',
         'USER': 'root',
-        'PASSWORD': 'Yu1252068782?',
-        'HOST': '101.132.45.28',
+        'PASSWORD': '*******',
+        'HOST': '******',
         'PORT': '3306',
     }
 }
@@ -139,14 +138,14 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'frontend/static/media')
 
 EMAIL_HOST = 'smtp.qq.com'
 EMAIL_PORT = 465
-EMAIL_HOST_USER = '1252068782@qq.com'
-EMAIL_HOST_PASSWORD = 'eclzegtgaytufidi'
-EMAIL_FROM = '1252068782@qq.com'
+EMAIL_HOST_USER = 'QQ Account'
+EMAIL_HOST_PASSWORD = 'Authentication Password'
+EMAIL_FROM = 'QQ Account'
 
 CACHES = {
     "default": {
         "BACKEND": "django_redis.cache.RedisCache",
-        "LOCATION": "redis://101.132.45.28:6379/4",
+        "LOCATION": "redis://IP:6379/4",
         "OPTIONS": {
             "CLIENT_CLASS": "django_redis.client.DefaultClient",
         }
@@ -156,14 +155,14 @@ CACHES = {
 CACHES = {
     "default": {
         "BACKEND": "django_redis.cache.RedisCache",
-        "LOCATION": "redis://101.132.45.28:6379/1",  # 指明使用redis的1号数据库 user
+         "LOCATION": "redis://IP:6379/4",  # 指明使用redis的1号数据库 user
         "OPTIONS": {
             "CLIENT_CLASS": "django_redis.client.DefaultClient",
         }
     },
     "session": {
         "BACKEND": "django_redis.cache.RedisCache",
-        "LOCATION": "redis://101.132.45.28:6379/2",  # 指明使用redis的2号数据库 session
+         "LOCATION": "redis://IP:6379/2",  # 指明使用redis的2号数据库 session
         "OPTIONS": {
             "CLIENT_CLASS": "django_redis.client.DefaultClient",
         }
@@ -174,7 +173,6 @@ CACHES = {
 SESSION_ENGINE = "django.contrib.sessions.backends.cache"
 # 指明使用哪一个库保存session数据
 SESSION_CACHE_ALIAS = "session"
-# SESSION_COOKIE_AGE = 60 * 1
 SESSION_COOKIE_AGE = 60 * 20
 SESSION_EXPIRE_AT_BROWSER_CLOSE = False
 SESSION_SAVE_EVERY_REQUEST = True

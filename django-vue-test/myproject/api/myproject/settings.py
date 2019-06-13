@@ -80,8 +80,8 @@ DATABASES = {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'test-django-vue',
         'USER': 'root',
-        'PASSWORD': 'yu1252068782',
-        'HOST': '101.132.45.28',
+        'PASSWORD': '******',
+        'HOST': 'IP',
         'PORT': '3306',
     }
 }

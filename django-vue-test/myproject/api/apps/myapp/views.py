@@ -7,8 +7,6 @@ import json
 
 from .models import Book
 
-
-# 这里不能自己写 sql?????
 # Create your views here.
 @require_http_methods(["GET"])
 def add_book(request):
