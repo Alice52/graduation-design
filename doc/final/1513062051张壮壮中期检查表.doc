@@ -9,30 +9,39 @@ xmlns="http://www.w3.org/TR/REC-html40">
 <meta name=ProgId content=Word.Document>
 <meta name=Generator content="Microsoft Word 15">
 <meta name=Originator content="Microsoft Word 15">
-<link rel=File-List href="张壮壮_1513062051_毕业论文（设计）中期检查表.files/filelist.xml">
+<link rel=File-List href="1513062051张壮壮中期检查表.files/filelist.xml">
+<link rel=Edit-Time-Data href="1513062051张壮壮中期检查表.files/editdata.mso">
+<!--[if !mso]>
+<style>
+v\:* {behavior:url(#default#VML);}
+o\:* {behavior:url(#default#VML);}
+w\:* {behavior:url(#default#VML);}
+.shape {behavior:url(#default#VML);}
+</style>
+<![endif]-->
 <title> 南通大学 </title>
 <!--[if gte mso 9]><xml>
  <o:DocumentProperties>
   <o:Author>peiyanmin</o:Author>
   <o:LastAuthor>张 壮</o:LastAuthor>
-  <o:Revision>6</o:Revision>
-  <o:TotalTime>41</o:TotalTime>
+  <o:Revision>8</o:Revision>
+  <o:TotalTime>42</o:TotalTime>
   <o:LastPrinted>2001-12-03T00:12:00Z</o:LastPrinted>
   <o:Created>2010-06-24T03:16:00Z</o:Created>
-  <o:LastSaved>2019-06-12T04:30:00Z</o:LastSaved>
+  <o:LastSaved>2019-06-15T23:57:00Z</o:LastSaved>
   <o:Pages>1</o:Pages>
-  <o:Words>111</o:Words>
-  <o:Characters>634</o:Characters>
+  <o:Words>138</o:Words>
+  <o:Characters>793</o:Characters>
   <o:Company>nust</o:Company>
-  <o:Lines>5</o:Lines>
+  <o:Lines>6</o:Lines>
   <o:Paragraphs>1</o:Paragraphs>
-  <o:CharactersWithSpaces>744</o:CharactersWithSpaces>
+  <o:CharactersWithSpaces>930</o:CharactersWithSpaces>
   <o:Version>16.00</o:Version>
  </o:DocumentProperties>
 </xml><![endif]-->
-<link rel=themeData href="张壮壮_1513062051_毕业论文（设计）中期检查表.files/themedata.thmx">
+<link rel=themeData href="1513062051张壮壮中期检查表.files/themedata.thmx">
 <link rel=colorSchemeMapping
-href="张壮壮_1513062051_毕业论文（设计）中期检查表.files/colorschememapping.xml">
+href="1513062051张壮壮中期检查表.files/colorschememapping.xml">
 <!--[if gte mso 9]><xml>
  <w:WordDocument>
   <w:View>Print</w:View>
@@ -364,6 +373,12 @@ href="张壮壮_1513062051_毕业论文（设计）中期检查表.files/colorschememapping.xml"
    Name="Table Subtle 2"/>
   <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
    Name="Table Web 1"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Web 2"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Web 3"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Theme"/>
   <w:LsdException Locked="false" Priority="99" SemiHidden="true"
    Name="Placeholder Text"/>
   <w:LsdException Locked="false" Priority="1" QFormat="true" Name="No Spacing"/>
@@ -661,14 +676,14 @@ href="张壮壮_1513062051_毕业论文（设计）中期检查表.files/colorschememapping.xml"
 	mso-font-charset:0;
 	mso-generic-font-family:roman;
 	mso-font-pitch:variable;
-	mso-font-signature:-536869121 1107305727 33554432 0 415 0;}
+	mso-font-signature:3 0 0 0 1 0;}
 @font-face
 	{font-family:"\@宋体";
 	panose-1:2 1 6 0 3 1 1 1 1 1;
 	mso-font-charset:134;
 	mso-generic-font-family:auto;
 	mso-font-pitch:variable;
-	mso-font-signature:3 680460288 22 0 262145 0;}
+	mso-font-signature:3 135135232 16 0 262145 0;}
 @font-face
 	{font-family:"\@黑体";
 	panose-1:2 1 6 0 3 1 1 1 1 1;
@@ -692,7 +707,8 @@ href="张壮壮_1513062051_毕业论文（设计）中期检查表.files/colorschememapping.xml"
 	mso-fareast-font-family:宋体;
 	mso-font-kerning:1.0pt;}
 p.MsoHeader, li.MsoHeader, div.MsoHeader
-	{mso-style-link:"页眉 字符";
+	{mso-style-noshow:yes;
+	mso-style-link:"页眉 字符";
 	margin:0cm;
 	margin-bottom:.0001pt;
 	text-align:center;
@@ -708,12 +724,25 @@ p.MsoHeader, li.MsoHeader, div.MsoHeader
 	mso-fareast-font-family:宋体;
 	mso-font-kerning:1.0pt;}
 p.MsoFooter, li.MsoFooter, div.MsoFooter
-	{mso-style-link:"页脚 字符";
+	{mso-style-noshow:yes;
+	mso-style-link:"页脚 字符";
 	margin:0cm;
 	margin-bottom:.0001pt;
 	mso-pagination:none;
 	tab-stops:center 207.65pt right 415.3pt;
 	layout-grid-mode:char;
+	font-size:9.0pt;
+	font-family:"Times New Roman",serif;
+	mso-fareast-font-family:宋体;
+	mso-font-kerning:1.0pt;}
+p.MsoAcetate, li.MsoAcetate, div.MsoAcetate
+	{mso-style-unhide:no;
+	mso-style-link:"批注框文本 字符";
+	margin:0cm;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	text-justify:inter-ideograph;
+	mso-pagination:none;
 	font-size:9.0pt;
 	font-family:"Times New Roman",serif;
 	mso-fareast-font-family:宋体;
@@ -731,19 +760,35 @@ p.msonormal0, li.msonormal0, div.msonormal0
 	mso-bidi-font-family:宋体;}
 span.a
 	{mso-style-name:"页眉 字符";
+	mso-style-noshow:yes;
 	mso-style-unhide:no;
 	mso-style-locked:yes;
 	mso-style-link:页眉;
 	mso-ansi-font-size:9.0pt;
 	mso-bidi-font-size:9.0pt;
 	font-family:宋体;
+	mso-ascii-font-family:宋体;
 	mso-fareast-font-family:宋体;
+	mso-hansi-font-family:宋体;
 	mso-font-kerning:1.0pt;}
 span.a0
 	{mso-style-name:"页脚 字符";
+	mso-style-noshow:yes;
 	mso-style-unhide:no;
 	mso-style-locked:yes;
 	mso-style-link:页脚;
+	mso-ansi-font-size:9.0pt;
+	mso-bidi-font-size:9.0pt;
+	font-family:宋体;
+	mso-ascii-font-family:宋体;
+	mso-fareast-font-family:宋体;
+	mso-hansi-font-family:宋体;
+	mso-font-kerning:1.0pt;}
+span.a1
+	{mso-style-name:"批注框文本 字符";
+	mso-style-unhide:no;
+	mso-style-locked:yes;
+	mso-style-link:批注框文本;
 	mso-ansi-font-size:9.0pt;
 	mso-bidi-font-size:9.0pt;
 	font-family:宋体;
@@ -764,11 +809,7 @@ span.SpellE
  /* Page Definitions */
  @page
 	{mso-page-border-surround-header:no;
-	mso-page-border-surround-footer:no;
-	mso-footnote-separator:url("张壮壮_1513062051_毕业论文（设计）中期检查表.files/header.htm") fs;
-	mso-footnote-continuation-separator:url("张壮壮_1513062051_毕业论文（设计）中期检查表.files/header.htm") fcs;
-	mso-endnote-separator:url("张壮壮_1513062051_毕业论文（设计）中期检查表.files/header.htm") es;
-	mso-endnote-continuation-separator:url("张壮壮_1513062051_毕业论文（设计）中期检查表.files/header.htm") ecs;}
+	mso-page-border-surround-footer:no;}
 @page WordSection1
 	{size:595.3pt 841.9pt;
 	margin:72.0pt 90.0pt 72.0pt 90.0pt;
@@ -897,7 +938,7 @@ window.close();
 } 
 </script>
 <!--[if gte mso 9]><xml>
- <o:shapedefaults v:ext="edit" spidmax="2049"/>
+ <o:shapedefaults v:ext="edit" spidmax="1026"/>
 </xml><![endif]--><!--[if gte mso 9]><xml>
  <o:shapelayout v:ext="edit">
   <o:idmap v:ext="edit" data="1"/>
@@ -1001,19 +1042,18 @@ lang=EN-US style='font-size:12.0pt;mso-fareast-font-family:黑体;mso-hansi-font-f
   6.0pt;margin-left:0cm;mso-para-margin-top:.5gd;mso-para-margin-right:0cm;
   mso-para-margin-bottom:.5gd;mso-para-margin-left:0cm'><span style='mso-bidi-font-size:
   10.5pt;font-family:宋体;mso-ascii-font-family:"Times New Roman";mso-hansi-font-family:
-  "Times New Roman"'>文献、资料检索阅读：中文</span><u><span style='mso-bidi-font-size:
-  10.5pt'> <span lang=EN-US>15 </span></span></u><span style='mso-bidi-font-size:
+  "Times New Roman"'>文献、资料检索阅读：中文</span><u><span lang=EN-US style='mso-bidi-font-size:
+  10.5pt'> 15 </span></u><span style='mso-bidi-font-size:10.5pt;font-family:
+  宋体;mso-ascii-font-family:"Times New Roman";mso-hansi-font-family:"Times New Roman"'>篇，外文</span><u><span
+  lang=EN-US style='mso-bidi-font-size:10.5pt'> 5 </span></u><span
+  style='mso-bidi-font-size:10.5pt;font-family:宋体;mso-ascii-font-family:"Times New Roman";
+  mso-hansi-font-family:"Times New Roman"'>篇；是否具备独立查阅文献资料的能力</span><u><span
+  style='mso-bidi-font-size:10.5pt'> </span></u><u><span style='mso-bidi-font-size:
   10.5pt;font-family:宋体;mso-ascii-font-family:"Times New Roman";mso-hansi-font-family:
-  "Times New Roman"'>篇，外文</span><u><span style='mso-bidi-font-size:10.5pt'> <span
-  lang=EN-US>5 </span></span></u><span style='mso-bidi-font-size:10.5pt;
-  font-family:宋体;mso-ascii-font-family:"Times New Roman";mso-hansi-font-family:
-  "Times New Roman"'>篇；是否具备独立查阅文献资料的能力</span><u><span style='mso-bidi-font-size:
-  10.5pt'> </span></u><u><span style='mso-bidi-font-size:10.5pt;font-family:
-  宋体;mso-ascii-font-family:"Times New Roman";mso-hansi-font-family:"Times New Roman"'>是</span></u><u><span
-  style='mso-bidi-font-size:10.5pt'> </span></u><span style='mso-bidi-font-size:
-  10.5pt;font-family:宋体;mso-ascii-font-family:"Times New Roman";mso-hansi-font-family:
-  "Times New Roman"'>。</span><span lang=EN-US style='mso-bidi-font-size:10.5pt;
-  font-family:宋体;mso-bidi-font-family:宋体'><o:p></o:p></span></p>
+  "Times New Roman"'>是</span></u><u><span style='mso-bidi-font-size:10.5pt'> </span></u><span
+  style='mso-bidi-font-size:10.5pt;font-family:宋体;mso-ascii-font-family:"Times New Roman";
+  mso-hansi-font-family:"Times New Roman"'>。</span><span lang=EN-US
+  style='mso-bidi-font-size:10.5pt;font-family:宋体;mso-bidi-font-family:宋体'><o:p></o:p></span></p>
   </td>
  </tr>
  <tr style='mso-yfti-irow:3'>
@@ -1157,9 +1197,9 @@ lang=EN-US style='font-size:12.0pt;mso-fareast-font-family:黑体;mso-hansi-font-f
   style='mso-bidi-font-size:10.5pt'> <span lang=EN-US><o:p></o:p></span></span></p>
   <p class=MsoNormal><span style='mso-bidi-font-size:10.5pt;font-family:宋体;
   mso-ascii-font-family:"Times New Roman";mso-hansi-font-family:"Times New Roman"'>改进措施：引进</span><span
-  lang=EN-US style='mso-bidi-font-size:10.5pt'> <span class=SpellE>redis</span>
-  </span><span style='mso-bidi-font-size:10.5pt;font-family:宋体;mso-ascii-font-family:
-  "Times New Roman";mso-hansi-font-family:"Times New Roman"'>对图片进行相应的缓存，提高速度的效果。</span><span
+  style='mso-bidi-font-size:10.5pt'> <span lang=EN-US>Redis </span></span><span
+  style='mso-bidi-font-size:10.5pt;font-family:宋体;mso-ascii-font-family:"Times New Roman";
+  mso-hansi-font-family:"Times New Roman"'>对图片进行相应的缓存，提高速度的效果。</span><span
   style='mso-bidi-font-size:10.5pt'> <span lang=EN-US><o:p></o:p></span></span></p>
   <p class=MsoNormal><span style='mso-bidi-font-size:10.5pt;font-family:宋体;
   mso-ascii-font-family:"Times New Roman";mso-hansi-font-family:"Times New Roman"'>问题</span><span
@@ -1217,15 +1257,26 @@ style='font-size:10.0pt'><o:p>&nbsp;</o:p></span></p>
 <p class=MsoNormal align=right style='text-align:right'><span style='font-size:
 10.0pt;font-family:宋体;mso-ascii-font-family:"Times New Roman";mso-hansi-font-family:
 "Times New Roman"'>检查教师：</span><u><span lang=EN-US style='font-size:10.0pt'>&nbsp;
-&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span></u></p>
+&nbsp; </span></u><span lang=EN-US style='font-size:10.0pt;mso-no-proof:yes'><img
+width=60 height=30 id="_x0000_i1026"
+src="http://210.29.65.111/bysj/DaYin/dzname/2009064.jpg"
+alt="http://210.29.65.111/bysj/DaYin/dzname/2009064.jpg"></span><u><span
+lang=EN-US style='font-size:10.0pt'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span></u><span
+lang=EN-US><o:p></o:p></span></p>
 
 <p class=MsoNormal align=right style='text-align:right'><span lang=EN-US
 style='font-size:10.0pt'><span
 style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 </span></span><span style='font-size:10.0pt;font-family:宋体;mso-ascii-font-family:
-"Times New Roman";mso-hansi-font-family:"Times New Roman"'>教研室主任：</span><u><span
-lang=EN-US style='font-size:10.0pt'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-&nbsp; &nbsp;</span></u><span lang=EN-US> </span></p>
+"Times New Roman";mso-hansi-font-family:"Times New Roman"'>教研室（系）主任：</span><u><span
+lang=EN-US style='font-size:10.0pt'>&nbsp; &nbsp;</span></u><span lang=EN-US
+style='font-size:10.0pt;mso-no-proof:yes'><img width=60 height=30
+id="_x0000_i1025" src="http://210.29.65.111/bysj/DaYin/dzname/2009064.jpg"
+alt="http://210.29.65.111/bysj/DaYin/dzname/2009064.jpg"></span><u><span
+lang=EN-US style='font-size:10.0pt'> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span></u><span
+lang=EN-US> <o:p></o:p></span></p>
+
+<p class=MsoNormal align=right style='text-align:right'><span lang=EN-US><o:p>&nbsp;</o:p></span></p>
 
 </div>
 
